@@ -16,6 +16,7 @@ alias hxen="cd ~/Documents/working/enrollme-web-client"
 alias hxui="cd ~/Documents/working/hixme-ui"
 alias dot="cd ~/Documents/working/dotfiles"
 alias vi="vim"
+alias nrf="rm -rf node_modules && npm i && ys"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
