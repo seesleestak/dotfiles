@@ -1,8 +1,7 @@
 # Path to oh-my-zsh installation
-export ZSH=/Users/Calvin/.oh-my-zsh
+# export ZSH=/Users/Calvin/.oh-my-zsh
 
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="agnoster"
+ZSH_THEME="gitster"
 
 # Load plugins
 plugins=(git)
@@ -11,15 +10,15 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias ys="yarn start"
-alias hxad="cd ~/Documents/working/admin-web-client"
-alias hxen="cd ~/Documents/working/enrollme-web-client"
-alias hxui="cd ~/Documents/working/hixme-ui"
-alias dot="cd ~/Documents/working/dotfiles"
+alias hxad="cd ~/working/admin-web-client"
+alias hxen="cd ~/working/enrollme-web-client"
+alias hxui="cd ~/working/hixme-ui"
+alias dot="cd ~/working/dotfiles"
 alias vi="vim"
 alias nrf="rm -rf node_modules && npm i && ys"
 alias lb="lerna bootstrap"
 alias lc="lerna clean"
-alias lrf="lerna clean && lerna bootstrap"
+alias lrf="lc && lb"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
