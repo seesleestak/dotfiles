@@ -36246,7 +36246,7 @@
 		</dict>
 	</dict>
 	<key>Default Arrangement Name</key>
-	<string>homeDefault</string>
+	<string>myDefault</string>
 	<key>Default Bookmark Guid</key>
 	<string>D52C6F5E-EC18-4BD1-88BF-EAE5F4A5D3F7</string>
 	<key>DimBackgroundWindows</key>
@@ -36263,10 +36263,12 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/working/dotfiles/iterm2_profile</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{906, 626}</string>
+	<string>{1159, 752}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -36304,15 +36306,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>170 291 1216 367 0 0 1440 878 </string>
+	<string>2367 185 1281 587 1920 0 1920 1058 </string>
+	<key>NSWindow Frame ProfilesPanel</key>
+	<string>788 356 735 382 0 0 1920 1058 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>370 211 700 622 0 0 1440 878 </string>
+	<string>650 518 620 392 0 0 1920 1058 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>424 237 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>295 219 937 464 0 0 1440 878 </string>
+	<string>393 406 937 464 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 81 1440 797 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 86 1060 792 0 0 1440 878 </string>
+	<string>1920 0 1920 1058 1920 0 1920 1058 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -37099,11 +37105,11 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>0C104871-B602-4114-9AC0-49CC5961B82A</string>
+	<string>05AADA3C-46AD-4054-871E-88006CE50A6A</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>519266324.50376701</real>
+	<real>509325839.73276103</real>
 	<key>OpenArrangementAtStartup</key>
 	<true/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -37144,7 +37150,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/calvincieslak/working/dotfiles/iterm2_profile</string>
+	<string>/Users/Calvin/working/dotfiles/iterm2_profile</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -37156,11 +37162,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=7</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=31</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-12-31T16:10:41Z</date>
+	<date>2017-12-30T21:38:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
