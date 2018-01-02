@@ -9,16 +9,27 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias ys="yarn start"
-alias hxad="cd ~/working/admin-web-client"
-alias hxen="cd ~/working/enrollme-web-client"
-alias hxui="cd ~/working/hixme-ui"
-alias dot="cd ~/working/dotfiles"
-alias vi="vim"
-alias nrf="rm -rf node_modules && npm i && ys"
-alias lb="lerna bootstrap"
-alias lc="lerna clean"
-alias lrf="lc && lb"
+  alias vi="vim"
+
+  # npm
+  alias ys="yarn start"
+  alias nrf="rm -rf node_modules && npm i && ys"
+
+  # Lerna 
+  alias lb="lerna bootstrap"
+  alias lc="lerna clean"
+  alias lrf="lc && lb"
+
+  # Directories
+  alias hxad="cd ~/working/admin-web-client"
+  alias hxen="cd ~/working/enrollme-web-client"
+  alias hxui="cd ~/working/hixme-ui"
+  alias hui="cd ~/working/hixme-ui-github"
+  alias dot="cd ~/working/dotfiles"
+
+  # hiflow
+  alias hic="hi commit"
+  alias hico="hi checkout"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
