@@ -1,7 +1,7 @@
 # Path to oh-my-zsh installation
-# export ZSH=/Users/Calvin/.oh-my-zsh
+export ZSH=/Users/Calvin/.oh-my-zsh
 
-ZSH_THEME="gitster"
+ZSH_THEME="schminitz"
 
 # Load plugins
 plugins=(git)
@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
   # Lerna 
   alias lb="lerna bootstrap"
-  alias lc="lerna clean"
+  alias lc="lerna clean --yes"
   alias lrf="lc && lb"
 
   # Directories
@@ -41,3 +41,5 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/sls.zsh
+
+
