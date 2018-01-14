@@ -1,5 +1,5 @@
 # Path to oh-my-zsh installation
-export ZSH=/Users/Calvin/.oh-my-zsh
+export ZSH=/Users/calvincieslak/.oh-my-zsh
 
 ZSH_THEME="schminitz"
 
@@ -13,7 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
   # npm
   alias ys="yarn start"
-  alias nrf="rm -rf node_modules && npm i && ys"
+  alias nrf="rm -rf node_modules && npm install"
 
   # Lerna 
   alias lb="lerna bootstrap"
@@ -42,4 +42,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/sls.zsh
 
-
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
