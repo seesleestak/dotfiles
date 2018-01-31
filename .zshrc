@@ -45,20 +45,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # 10ms timeout to avoid delays with vim
 KEYTIMEOUT=1
 
-# function echo_color() {
-#   printf "$1\033[0m\n"
-# }
-# echo_color "c-f  Move forward"
-# echo_color "c-b  Move backward"
-# echo_color "c-p  Move up"
-# echo_color "c-n  Move down"
-# echo_color "c-a  Jump to beginning of line"
-# echo_color "c-e  Jump to end of line"
-# echo_color "c-d  Delete forward"
-# echo_color "c-h  Delete backward"
-# echo_color "c-k  Delete forward to end of line"
-# echo_color "c-u  Delete entire line"
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
