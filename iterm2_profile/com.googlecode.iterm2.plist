@@ -36518,17 +36518,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>2367 185 1281 587 1920 0 1920 1058 </string>
+	<string>386 319 1281 453 0 0 1920 1058 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>788 356 735 382 0 0 1920 1058 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 518 620 392 0 0 1920 1058 </string>
+	<string>650 516 620 392 0 0 1920 1058 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>424 237 606 469 0 0 1920 1058 </string>
+	<string>269 165 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>635 517 796 473 0 0 1920 1058 </string>
+	<string>635 580 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 107 1933 951 0 0 1920 1058 </string>
+	<string>0 81 1440 797 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1920 0 1920 1058 1920 0 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -36802,7 +36802,7 @@
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
-			<real>0.87397637424698793</real>
+			<real>0.86676746046686748</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Jobs to Ignore</key>
@@ -37245,7 +37245,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGSForPowerline-Regular 16</string>
+			<string>Menlo-Regular 16</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Open Toolbelt</key>
@@ -37311,7 +37311,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>1.0130659356174698</real>
+			<real>1.0728539156626506</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -37384,7 +37384,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-03T21:06:41Z</date>
+	<date>2018-01-30T16:57:39Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
