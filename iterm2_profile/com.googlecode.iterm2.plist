@@ -87022,7 +87022,7 @@
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Documents/nord-iterm2-0.2.0/src/xml</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{1159, 752}</string>
+	<string>{1159, 743}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -87237,6 +87237,8 @@
 				<key>Red Component</key>
 				<real>0.086937598884105682</real>
 			</dict>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Badge Color</key>
@@ -87261,7 +87263,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>13.804957170050761</real>
+			<real>19.729582407994926</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -87792,6 +87794,8 @@
 			<integer>2</integer>
 			<key>Place Prompt at First Column</key>
 			<true/>
+			<key>Prevent Opening in a Tab</key>
+			<false/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -87837,7 +87841,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.021361437182741118</real>
+			<real>0.046488340736040613</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
