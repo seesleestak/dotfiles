@@ -46,7 +46,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # 10ms timeout to avoid delays with vim
 KEYTIMEOUT=1
 
-# Vimstart - by Billy Montgomery
+# vimstart - by Billy Montgomery
 function vimstart() {
   PURPLE="\033[0;35m"
   ORANGE="\033[0;33m"
@@ -63,6 +63,23 @@ function vimstart() {
 
   echo $PURPLE
   echo $TOTAL | awk '{print $1/10 " Average \n"}'
+}
+
+# riplace - by Billy Montgomery
+function riplace() {
+  if [ ${#1} -eq 0 ]; then
+    read "a?Search: "
+  else
+    a=${#1}
+  fi
+
+  if [ ${#2} -eq 0 ]; then
+    read "b?Replace:"
+  else
+    b=${#2}
+  fi
+
+  rg -l "$a" | xargs sed -i "" "s|$a|$b|g"
 }
 
 # nvm
