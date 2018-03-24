@@ -87201,6 +87201,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>DarkThemeHasBlackTitlebar</key>
+	<true/>
 	<key>Default Arrangement Name</key>
 	<string>myDefault</string>
 	<key>Default Bookmark Guid</key>
@@ -87214,7 +87216,7 @@
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>EnableDivisionView</key>
-	<true/>
+	<false/>
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
@@ -87286,7 +87288,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 165 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>340 376 918 452 0 0 1920 1058 </string>
+	<string>241 297 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1920 1058 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -88105,7 +88107,7 @@
 			<key>Rows</key>
 			<integer>43</integer>
 			<key>Screen</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>Scrollback Lines</key>
 			<integer>1000</integer>
 			<key>Selected Text Color</key>
@@ -88151,13 +88153,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25300124287605286</real>
+				<real>0.18463134765625</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.19692185521125793</real>
+				<real>0.1500129699707031</real>
 				<key>Red Component</key>
-				<real>0.17621420323848724</real>
+				<real>0.13270377319096394</real>
 			</dict>
 			<key>Tags</key>
 			<array/>
@@ -88167,6 +88169,19 @@
 			<integer>0</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
+			<key>Underline Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.1879119873046875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
+				<key>Green Component</key>
+				<real>0.151928843708654</real>
+				<key>Red Component</key>
+				<real>0.13593633544375036</real>
+			</dict>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -88182,7 +88197,7 @@
 			<key>Use Tab Color</key>
 			<true/>
 			<key>Use Underline Color</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0728539156626506</real>
 			<key>Visual Bell</key>
@@ -88263,7 +88278,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-19T22:21:00Z</date>
+	<date>2018-03-24T14:54:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -88273,7 +88288,7 @@
 	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>ShowPaneTitles</key>
-	<true/>
+	<false/>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -88285,9 +88300,9 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>
-	<integer>5</integer>
+	<integer>15</integer>
 	<key>TerminalVMargin</key>
-	<integer>2</integer>
+	<integer>12</integer>
 	<key>ToolbeltTools</key>
 	<array>
 		<string>Command History</string>
