@@ -87280,7 +87280,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>111 142 1208 464 0 0 1440 878 </string>
+	<string>2244 356 1208 330 1920 0 1920 1058 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>788 356 735 382 0 0 1920 1058 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -87288,9 +87288,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 165 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>784 518 796 473 0 0 1920 1058 </string>
+	<string>737 620 918 401 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 878 0 0 1440 878 </string>
+	<string>0 0 1920 1058 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1920 0 1920 1058 1920 0 1920 1058 </string>
 	<key>New Bookmarks</key>
@@ -88199,7 +88199,7 @@
 			<key>Use Underline Color</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.0728539156626506</real>
+			<real>1.1443488798945785</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
