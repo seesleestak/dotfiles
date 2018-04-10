@@ -37,6 +37,13 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='rg --files '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Custom cd
+c() {
+  cd $1;
+  ls -al;
+}
+alias cd="c"
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/Calvin/Documents/working/report-service/node_modules/tabtab/.completions/serverless.zsh
