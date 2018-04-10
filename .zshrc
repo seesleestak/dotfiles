@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
   alias hxui="cd ~/working/hixme-ui"
   alias hui="cd ~/working/hixme-ui-github"
   alias dot="cd ~/working/dotfiles"
+  alias mor="cd ~/working/mor-web-client"
 
   # hiflow
   alias hic="hi commit"
