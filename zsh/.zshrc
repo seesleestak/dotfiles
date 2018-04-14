@@ -1,7 +1,7 @@
 # Path to oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="schminitz"
+ZSH_THEME="sleestak"
 
 # Load plugins
 plugins=(git)
