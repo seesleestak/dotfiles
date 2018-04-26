@@ -13,6 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
   # npm
   alias ys="yarn start"
+  alias ns="npm start"
   alias nrf="rm -rf node_modules && npm install"
 
   # Lerna 
