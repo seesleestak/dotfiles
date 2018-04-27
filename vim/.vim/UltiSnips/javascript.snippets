@@ -1,0 +1,85 @@
+snippet log "console.log('...', ...)" b
+console.log('$1 --- ', $1)
+endsnippet
+
+snippet sc "Stateless Component" b
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const $1 = () => {
+  return (
+    <div>
+			$2
+    </div>
+  )
+}
+
+$1.propTypes = {}
+$1.defaultProps = {}
+$1.displayName = '$1'
+
+export default $1
+endsnippet
+
+snippet con "Connect Container" b
+import { connect } from 'react-redux'
+
+import $1 from '$2'
+
+const mapStateToProps = (state) => ({})
+const mapDispatchToProps = (dispatch) => ({})
+
+export default connect(mapStateToProps, mapDispatchToProps)($1)
+endsnippet
+
+snippet t "HUI Jest test structure" b
+import React from 'react'
+import renderer from 'react-test-renderer'
+import { ThemeProvider } from '@hixme-ui/theme'
+import 'jest-styled-components'
+
+import $1 from '../src/index'
+
+describe('$1', () => {
+  test('Should render okay', () => {
+    const component = renderer.create(
+      <ThemeProvider>
+        <$1 />
+      </ThemeProvider>,
+    )
+
+    const tree = component.toJSON()
+    expect(tree.type).toBe('div')
+  })
+})
+endsnippet
+
+snippet i "Test spec" b
+test('$1', () => {
+  $2
+})
+endsnippet
+
+snippet de "Test describe" b
+describe('$1', () => {
+	$2
+})
+endsnippet
+
+snippet ind "Index import/export" b
+import $1 from './$1'
+
+export default $1
+endsnippet
+
+snippet sty "Styled component init" b
+import styled from 'styled-components'
+
+const $1 = styled.div\`
+	$2
+\`
+
+$1.displayName = '$1'
+
+export default $1
+endsnippet
