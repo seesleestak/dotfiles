@@ -148,7 +148,6 @@ for_window [class="^.*"] border pixel 0
 # gaps
 gaps inner 12
 
-
 # Start nm-applet
 exec --no-startup-id nm-applet
 
@@ -159,4 +158,4 @@ exec --no-startup-id dropbox start
 exec --no-startup-id setxkbmap -option caps:swapescape
 
 # Set wallpaper
-exec_always --no-startup-id feh --bg-scale ~/Dropbox/Photos/
+exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/rossi-2016-04-gp-spain.jpg
