@@ -1,12 +1,8 @@
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
-URxvt.font:	xft:monospace:size=10:minspace=False
+URxvt.font: xft:OfficeCodePro:size=10
 URxvt.letterSpace: -1
 URxvt.internalBorder: 10
-
-!! resize-font
-URxvt.resize-font.smaller:	C-Down
-URxvt.resize-font.bigger:	C-Up
 
 #define nord0 #2E3440
 #define nord1 #3B4252
@@ -28,7 +24,7 @@ URxvt.resize-font.bigger:	C-Up
 *.foreground:   nord4
 *.background:   nord0
 *.cursorColor:  nord4
-*fading: 35
+*fading: 20
 *fadeColor: nord3
 
 *.color0: nord1
