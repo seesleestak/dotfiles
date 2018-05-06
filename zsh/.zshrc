@@ -34,6 +34,8 @@ source $ZSH/oh-my-zsh.sh
   alias hic="hi commit"
   alias hico="hi checkout"
 
+  alias screen="scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Dropbox/Photos'"
+
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
