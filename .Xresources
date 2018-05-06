@@ -1,8 +1,8 @@
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
-URxvt.font: xft:OfficeCodePro:size=10
+URxvt.font: xft:OfficeCodePro:size=10,xft:Droid Sans Mono:size=10,xft:DejaVu Sans Mono:size=10,xft:Droid Sans Fallback:size=10,xft:FreeSans:size=10,xft:FreeSans:size=10
 URxvt.letterSpace: -1
-URxvt.internalBorder: 10
+URxvt.internalBorder: 8
 
 #define nord0 #2E3440
 #define nord1 #3B4252
@@ -24,8 +24,6 @@ URxvt.internalBorder: 10
 *.foreground:   nord4
 *.background:   nord0
 *.cursorColor:  nord4
-*fading: 20
-*fadeColor: nord3
 
 *.color0: nord1
 *.color1: nord11
@@ -43,3 +41,8 @@ URxvt.internalBorder: 10
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
+
+! Color states     'bg',    'fg',    'bgalt', 'hlbg',  'hlfg'
+rofi.color-normal: nord6, nord0, nord6, nord4, nord3, nord11
+!                  'background', 'border', 'separator'
+rofi.color-window: nord6, nord6, nord6
