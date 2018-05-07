@@ -1,14 +1,7 @@
-! "Enabled modi" Set from: Default
 rofi.modi: run
-
-! "Padding" Set from: Default
 rofi.padding: 30
 rofi.bw: 2
-
-! "Number of lines" Set from: Default
 rofi.lines: 4
 rofi.line-margin: 10
 rofi.line-padding: 2
-
-! "Font to use" Set from: Default
-rofi.font: Office Code Pro 14
+rofi.font: Office Code Pro Bold 14
