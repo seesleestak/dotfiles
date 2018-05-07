@@ -28,7 +28,7 @@ set autoindent
 set nobackup
 set noswapfile
 
-set clipboard=unnamedplus
+set clipboard=unnamedplus,unnamed
 
 " vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
