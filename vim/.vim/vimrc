@@ -28,14 +28,7 @@ set autoindent
 set nobackup
 set noswapfile
 
-" System clipboard
-" if has("clipboard")
-  " set clipboard=unnamed " copy to the system clipboard
-
-"   if has("unnamedplus") " X11 support
-    set clipboard+=unnamedplus
-"   endif
-" endif
+set clipboard=unnamedplus
 
 " vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
