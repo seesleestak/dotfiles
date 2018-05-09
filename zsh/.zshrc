@@ -10,8 +10,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-  alias vi="vim"
-
   # npm
   alias ys="yarn start"
   alias ns="npm start"
