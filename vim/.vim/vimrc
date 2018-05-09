@@ -31,6 +31,10 @@ set noswapfile
 " Clipboard
 set clipboard=unnamedplus,unnamed
 
+" Show col,row at bottom
+set ruler
+set rulerformat=%l,%v
+
 " vim-plug ---------------------------------------
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
