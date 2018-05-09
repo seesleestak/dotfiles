@@ -1,0 +1,7 @@
+rofi.modi: run
+rofi.padding: 30
+rofi.bw: 2
+rofi.lines: 4
+rofi.line-margin: 10
+rofi.line-padding: 2
+rofi.font: Office Code Pro Bold 14

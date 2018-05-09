@@ -4,3 +4,6 @@
 [core]
   editor = vim
   excludesfile = /Users/Calvin/.gitignore_global
+[remote "origin"]
+  fetch = +refs/heads/*:refs/remotes/origin/*
+

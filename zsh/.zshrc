@@ -34,6 +34,10 @@ source $ZSH/oh-my-zsh.sh
   alias hic="hi commit"
   alias hico="hi checkout"
 
+  alias screen="scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Dropbox/Photos/'"
+  alias vga="xrandr --output LVDS-1 --off --output VGA-1 --auto"
+  alias bimon="xrandr --output VGA-1 --off --output LVDS-1 --auto"
+
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
