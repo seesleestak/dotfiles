@@ -28,6 +28,7 @@ set autoindent
 set nobackup
 set noswapfile
 
+" Clipboard
 set clipboard=unnamedplus,unnamed
 
 " vim-plug ---------------------------------------
@@ -140,42 +141,7 @@ command! -bang -nargs=* Rg
   nnoremap <leader>gst :GFiles?<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
-" ------------------------------------------------
-
-" Statusline -------------------------------------
-  " Modified from https://github.com/ahmedelgabri/dotfiles/blob/c4f40c27b295ecfb7673bd29d373cab26b93379b/vim/vimrc.local#L302-L423
-
-  " Get ale lint errors
-  function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
-    return l:counts.total == 0 ? '' : printf(
-    \   '%dW %dE',
-    \   all_non_errors,
-    \   all_errors
-    \)
-  endfunction
-
-  function! GitInfo()
-    let git = fugitive#head()
-    if git != ''
-      return fugitive#head()
-    else
-      return ''
-  endfunction
-
-  set laststatus=2
-  set statusline=
-  set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
-  set statusline+=%8*\ %<%F\ %m\ %w\                       " File+path
-  set statusline+=%#warningmsg#
-  set statusline+=%*
-  set statusline+=%9*\ %=                                  " Space
-  set statusline+=%{LinterStatus()}\                       " Lint errors
-  set statusline+=%3p%%\ %l,%c\                            " total (%)/Row: Col
+  nnoremap <leader>w :ALENextWrap<CR>
 " ------------------------------------------------
 
 " Billy's console log creator
