@@ -3,6 +3,8 @@ set mouse=n " Allow scrolling
 set hidden " Hide buffers instead of closing
 set autoread " Auto reload if file changes outside of vim
 set lazyredraw " Only redraw once macro is done running
+set number " Show line numbers
+set relativenumber " Show relative line numbers
 
 " Fixes ESC delay
 set timeoutlen=1000 
@@ -11,10 +13,6 @@ set ttimeoutlen=0
 " Search highlighting
 set incsearch
 set hlsearch
-
-" Line numbers
-set number
-set relativenumber
 
 " Tab
 set tabstop=2
@@ -69,6 +67,7 @@ call plug#end()
 " Syntax Highlighting
 syntax on
 
+" termguicolors for tmux
 set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 set termguicolors
