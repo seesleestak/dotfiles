@@ -9,6 +9,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# vi mode
+bindkey -v
+
 # Aliases
   # npm
   alias ys="yarn start"
