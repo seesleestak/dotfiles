@@ -13,6 +13,16 @@ function get_box_name {
   fi
 }
 
+# vi mode prompt
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # user name
 function get_usr_name {
   local name="%n"
@@ -40,3 +50,4 @@ PROMPT='%(?, , )
 %{$reset_color%}$(git_prompt_ahead) \
 %{$fg[yellow]%}$(vim_bg_info) %{$reset_color%}
 %_ $(prompt_char) '
+
