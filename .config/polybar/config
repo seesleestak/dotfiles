@@ -1,106 +1,85 @@
 [colors]
-  background = ${xrdb:color0}
-  background-alt = ${xrdb:color0}
-  foreground = ${xrdb:color7}
-  foreground-alt = ${xrdb:color15}
-  primary = ${xrdb:color4}
-  secondary = #00aaff
-  alert = ${xrdb:color1}
-  battery-charging = #00aaff
-  battery-discharging = #ffaa00
-  battery-full = #00ffaa
-  highlight = ${xrdb:color1}
-  magenta = ${xrdb:color5}
-  green = ${xrdb:color2}
-  yellow = ${xrdb:color3}
+background = ${xrdb:background}
+background-alt = ${xrdb:background}
+foreground = ${xrdb:color7}
+foreground-alt = ${xrdb:color15}
+primary = ${xrdb:color4}
+secondary = #00aaff
+alert = ${xrdb:color1}
+battery-charging = #00aaff
+battery-discharging = #ffaa00
+battery-full = #00ffaa
+highlight = ${xrdb:color1}
+magenta = ${xrdb:color5}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+muted = ${xrdb:color8}
 
 [bar/top]
-  bottom = false
-  width = 100%
-  height = 24
-  offset-x = 0
-  offset-y = 0
+bottom = false
+width = 100%
+height = 40
+offset-x = 0
+offset-y = 0
+dpi = 192
 
-  background = ${colors.background}
-  foreground = ${colors.foreground}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-  padding-left = 0
-  padding-right = 0
-  margin-right = 5
-  module-margin-left = 0
-  module-margin-right = 0
+padding-left = 0
+padding-right = 0
+margin-right = 5
+module-margin-left = 0
+module-margin-right = 0
 
-  font-0 = Office Code Pro:pixelsize=14;-6
-  font-1 = FontAwesome:pixelsize=13;-8
-  font-2 = Material Icons:pixelsize=13;3
-  font-3 = SpaceMono Nerd Font Mono:pixelsize=20
-  font-4 = Office Code Pro Bold:pixelsize=14;-6
+font-0 = Office Code Pro:size=10;2
+font-1 = Sauce Code Pro Nerd Font Mono:size=16;5
+font-2 = Sauce Code Pro Nerd Font Mono:size=12;5
+font-3 = Office Code Pro Bold:size=10;2
 
-  fixed-center = true
+fixed-center = true
 
-  modules-left = i3
-  modules-right = volume wireless-network wired-network battery powermenu date time
-
-[module/bspwm]
-  type = internal/bspwm
-
-  label-focused = %index%
-  label-focused-background = ${colors.background}
-  label-focused-foreground = ${colors.foreground}
-  label-focused-underline= ${colors.background}
-  label-focused-padding = 2
-
-  label-occupied = %index%
-  label-occupied-foreground = ${colors.foreground-alt}
-  label-occupied-padding = 2
-
-  label-urgent = %index%!
-  label-urgent-background = ${colors.background-alt}
-  label-urgent-foreground = ${colors.alert}
-  label-urgent-padding = 2
-
-  label-empty = %index%
-  label-empty-foreground = ${colors.foreground-alt}
-  label-empty-padding = 2
+modules-left = i3
+modules-right = volume wireless-network battery powermenu date time
 
 [module/i3]
-  type = internal/i3
+type = internal/i3
 
-  format = <label-state><label-mode>
-  index-sort = true
-  wrapping-scroll = false
-  strip-wsnumbers = true
+format = <label-state><label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
 
 ; Only show workspaces on the same output as the bar
-  pin-workspaces = true
+pin-workspaces = true
 
-  label-mode-padding = 2
-  label-mode-foreground = ${colors.background}
-  label-mode-background = ${colors.primary}
+label-mode-padding = 1
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-  label-focused = %name%
-  label-focused-background = ${colors.foreground}
-  label-focused-foreground = ${colors.background}
-  label-focused-underline = ${module/bspwm.label-focused-underline}
-  label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused = %name%
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.green}
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-  label-unfocused = %name%
-  label-unfocused-foreground = ${module/bspwm.label-occupied-foreground}
-  label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.muted}
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-  label-visible = %name%
-  label-visible-background = ${self.label-focused-background}
-  label-visible-underline = ${self.label-focused-underline}
-  label-visible-padding = ${self.label-focused-padding}
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
-  label-urgent = %name%
-  label-urgent-background = ${module/bspwm.label-urgent-background}
-  label-urgent-foreground = ${module/bspwm.label-urgent-foreground}
-  label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent = %name%
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
 
 ; [module/weather]
 ; type = custom/script
@@ -123,139 +102,142 @@
 ; click-left = chromium https://openweathermap.org/city/756135
 
 ; [module/wired-network]
-;   type = internal/network
-;   interface = enp2s0
-;   interval = 3.0
+; type = internal/network
+; interface = enp0s20f0u1
+; interval = 3.0
 
-;   format-connected = 
-;   format-connected-foreground = ${colors.foreground-alt}
+; format-connected = 
+; format-connected-foreground = ${colors.foreground-alt}
 
-;   format-disconnected =  
-;   format-disconnected-foreground = ${colors.foreground-alt}
+; format-disconnected =  
+; format-disconnected-foreground = ${colors.foreground-alt}
 
 
 [module/wireless-network]
-  type = internal/network
-  interface = wlp8s0
-  interval = 3.0
+type = internal/network
+interface = wlp2s0
+interval = 3.0
 
-  format-connected = 直
-  format-connected-foreground = ${colors.foreground-alt}
+format-connected = 直
+format-connected-foreground = ${colors.foreground-alt}
 
-  format-disconnected = 睊 
-  format-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = 睊 
+format-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
-  type = internal/date
-  interval = 1.0
-  label-font = 0
-  date = "%A %d %b"
-  label = "%date%"
-  label-foreground = ${colors.foreground}
-  label-background = ${colors.background}
-  label-padding-right = 2
-  label-padding-left = 2
-  click-left = chromium https://calendar.google.com
+type = internal/date
+interval = 1.0
+label-font = 0
+date = "%A %d %b"
+label = "%date%"
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
+label-padding-right = 2
+label-padding-left = 2
+click-left = chromium https://calendar.google.com
 
 [module/time]
-  type = internal/date
-  interval = 1.0
+type = internal/date
+interval = 1.0
 
-  label = %time%  
-  time = %I:%M %p
+label = %time%  
+time = %I:%M %p
 
-  label-padding-right = 2
-  label-padding-left = 2
-  label-margin = 0
-  label-font = 5
+label-padding-right = 2
+label-padding-left = 2
+label-margin = 0
+label-font = 4
 
-  format-background = ${colors.green}
-  format-foreground = ${colors.background}
+format-background = ${colors.green}
+format-foreground = ${colors.background}
 
 [module/volume]
-  type = internal/volume
+type = internal/volume
 
-  format-volume = <ramp-volume> <label-volume>
-  format-voulme-padding = 0
-  format-volume-foreground = ${colors.foreground-alt}
-  label-volume = %percentage%
+format-volume = <ramp-volume> <label-volume>
+format-voulme-padding = 0
+format-volume-foreground = ${colors.foreground-alt}
+label-volume = %percentage%
 
-  format-muted =  <label-muted>
-  format-muted-foreground = ${colors.foreground-alt}
-  label-muted = "mute"
-  format-muted-padding = 3
+format-muted =  <label-muted>
+format-muted-foreground = ${colors.foreground-alt}
+label-font = 2
+label-muted = "mute"
+format-muted-padding = 3
 
-  ramp-volume-0 = 
-  ramp-volume-1 = 
-  ramp-volume-2 = 
-  ramp-headphones-0 = 
-  ramp-headphones-1 = 
-  ramp-headphones-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+ramp-headphones-2 = 
 
-  format-volume-padding = 3
+format-volume-padding = 3
 
 [module/battery]
-  type = internal/battery
-  battery = BAT0
-  adapter = AC
-  full-at = 97
-  poll-interval = 5.0
+type = internal/battery
+battery = BAT1
+adapter = AC
+full-at = 98
+poll-interval = 5.0
 
-  format-charging = <animation-charging> <label-charging>
-  format-charging-padding = 3
+format-charging = <animation-charging> <label-charging>
+format-charging-padding = 3
 
-  format-discharging = <ramp-capacity> <label-discharging>
-  format-discharging-padding = 3
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 3
 
-  format-full = <label-full>
-  format-full-padding = 3
-  format-full-foreground = ${colors.battery-full}
+format-full = <ramp-capacity> <label-full>
+format-full-padding = 3
+format-full-foreground = ${colors.battery-full}
 
-  label-charging = %percentage%%
-  label-discharging = %percentage%%
-  label-full = 
-  label-charging-foreground = ${colors.foreground-alt}
-  label-discharging-foreground = ${colors.foreground-alt}
-  label-full-foreground = ${colors.foreground-alt}
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+label-charging-foreground = ${colors.foreground-alt}
+label-discharging-foreground = ${colors.foreground-alt}
+label-full-foreground = ${colors.foreground-alt}
+label-font = 2
 
-  ramp-capacity-0 = 
-  ramp-capacity-1 = 
-  ramp-capacity-2 = 
-  ramp-capacity-3 = 
-  ramp-capacity-4 = 
-  ramp-capacity-5 = 
-  ramp-capacity-6 = 
-  ramp-capacity-7 = 
-  ramp-capacity-8 = 
-  ramp-capacity-9 = 
-  ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
 
-  animation-charging-0 = 
-  animation-charging-1 = 
-  animation-charging-2 = 
-  animation-charging-3 = 
-  animation-charging-4 = 
-  animation-charging-foreground = ${colors.foreground-alt}
-  animation-charging-framerate = 750
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
 
 [module/powermenu]
-  type = custom/menu
+type = custom/menu
 
-  format-spacing = 1
+format-spacing = 1
 
-  label-open = 
-  label-open-foreground = ${colors.foreground-alt}
-  label-close = 
-  label-close-foreground = ${colors.foreground}
-  label-separator = " " 
-  label-separator-foreground = ${colors.foreground-alt}
+label-open = 
+label-open-foreground = ${colors.foreground-alt}
+label-close = 
+label-close-foreground = ${colors.foreground}
+label-separator = " " 
+label-separator-foreground = ${colors.foreground-alt}
+label-font = 3
 
-  menu-0-0 = 
-  menu-0-0-exec = reboot
-  menu-0-1 = 
-  menu-0-1-exec = systemctl poweroff
-  menu-0-2 = 
-  menu-0-2-exec = i3-msg exit
+menu-0-0 = 
+menu-0-0-exec = reboot
+menu-0-1 = 
+menu-0-1-exec = systemctl poweroff
+menu-0-2 = 
+menu-0-2-exec = i3-msg exit
 
 [settings]
 screenchange-reload = true
