@@ -1,6 +1,5 @@
-rofi.modi: run
 rofi.padding: 30
-rofi.bw: 2
+rofi.bw: 3
 rofi.lines: 4
 rofi.line-margin: 10
 rofi.line-padding: 2

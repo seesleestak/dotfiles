@@ -44,4 +44,4 @@ URxvt.internalBorder: 8
 ! Color states     'bg',    'fg',    'bgalt', 'hlbg',  'hlfg'
 rofi.color-normal: nord6, nord0, nord6, nord4, nord3, nord11
 !                  'background', 'border', 'separator'
-rofi.color-window: nord6, nord6, nord6
+rofi.color-window: nord6, nord4, nord6
