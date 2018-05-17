@@ -19,10 +19,9 @@ muted = ${xrdb:color8}
 [bar/top]
 bottom = false
 width = 100%
-height = 40
+height = 20
 offset-x = 0
 offset-y = 0
-dpi = 192
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -34,14 +33,14 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = Office Code Pro:size=10;2
-font-1 = SauceCodePro Nerd Font Mono:size=16;5
-font-2 = SauceCodePro Nerd Font Mono:size=12;5
+font-1 = SpaceMono Nerd Font Mono:size=16;4
+font-2 = SpaceMono Nerd Font Mono:size=12;4
 font-3 = Office Code Pro Bold:size=10;2
 
 fixed-center = true
 
 modules-left = i3
-modules-right = volume wireless-network battery powermenu date time
+modules-right = volume wireless-network wired-network battery powermenu date time
 
 [module/i3]
 type = internal/i3
@@ -83,41 +82,14 @@ label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1
 
-; [module/weather]
-; type = custom/script
-; exec = ~/scripts/openweathermap.sh
-; interval = 600
-; label-font = 0
-; format-background = ${colors.magenta}
-; format-foreground = ${colors.background}
-; format-padding = 0
-; click-left = chromium https://openweathermap.org/city/756135
-
-; [module/weather-icon]
-; type = custom/script
-; exec = ~/scripts/openweathermap-icon.sh
-; interval = 600
-; label-font = 5
-; format-background = ${colors.magenta}
-; format-foreground = ${colors.background}
-; format-padding = 4
-; click-left = chromium https://openweathermap.org/city/756135
-
-; [module/wired-network]
-; type = internal/network
-; interface = enp0s20f0u1
-; interval = 3.0
-
-; format-connected = 
-; format-connected-foreground = ${colors.foreground-alt}
-
-; format-disconnected =  
-; format-disconnected-foreground = ${colors.foreground-alt}
-
+[module/wired-network]
+type = internal/network
+interface = enp2s0
+interval = 3.0
 
 [module/wireless-network]
 type = internal/network
-interface = wlp2s0
+interface = wlp8s0
 interval = 3.0
 
 format-connected = 直
