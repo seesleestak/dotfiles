@@ -1,6 +1,3 @@
-! Set global dpi
-*.dpi: 192
-
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.font: xft:OfficeCodePro:size=10,xft:Droid Sans Mono:size=10,xft:DejaVu Sans Mono:size=10,xft:Droid Sans Fallback:size=10,xft:FreeSans:size=10,xft:FreeSans:size=10
