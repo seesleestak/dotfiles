@@ -1,0 +1,228 @@
+[colors]
+background = ${xrdb:background}
+background-alt = ${xrdb:background}
+foreground = ${xrdb:color7}
+foreground-alt = ${xrdb:color15}
+primary = ${xrdb:color4}
+secondary = #00aaff
+alert = ${xrdb:color1}
+battery-charging = #00aaff
+battery-discharging = #ffaa00
+battery-full = #00ffaa
+highlight = ${xrdb:color1}
+magenta = ${xrdb:color5}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+teal = ${xrdb:color14}
+muted = ${xrdb:color8}
+
+[bar/top]
+bottom = false
+width = 100%
+height = 20
+offset-x = 0
+offset-y = 0
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 0
+margin-right = 5
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Office Code Pro:size=10;2
+font-1 = SpaceMono Nerd Font Mono:size=16;4
+font-2 = SpaceMono Nerd Font Mono:size=12;4
+font-3 = Office Code Pro Bold:size=10;2
+
+fixed-center = true
+
+modules-left = i3
+modules-right = volume wireless-network wired-network battery powermenu date time
+
+[module/i3]
+type = internal/i3
+
+format = <label-state><label-mode>
+index-sort = true
+wrapping-scroll = false
+strip-wsnumbers = true
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode-padding = 1
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = ${colors.teal}
+label-focused-foreground = ${colors.background}
+label-focused-underline = ${colors.green}
+label-focused-padding = 1
+label-focused-font = 4
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.muted}
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 1
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
+
+[module/wired-network]
+type = internal/network
+interface = enp2s0
+interval = 3.0
+
+label-connected = 
+label-connected-padding = 1
+
+[module/wireless-network]
+type = internal/network
+interface = wlp8s0
+interval = 3.0
+
+format-connected = 直
+format-connected-foreground = ${colors.foreground-alt}
+label-connected-padding = 1
+
+[module/date]
+type = internal/date
+interval = 1.0
+label-font = 0
+date = "%A %d %b"
+label = "%date%"
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
+label-padding-right = 2
+label-padding-left = 2
+click-left = chromium https://calendar.google.com
+
+[module/time]
+type = internal/date
+interval = 1.0
+
+label = %time%  
+time = %I:%M %p
+
+label-padding-right = 1
+label-padding-left = 1
+label-margin = 0
+label-font = 4
+
+format-background = ${colors.green}
+format-foreground = ${colors.background}
+
+[module/volume]
+type = internal/volume
+
+format-volume = <ramp-volume> <label-volume>
+format-voulme-padding = 0
+format-volume-foreground = ${colors.foreground-alt}
+label-volume = %percentage%
+
+format-muted =  <label-muted>
+format-muted-foreground = ${colors.foreground-alt}
+label-font = 2
+label-muted = "mute"
+format-muted-padding = 2
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
+ramp-headphones-2 = 
+
+format-volume-padding = 2
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+poll-interval = 5.0
+
+format-charging = <animation-charging> <label-charging>
+format-charging-padding = 2
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-padding = 2
+
+format-full = <ramp-capacity> <label-full>
+format-full-padding = 2
+format-full-foreground = ${colors.battery-full}
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+label-charging-foreground = ${colors.foreground-alt}
+label-discharging-foreground = ${colors.foreground-alt}
+label-full-foreground = ${colors.foreground-alt}
+label-font = 2
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.foreground-alt}
+label-close = 
+label-close-foreground = ${colors.foreground}
+label-separator = " " 
+label-separator-foreground = ${colors.foreground-alt}
+label-font = 3
+
+menu-0-0 = 
+menu-0-0-exec = reboot
+menu-0-1 = 
+menu-0-1-exec = systemctl poweroff
+menu-0-2 = 
+menu-0-2-exec = i3-msg exit
+
+[settings]
+screenchange-reload = true
+; compositing-background = xor
+; compositing-background = screen
+; compositing-foreground = source
+; compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

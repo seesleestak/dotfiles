@@ -1,0 +1,20 @@
+2018/05/18-15:03:15.849 770 Reusing MANIFEST /home/calvin/.config/chromium/Default/Local Extension Settings/cfhdojbkjhnklbpkdaibdccddilifddb/MANIFEST-000001
+2018/05/18-15:03:15.849 770 Recovering log #91
+2018/05/18-15:03:15.849 770 Reusing old log /home/calvin/.config/chromium/Default/Local Extension Settings/cfhdojbkjhnklbpkdaibdccddilifddb/000091.log 
+2018/05/18-15:04:17.170 1357 Level-0 table #95: started
+2018/05/18-15:04:17.245 1357 Level-0 table #95: 3316296 bytes OK
+2018/05/18-15:04:17.247 1357 Delete type=0 #91
+2018/05/18-15:04:17.249 1357 Compacting 4@0 + 2@1 files
+2018/05/18-15:04:17.352 1357 Generated table #96@0: 1 keys, 3316120 bytes
+2018/05/18-15:04:17.354 1357 Generated table #97@0: 2 keys, 337 bytes
+2018/05/18-15:04:17.355 1357 Compacted 4@0 + 2@1 files => 3316457 bytes
+2018/05/18-15:04:17.355 1357 compacted to: files[ 0 2 1 0 0 0 0 ]
+2018/05/18-15:04:17.357 1357 Delete type=2 #84
+2018/05/18-15:04:17.357 1357 Delete type=2 #85
+2018/05/18-15:04:17.357 1357 Delete type=2 #90
+2018/05/18-15:04:17.358 1357 Delete type=2 #92
+2018/05/18-15:04:17.358 1357 Delete type=2 #87
+2018/05/18-15:04:17.359 1357 Delete type=2 #95
+2018/05/18-15:08:53.342 1357 Level-0 table #99: started
+2018/05/18-15:08:53.418 1357 Level-0 table #99: 3316360 bytes OK
+2018/05/18-15:08:53.419 1357 Delete type=0 #94

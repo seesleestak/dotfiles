@@ -1,0 +1,21 @@
+[05/18/18, 10:30:02:541] info: ╔═════════════════════════════════════════════════════════════════════════════╗
+[05/18/18, 10:30:02:544] info: ║      Slack 3.1.1, linux 4.16.8-1-ARCH on x64 at 05/18/18, 10:30:02:532      ║
+[05/18/18, 10:30:02:546] info: ╚═════════════════════════════════════════════════════════════════════════════╝
+[05/18/18, 10:30:02:887] info: Initializing local storage instance at path: /home/calvin/.config/Slack/local-settings.json
+[05/18/18, 10:30:04:788] info: Store: SET_NETWORK_STATUS online
+[05/18/18, 10:30:10:930] info: Store: SELECT_CHANNEL D40802HFY
+[05/18/18, 10:30:10:936] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US"
+}
+[05/18/18, 10:30:10:942] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[05/18/18, 10:30:11:549] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "loaded",
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 10:30:11:567] info: Store: MAIN_WINDOW_SHOWN

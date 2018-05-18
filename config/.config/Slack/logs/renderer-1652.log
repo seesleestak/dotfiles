@@ -1,0 +1,133 @@
+[05/18/18, 13:19:01:480] info: ╔═════════════════════════════════════════════════════════════════════════════╗
+[05/18/18, 13:19:01:482] info: ║      Slack 3.1.1, linux 4.16.9-1-ARCH on x64 at 05/18/18, 13:19:01:471      ║
+[05/18/18, 13:19:01:482] info: ╚═════════════════════════════════════════════════════════════════════════════╝
+[05/18/18, 13:19:02:073] info: Initializing local storage instance at path: /home/calvin/.config/Slack/local-settings.json
+[05/18/18, 13:19:02:332] info: NetworkStatus: Waiting for network online…
+[05/18/18, 13:19:03:093] info: NetworkStatus: Response from api.test
+{
+  "status": "online"
+}
+[05/18/18, 13:19:03:503] info: Store: SET_NETWORK_STATUS online
+[05/18/18, 13:19:09:053] info: Store: SELECT_CHANNEL DA7HQAB26
+[05/18/18, 13:19:09:059] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US"
+}
+[05/18/18, 13:19:09:064] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[05/18/18, 13:19:09:520] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "loaded",
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 13:19:09:532] info: Store: MAIN_WINDOW_SHOWN
+[05/18/18, 13:19:09:739] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 13:19:10:309] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T067YHBHB",
+  "theme": {
+    "active_item": "#88C0D0",
+    "active_item_text": "#2E3440",
+    "active_presence": "#90bc6b",
+    "badge": "#81A1C1",
+    "column_bg": "#2E3440",
+    "hover_item": "#3B4252",
+    "menu_bg": "#3B4252",
+    "text_color": "#D8DEE9"
+  }
+}
+[05/18/18, 13:19:10:565] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": {
+    "image_102": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_102.png",
+    "image_132": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_132.png",
+    "image_230": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_132.png",
+    "image_34": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_34.png",
+    "image_44": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_44.png",
+    "image_68": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_68.png",
+    "image_88": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_88.png",
+    "image_original": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2016-03-14/26749067207_3cad9c06d416650f6fa7_original.png"
+  },
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 13:19:10:753] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 13:19:10:761] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "webapp-loaded",
+  "teamId": "T067YHBHB"
+}
+[05/18/18, 13:19:11:090] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T067YHBHB",
+  "token": "xoxs-⋯"
+}
+[05/18/18, 13:19:13:689] info: Store: SELECT_CHANNEL D40802HFY
+[05/18/18, 13:19:16:926] info: Store: SELECT_CHANNEL C3M9KFKRR
+[05/18/18, 14:20:39:928] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    12,
+    12
+  ],
+  "size": [
+    1342,
+    744
+  ]
+}
+[05/18/18, 14:21:08:410] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    12,
+    12
+  ],
+  "size": [
+    1896,
+    1056
+  ]
+}
+[05/18/18, 14:21:37:909] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    12,
+    32
+  ],
+  "size": [
+    1896,
+    1036
+  ]
+}
+[05/18/18, 14:21:38:608] info: Store: SELECT_CHANNEL C11L55KC0
+[05/18/18, 14:27:51:789] info: Store: NEW_NOTIFICATION
+{
+  "avatarImage": "https://ca.slack-edge.com/T067YHBHB-UAF561FH6-gf0aedfe6185-512",
+  "channel": "DAKHB7UCT",
+  "content": "[REDACTED]",
+  "id": "rL6SAhykYmGpDK",
+  "imageUri": null,
+  "launchUri": "slack://channel?id=DAKHB7UCT&message=1526678871.000123&team=T067YHBHB",
+  "msg": "1526678871.000123",
+  "silent": true,
+  "subtitle": "",
+  "teamId": "T067YHBHB",
+  "title": "[REDACTED]"
+}
+[05/18/18, 14:36:04:750] info: Store: SELECT_CHANNEL DAKHB7UCT
+[05/18/18, 14:36:16:631] info: Store: SELECT_CHANNEL C1T6DLC13
+[05/18/18, 14:45:03:034] info: Store: SELECT_CHANNEL D40802HFY
+[05/18/18, 14:45:11:650] info: Store: MAIN_WINDOW_FOCUSED
+[05/18/18, 14:51:10:360] info: Store: SET_FULL_SCREEN
