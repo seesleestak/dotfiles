@@ -1,0 +1,32 @@
+{
+   "description": "",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhCgY51TlEhSczTEUfeQF61KQ3uXyauEdc4m26sB/VsvnHVDXDoqIkSkxsdEVOlpGAGryp0Rvy8Aw/1yWNFAmPjGnrwOPNaPt5AuxMv3YnuJT2G+CZ+EZE2j5d5a3z/Ieokuoi4HgBM9lKdQUGMn4EaG60R1pGfOR1O/oWXNTvJRmBVNzU+mGHwcbnLllVGs2aXZVJMfx1XyDhnZLRMzzx+YvQVZWOCOWAJ60DnuenPzAPJgdhRZgxkcp+tdmzi/+76I8RVGlmdW5zhFrX3Y9y4/9xrJC35ccvCQw22BNN+zwwRGJFQ1q224PqKVd+nS/FE5pq0d+LXa/Hm9RplE+zQIDAQAB",
+   "manifest_version": 2,
+   "name": "Material Theme",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 176, 217, 225 ],
+         "button_background": [ 176, 217, 225, 1 ],
+         "frame": [ 48, 54, 65 ],
+         "ntp_background": [ 64, 69, 82 ],
+         "ntp_text": [ 176, 217, 225 ],
+         "tab_background_text": [ 179, 189, 203 ],
+         "tab_text": [ 176, 217, 225 ],
+         "toolbar": [ 65, 74, 89 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0.53, 0.45, 0.79 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

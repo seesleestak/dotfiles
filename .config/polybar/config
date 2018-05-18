@@ -87,6 +87,9 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
+label-connected = 
+label-connected-padding = 1
+
 [module/wireless-network]
 type = internal/network
 interface = wlp8s0
@@ -94,9 +97,7 @@ interval = 3.0
 
 format-connected = 直
 format-connected-foreground = ${colors.foreground-alt}
-
-format-disconnected = 睊 
-format-disconnected-foreground = ${colors.foreground-alt}
+label-connected-padding = 1
 
 [module/date]
 type = internal/date
@@ -117,8 +118,8 @@ interval = 1.0
 label = %time%  
 time = %I:%M %p
 
-label-padding-right = 2
-label-padding-left = 2
+label-padding-right = 1
+label-padding-left = 1
 label-margin = 0
 label-font = 4
 
@@ -137,7 +138,7 @@ format-muted =  <label-muted>
 format-muted-foreground = ${colors.foreground-alt}
 label-font = 2
 label-muted = "mute"
-format-muted-padding = 3
+format-muted-padding = 2
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -146,23 +147,23 @@ ramp-headphones-0 = 
 ramp-headphones-1 = 
 ramp-headphones-2 = 
 
-format-volume-padding = 3
+format-volume-padding = 2
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = AC
+battery = BAT0
+adapter = ADP1
 full-at = 98
 poll-interval = 5.0
 
 format-charging = <animation-charging> <label-charging>
-format-charging-padding = 3
+format-charging-padding = 2
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 3
+format-discharging-padding = 2
 
 format-full = <ramp-capacity> <label-full>
-format-full-padding = 3
+format-full-padding = 2
 format-full-foreground = ${colors.battery-full}
 
 label-charging = %percentage%%
