@@ -69,9 +69,9 @@ call plug#end()
 syntax on
 
 " termguicolors for tmux
-set t_8f=[38;2;%lu;%lu;%lum
-set t_8b=[48;2;%lu;%lu;%lum
-set termguicolors
+" set t_8f=[38;2;%lu;%lu;%lum
+" set t_8b=[48;2;%lu;%lu;%lum
+" set termguicolors
 
 " nord
 let g:nord_uniform_diff_background = 1
