@@ -33,8 +33,9 @@ source $ZSH/oh-my-zsh.sh
   alias hico="hi checkout"
 
   alias screen="scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Dropbox/Photos/'"
-  alias vga="xrandr --output LVDS-1 --off --output VGA-1 --auto"
-  alias bimon="xrandr --output VGA-1 --off --output LVDS-1 --auto"
+  alias vga="xrandr --output LVDS1 --off --output VGA1 --auto"
+  alias hdmi="xrandr --output LVDS1 --off --output HDMI1 --auto"
+  alias bimon="xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
