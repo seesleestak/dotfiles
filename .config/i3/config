@@ -1,6 +1,6 @@
 # Set mod as windows key
 set $mod Mod4
-set $term urxvt
+set $term st
 
 font pango:Office Code Pro Regular 8
 
@@ -17,7 +17,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id setxkbmap -option caps:swapescape
 
 # Set wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/Wallpaper/Unsplash/dmitri-popov-325737-unsplash.jpg
+exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
 
 # Start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -31,6 +31,9 @@ bindsym $mod+Shift+Return split v exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
+#
+# Close all windows on all workspaces (any class string)
+bindsym $mod+Shift+Control+q [class=”.*”] kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -58,9 +61,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1  "1" 
@@ -74,7 +74,7 @@ set $ws8  "8"
 set $ws9  "9" 
 set $ws10 "10"
 
-# switch to workspace
+# Switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -86,7 +86,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-# move focused container to workspace
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -115,6 +115,7 @@ bindsym $mod+Shift+u resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+i resize grow height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow width 10 px or 10 ppt
 
+# i3Lock script
 bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
 
 # reload the configuration file
@@ -135,11 +136,11 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Sreen brightness controls
-bindsym XF86KbdBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86KbdBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "R" {
         # These bindings trigger as soon as you enter the resize mode
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
@@ -158,12 +159,4 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         # status_command i3status
-#         # position top
-# }
-
+bindsym $mod+r mode "R"

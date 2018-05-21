@@ -14,6 +14,7 @@ magenta = ${xrdb:color5}
 green = ${xrdb:color2}
 yellow = ${xrdb:color3}
 teal = ${xrdb:color14}
+purple = ${xrdb:color13}
 muted = ${xrdb:color8}
 
 [bar/top]
@@ -55,7 +56,8 @@ pin-workspaces = true
 
 label-mode-padding = 1
 label-mode-foreground = ${colors.background}
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.purple}
+label-mode-font = 4
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
