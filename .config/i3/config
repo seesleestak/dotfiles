@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term st
 
-font pango:Office Code Pro Regular 8
+font pango:Office Code Pro 8
 
 # Hide window title bar
 for_window [class="^.*"] border pixel 0
@@ -46,11 +46,6 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -159,4 +154,19 @@ mode "R" {
         bindsym $mod+r mode "default"
 }
 
+mode "S" {
+        bindsym l exec --no-startup-id i3lock, mode "default"
+        bindsym e exec --no-startup-id i3-msg exit, mode "default"
+        bindsym s exec --no-startup-id systemctl suspend, mode "default"
+        bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+        bindsym r exec --no-startup-id systemctl reboot, mode "default"
+        bindsym p exec --no-startup-id systemctl poweroff, mode "default"
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
 bindsym $mod+r mode "R"
+bindsym $mod+s mode "S"
