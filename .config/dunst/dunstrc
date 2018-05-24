@@ -46,7 +46,7 @@
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 90
+    notification_height = 0
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -54,7 +54,7 @@
     separator_height = 2
 
     # Padding between text and separator.
-    padding = 30
+    padding = 20
 
     # Horizontal padding.
     horizontal_padding = 30
