@@ -26,18 +26,11 @@ function prompt_char {
 	if [ $UID -eq 0 ]; then echo "%{$fg[red]%}#%{$reset_color%}"; else echo $; fi
 }
 
-# get the name of the branch we are on
-function vim_bg_info() {
-  if [[ "$(command echo $VIM)" != "" ]]; then
-    echo "⚡"
-  fi
-}
-
 PROMPT='%(?, , )
 %{$reset_color%} \
 %{$fg_bold[green]%}$(get_box_name)%{$reset_color%}@$(get_usr_name): \
 %{$fg[yellow]%}%~%{$reset_color%}$(git_prompt_info)\
 %{$reset_color%}$(git_prompt_ahead) \
-%{$fg[yellow]%}$(vim_bg_info) %{$reset_color%}
+%{$reset_color%}
 %_ $(prompt_char) '
 
