@@ -36,13 +36,17 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+Control+q [class=”.*”] kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi location 0 -show drun
 
 # split in horizontal orientation
 bindsym $mod+c split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+
+# Set no gaps/reset gaps
+bindsym $mod+s gaps inner current set 12
+bindsym $mod+Shift+s gaps inner current set 0
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -162,11 +166,11 @@ mode "S" {
         bindsym r exec --no-startup-id systemctl reboot, mode "default"
         bindsym p exec --no-startup-id systemctl poweroff, mode "default"
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+        # back to normal: Enter or Escape or $mod+s
+        bindsym Return jode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym $mod+s mode "default"
 }
 
-bindsym $mod+r mode "R"
-bindsym $mod+s mode "S"
+# bindsym $mod+r mode "R"
+# bindsym $mod+s mode "S"
