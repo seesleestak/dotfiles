@@ -33,6 +33,9 @@ margin-right = 5
 module-margin-left = 0
 module-margin-right = 0
 
+border-bottom-size = 1
+border-bottom-color = ${colors.muted}
+
 font-0 = Office Code Pro Medium:size=10;2
 font-1 = SpaceMono Nerd Font Mono:size=16;4
 font-2 = SpaceMono Nerd Font Mono:size=12;4
@@ -63,7 +66,7 @@ label-mode-font = 4
 label-focused = %name%
 label-focused-background = ${colors.teal}
 label-focused-foreground = ${colors.background}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.teal}
 label-focused-padding = 1
 label-focused-font = 4
 
@@ -105,7 +108,7 @@ label-connected-padding = 1
 type = internal/date
 interval = 1.0
 label-font = 0
-date = "%A %d %b"
+date = "%Y/%m/%d"
 label = "%date%"
 label-foreground = ${colors.foreground}
 label-background = ${colors.background}
