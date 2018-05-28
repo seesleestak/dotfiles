@@ -1,4 +1,0 @@
-Chatsworth
-Cieslak
-Janna
-checksum_v1 = c8f787859cc538d477dccf9e04db7037
