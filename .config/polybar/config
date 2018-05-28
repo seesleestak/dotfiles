@@ -33,9 +33,6 @@ margin-right = 5
 module-margin-left = 0
 module-margin-right = 0
 
-border-bottom-size = 1
-border-bottom-color = ${colors.muted}
-
 font-0 = Office Code Pro Medium:size=10;2
 font-1 = SpaceMono Nerd Font Mono:size=16;4
 font-2 = SpaceMono Nerd Font Mono:size=12;4
