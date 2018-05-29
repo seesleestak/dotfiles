@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term st
 
-font pango:Office Code Pro 8
+font pango:Meslo LG S 8
 
 # Hide window title bar
 for_window [class="^.*"] border pixel 0
