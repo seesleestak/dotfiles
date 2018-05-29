@@ -33,10 +33,10 @@ margin-right = 5
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Office Code Pro Medium:size=10;2
+font-0 = Meslo LG S:size=10;2
 font-1 = SpaceMono Nerd Font Mono:size=16;4
 font-2 = SpaceMono Nerd Font Mono:size=12;4
-font-3 = Office Code Pro Bold:size=10;2
+font-3 = Meslo LG S:style=Bold:size=10;2
 
 fixed-center = true
 
@@ -89,7 +89,7 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-label-connected = 
+label-connected = " %ifname%"
 label-connected-padding = 1
 
 [module/wireless-network]
@@ -97,8 +97,8 @@ type = internal/network
 interface = wlp8s0
 interval = 3.0
 
-format-connected = "直%essid%"
 format-connected-foreground = ${colors.foreground-alt}
+label-connected = "直 %essid%"
 label-connected-padding = 1
 
 [module/date]
