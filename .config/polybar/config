@@ -20,7 +20,7 @@ muted = ${xrdb:color8}
 [bar/top]
 bottom = false
 width = 100%
-height = 20
+height = 22
 offset-x = 0
 offset-y = 0
 
