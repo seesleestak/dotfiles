@@ -16,124 +16,35 @@
     idle_threshold = 120
     font = Meslo LG S 10
     line_height = 4
-
-    # Possible values are:
-    # full: Allow a small subset of html markup in notifications:
-    #        <b>bold</b>
-    #        <i>italic</i>
-    #        <s>strikethrough</s>
-    #        <u>underline</u>
-    #
-    #        For a complete reference see
-    #        <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
-    #
-    # strip: This setting is provided for compatibility with some broken
-    #        clients that send markup even though it's not enabled on the
-    #        server. Dunst will try to strip the markup but the parsing is
-    #        simplistic so using this option outside of matching rules for
-    #        specific applications *IS GREATLY DISCOURAGED*.
-    #
-    # no:    Disable markup parsing, incoming notifications will be treated as
-    #        plain text. Dunst will not advertise that it has the body-markup
-    #        capability if this is set as a global setting.
-    #
-    # It's important to note that markup inside the format option will be parsed
-    # regardless of what this is set to.
     markup = full
-
-    # The format of the message.  Possible variables are:
-    #   %a  appname
-    #   %s  summary
-    #   %b  body
-    #   %i  iconname (including its path)
-    #   %I  iconname (without its path)
-    #   %p  progress value if set ([  0%] to [100%]) or nothing
-    #   %n  progress value if set without any extra characters
-    #   %%  Literal %
-    # Markup is allowed
     format = "<b>%s</b>\n%b"
-
-    # Alignment of message text.
-    # Possible values are "left", "center" and "right".
     alignment = left
-
-    # Show age of message if message is older than show_age_threshold
-    # seconds.
-    # Set to -1 to disable.
     show_age_threshold = 60
-
-    # Split notifications into multiple lines if they don't fit into
-    # geometry.
     word_wrap = no
-
-    # When word_wrap is set to no, specify where to ellipsize long lines.
-    # Possible values are "start", "middle" and "end".
     ellipsize = end
-
-    # Ignore newlines '\n' in notifications.
     ignore_newline = no
-
-    # Merge multiple notifications with the same content
     stack_duplicates = true
-
-    # Hide the count of merged notifications with the same content
     hide_duplicate_count = false
-
-    # Display indicators for URLs (U) and actions (A).
     show_indicators = yes
 
     ### Icons ###
-
-    # Align icons left/right/off
     icon_position = off
-
-    # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
-
-    # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
     ### History ###
-
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
     sticky_history = yes
-
-    # Maximum amount of notifications kept in history
     history_length = 20
 
     ### Misc/Advanced ###
-
-    # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
-
-    # Browser for opening urls in context menu.
     browser = /usr/bin/chromium -new-tab
-
-    # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
-
-    # Define the title of the windows spawned by dunst
     title = Dunst
-
-    # Define the class of the windows spawned by dunst
     class = Dunst
-
-    # Print a notification on startup.
-    # This is mainly for error detection, since dbus (re-)starts dunst
-    # automatically after a crash.
     startup_notification = false
 
     ### Legacy
-
-    # Use the Xinerama extension instead of RandR for multi-monitor support.
-    # This setting is provided for compatibility with older nVidia drivers that
-    # do not support RandR and using it on systems that support RandR is highly
-    # discouraged.
-    #
-    # By enabling this setting dunst will not be able to detect when a monitor
-    # is connected or disconnected which might break follow mode if the screen
-    # layout changes.
     force_xinerama = false
 
 [experimental]
