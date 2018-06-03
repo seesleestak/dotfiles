@@ -5,7 +5,7 @@ SCREENSHOT=/tmp/screen.png
 scrot $SCREENSHOT
 
 # Lock image and blur type variables
-LOCK_IMAGE=~/.config/i3/lock.png
+LOCK_IMAGE=~/.config/i3/lock-2.png
 BLURTYPE="0x4"
 
 # Create a blur on the shot:
