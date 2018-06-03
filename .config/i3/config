@@ -11,7 +11,7 @@ for_window [class="^.*"] border pixel 0
 gaps inner 12
 
 # Start dropbox daemon
-exec --no-startup-id dropbox start
+# exec --no-startup-id dropbox start
 
 # Caps lock ESC swap
 exec --no-startup-id setxkbmap -option caps:swapescape
