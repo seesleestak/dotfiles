@@ -32,11 +32,12 @@ source $ZSH/oh-my-zsh.sh
   alias hic="hi commit"
   alias hico="hi checkout"
 
-  alias screen="scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Dropbox/Photos/'"
-  alias vga="xrandr --output LVDS1 --off --output VGA1 --auto"
-  alias hdmi="xrandr --output LVDS1 --off --output HDMI1 --auto"
+  # Video outputs
+  alias vga="xrandr --output LVDS1 --off --output HDMI1 --off --output VGA1 --auto"
+  alias hdmi="xrandr --output LVDS1 --off --output VGA1 --off --output HDMI1 --auto"
   alias bimon="xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto"
 
+  # nmcli
   alias woff="nmcli radio wifi off"
   alias won="nmcli radio wifi on"
 
