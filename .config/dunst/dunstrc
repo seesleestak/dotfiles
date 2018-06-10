@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "325x4-20+40"
+    geometry = "250x4-20+40"
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -14,7 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Meslo LG S 10
+    font = Ubuntu Mono 10
     line_height = 4
     markup = full
     format = "<b>%s</b>\n%b"
