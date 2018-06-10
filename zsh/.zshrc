@@ -84,10 +84,10 @@ function riplace() {
   fi
 
   if [ ${#2} -eq 0 ]; then
-    read "b?Replace:"
+    read "b?Replace: "
   else
     b=${#2}
   fi
 
-  rg -l "$a" | xargs sed -i "" "s|$a|$b|g"
+  rg -l "$a" | xargs sed -i"" "s|$a|$b|g"
 }
