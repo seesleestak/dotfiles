@@ -9,3 +9,4 @@ Some of the stuff I'm using:
 - [rofi](https://github.com/seesleestak/dotfiles/blob/master/.config/rofi/config) 
 - [polybar](https://github.com/seesleestak/dotfiles/blob/master/.config/polybar/config) 
 - [ranger](https://github.com/seesleestak/dotfiles/blob/master/.config/ranger/rc.conf) 
+- [feh](https://github.com/seesleestak/dotfiles/blob/master/.config/feh)
