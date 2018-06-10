@@ -33,9 +33,9 @@ source $ZSH/oh-my-zsh.sh
   alias hico="hi checkout"
 
   # Video outputs
-  alias vga="xrandr --output LVDS1 --off --output HDMI1 --off --output VGA1 --auto"
-  alias hdmi="xrandr --output LVDS1 --off --output VGA1 --off --output HDMI1 --auto"
-  alias bimon="xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto"
+  alias vga="xrandr --output LVDS1 --off --output HDMI1 --off --output VGA1 --auto && i3-msg restart"
+  alias hdmi="xrandr --output LVDS1 --off --output VGA1 --off --output HDMI1 --auto && i3-msg restart"
+  alias bimon="xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto && i3-msg restart"
 
   # nmcli
   alias woff="nmcli radio wifi off"
