@@ -1,9 +1,8 @@
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
-URxvt.font: xft:Meslo LG S:size=10,xft:Droid Sans Mono:size=10,xft:DejaVu Sans Mono:size=10,xft:Droid Sans Fallback:size=10,xft:FreeSans:size=10,xft:FreeSans:size=10
-URxvt.boldFont: xft:Office Code Pro Bold:size=10
-URxvt.letterSpace: -1
-URxvt.internalBorder: 8
+URxvt.font: xft:Ubuntu Mono:size=12,xft:Droid Sans Mono:size=10,xft:DejaVu Sans Mono:size=10,xft:Droid Sans Fallback:size=10,xft:FreeSans:size=10,xft:FreeSans:size=10
+URxvt.internalBorder: 4
+URxvt.perl-ext-common: font-size
 
 #define nord0 #2E3440
 #define nord1 #3B4252
