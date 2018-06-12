@@ -105,11 +105,11 @@ label-connected-padding = 2
 [module/date]
 type = internal/date
 interval = 1.0
-label-font = 0
+label-font = 4
 date = "%Y/%m/%d"
 label = %date%
-label-foreground = ${colors.foreground}
-label-background = ${colors.background}
+label-foreground = ${colors.background}
+label-background = ${colors.teal}
 label-padding-right = 3
 label-padding-left = 3
 click-left = chromium https://calendar.google.com
@@ -160,13 +160,13 @@ full-at = 98
 poll-interval = 5.0
 
 format-charging = <animation-charging> <label-charging>
-format-charging-padding = 2
+format-charging-padding = 3
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 2
+format-discharging-padding = 3
 
 format-full = <ramp-capacity> <label-full>
-format-full-padding = 2
+format-full-padding = 3
 format-full-foreground = ${colors.battery-full}
 
 label-charging = %percentage%%
