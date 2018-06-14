@@ -1,8 +1,8 @@
 # Set mod as windows key
 set $mod Mod4
-set $term urxvt
+set $term st
 
-font pango:Ubuntu Mono 10
+font pango:Meslo LG S 10
 
 # Hide window title bar
 for_window [class="^.*"] border pixel 0
@@ -12,6 +12,9 @@ gaps inner 12
 
 # Caps lock ESC swap
 exec --no-startup-id setxkbmap -option caps:swapescape
+
+# Start compton
+# exec_always --no-startup-id compton -b
 
 # Set wallpaper
 exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
@@ -25,6 +28,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return split h exec $term
 bindsym $mod+Shift+Return split v exec $term
+
+bindsym $mod+Shift+b exec --no-startup-id xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto
 
 # kill focused window
 bindsym $mod+Shift+q kill
