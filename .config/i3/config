@@ -29,11 +29,12 @@ floating_modifier $mod
 bindsym $mod+Return split h exec $term
 bindsym $mod+Shift+Return split v exec $term
 
+# Add binding for switching to built in monitor
 bindsym $mod+Shift+b exec --no-startup-id xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto
 
 # kill focused window
 bindsym $mod+Shift+q kill
-#
+
 # Close all windows on all workspaces (any class string)
 bindsym $mod+Shift+Control+q [class=”.*”] kill
 
