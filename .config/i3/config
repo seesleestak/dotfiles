@@ -30,7 +30,7 @@ bindsym $mod+Return split h exec $term
 bindsym $mod+Shift+Return split v exec $term
 
 # Add binding for switching to built in monitor
-bindsym $mod+Shift+b exec --no-startup-id xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto
+bindsym $mod+Shift+b exec --no-startup-id xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto && i3-msg restart
 
 # kill focused window
 bindsym $mod+Shift+q kill

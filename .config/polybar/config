@@ -33,10 +33,10 @@ margin-right = 5
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = Ubuntu:pixelsize=10;2
-font-1 = SpaceMono Nerd Font Mono:size=16;4
-font-2 = SpaceMono Nerd Font Mono:size=12;4
-font-3 = Ubuntu:style=Bold:pixelsize=10;2
+font-0 = DejaVu Sans Mono:size=10;2
+font-1 = DejaVu Sans Mono:style=Bold:size=10;2
+font-2 = SpaceMono Nerd Font Mono:size=16;4
+font-3 = SpaceMono Nerd Font Mono:size=12;4
 
 fixed-center = true
 
@@ -54,36 +54,36 @@ strip-wsnumbers = true
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = ${colors.background}
 label-mode-background = ${colors.purple}
-label-mode-font = 4
+label-mode-font = 2
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
 label-focused-background = ${colors.teal}
 label-focused-foreground = ${colors.background}
 label-focused-underline = ${colors.teal}
-label-focused-padding = 2
-label-focused-font = 4
+label-focused-padding = 1
+label-focused-font = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.muted}
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 label-unfocused-font = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = 2
+label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
 label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 [module/wired-network]
 type = internal/network
@@ -99,35 +99,33 @@ interface = wlp8s0
 interval = 3.0
 
 format-connected-foreground = ${colors.foreground-alt}
-label-connected = "直 %essid%"
+label-connected = "直"
 label-connected-padding = 2
 
 [module/date]
 type = internal/date
 interval = 1.0
-label-font = 4
-date = "%Y/%m/%d"
+label-font = 1
+date = " %Y/%m/%d"
 label = %date%
-label-foreground = ${colors.background}
-label-background = ${colors.teal}
-label-padding-right = 3
-label-padding-left = 3
+label-padding-right = 0
+label-padding-left = 1
 click-left = chromium https://calendar.google.com
 
 [module/time]
 type = internal/date
 interval = 1.0
 
-label = %time%
+label = " %time%"
 time = %I:%M %p
 
-label-padding-right = 3
+label-padding-right = 2
 label-padding-left = 3
 label-margin = 0
-label-font = 4
+label-font = 1
 
-format-background = ${colors.green}
-format-foreground = ${colors.background}
+; format-background = ${colors.green}
+; format-foreground = ${colors.background}
 
 [module/volume]
 type = internal/volume
@@ -139,9 +137,9 @@ label-volume = %percentage%
 
 format-muted = ﱝ
 format-muted-foreground = ${colors.foreground-alt}
-label-font = 2
+label-font = 3
 label-muted = "mute"
-format-muted-padding = 3
+format-muted-padding = 1
 
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -150,7 +148,7 @@ ramp-headphones-0 = 
 ramp-headphones-1 = 
 ramp-headphones-2 = 
 
-format-volume-padding = 3
+format-volume-padding = 1
 
 [module/battery]
 type = internal/battery
@@ -160,13 +158,13 @@ full-at = 98
 poll-interval = 5.0
 
 format-charging = <animation-charging> <label-charging>
-format-charging-padding = 3
+format-charging-padding = 2
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 3
+format-discharging-padding = 2
 
 format-full = <ramp-capacity> <label-full>
-format-full-padding = 3
+format-full-padding = 2
 format-full-foreground = ${colors.battery-full}
 
 label-charging = %percentage%%
@@ -175,7 +173,7 @@ label-full = %percentage%%
 label-charging-foreground = ${colors.foreground-alt}
 label-discharging-foreground = ${colors.foreground-alt}
 label-full-foreground = ${colors.foreground-alt}
-label-font = 2
+label-font = 3
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
