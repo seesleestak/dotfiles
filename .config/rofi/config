@@ -3,7 +3,7 @@ rofi.bw: 3
 rofi.lines: 4
 rofi.line-margin: 10
 rofi.line-padding: 2
-rofi.font: Ubuntu Mono Bold 16
+rofi.font: DejaVu Sans Mono Bold 14
 
 rofi.kb-mode-next: Control+N
 rofi.kb-mode-previous: Control+P
