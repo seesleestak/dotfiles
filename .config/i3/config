@@ -29,8 +29,10 @@ floating_modifier $mod
 bindsym $mod+Return split h exec $term
 bindsym $mod+Shift+Return split v exec $term
 
-# Add binding for switching to built in monitor
-bindsym $mod+Shift+b exec --no-startup-id xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto && i3-msg restart
+# Add bindings for switching monitors
+bindsym $mod+Shift+b exec --no-startup-id monitor-built-in.sh 
+bindsym $mod+Shift+v exec --no-startup-id monitor-vga.sh
+bindsym $mod+Shift+m exec --no-startup-id monitor-hdmi.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -48,8 +50,8 @@ bindsym $mod+c split h
 bindsym $mod+v split v
 
 # Set no gaps/reset gaps
-bindsym $mod+s gaps inner current set 12
-bindsym $mod+Shift+s gaps inner current set 0
+# bindsym $mod+s gaps inner current set 12
+# bindsym $mod+Shift+s gaps inner current set 0
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -162,10 +164,10 @@ mode "R" {
 }
 
 mode "S" {
-        bindsym l exec --no-startup-id i3lock, mode "default"
-        bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        bindsym s exec --no-startup-id systemctl suspend, mode "default"
-        bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+        bindsym l exec --no-startup-id ~/.config/i3/lock.sh, mode "default"
+        # bindsym e exec --no-startup-id i3-msg exit, mode "default"
+        # bindsym s exec --no-startup-id systemctl suspend, mode "default"
+        # bindsym h exec --no-startup-id systemctl hibernate, mode "default"
         bindsym r exec --no-startup-id systemctl reboot, mode "default"
         bindsym p exec --no-startup-id systemctl poweroff, mode "default"
 
@@ -176,4 +178,4 @@ mode "S" {
 }
 
 bindsym $mod+r mode "R"
-# bindsym $mod+s mode "S"
+bindsym $mod+s mode "S"
