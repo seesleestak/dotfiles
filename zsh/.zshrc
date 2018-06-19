@@ -33,9 +33,9 @@ source $ZSH/oh-my-zsh.sh
   alias hico="hi checkout"
 
   # Video outputs
-  alias vga="xrandr --output LVDS1 --off --output HDMI1 --off --output VGA1 --auto && i3-msg restart"
-  alias hdmi="xrandr --output LVDS1 --off --output VGA1 --off --output HDMI1 --auto && i3-msg restart"
-  alias bimon="xrandr --output VGA1 --off --output HDMI1 --off --output LVDS1 --auto && i3-msg restart"
+  alias vga="monitor-vga.sh"
+  alias hdmi="monitor-hdmi.sh"
+  alias bimon="monitor-built-in.sh"
 
   # nmcli
   alias woff="nmcli radio wifi off"
@@ -73,6 +73,21 @@ function vimstart() {
 
   echo $PURPLE
   echo $TOTAL | awk '{print $1/10 " Average \n"}'
+}
+
+# Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
+function note() {
+  local notes_dir="/home/calvin/working/notes/misc"
+  case "$1" in
+    c)
+      cd "$notes_dir"
+      ;;
+    l)
+      ls -al "$notes_dir"
+      ;;
+    *)
+      vim "$notes_dir/$1"
+  esac
 }
 
 # riplace - by Billy Montgomery
