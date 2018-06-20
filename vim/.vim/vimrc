@@ -39,7 +39,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
-  Plug 'xtal8/traces.vim'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -59,9 +58,6 @@ call plug#end()
 
 " Syntax Highlighting
 syntax on
-
-" nord
-let g:nord_uniform_diff_background = 1
 colorscheme nord
 
 " Create Rg command for fzf
@@ -74,7 +70,7 @@ command! -bang -nargs=* Rg
 
 " Plugin config ----------------------------------
   " Closetag
-  let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js'
+  let g:closetag_filenames = '*.html,*.js'
 
   " UltiSnips
   let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
@@ -93,7 +89,7 @@ command! -bang -nargs=* Rg
   let g:ale_fix_on_save = 1
 " ------------------------------------------------
 
-" Remappings -------------------------------------
+" Mappings -------------------------------------
   " <leader>
   let mapleader = ','
 
@@ -108,19 +104,13 @@ command! -bang -nargs=* Rg
   
   " Open and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
-  nnoremap <leader>r :so $MYVIMRC<CR>
+  nnoremap <leader>r :source $MYVIMRC<CR>
 
   " Open zshrc
   nnoremap <leader>z :e ~/dotfiles/zsh/.zshrc<CR>
 
-  " Open .tmux.conf
-  nnoremap <leader>x :e ~/dotfiles/tmux/.tmux.conf<CR>
-
   " commentary mapping
   noremap <leader>c :Commentary<CR>
-
-  " Disable ex mode
-  nnoremap Q <Nop>
 
   " Buffer related mappings
   nnoremap <C-l> :bnext<CR>
