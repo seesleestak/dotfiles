@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term st
 
-font pango:Meslo LG S 10
+font pango:DejaVu Sans Mono 10
 
 # Hide window title bar
 for_window [class="^.*"] border pixel 0
@@ -38,10 +38,10 @@ bindsym $mod+Shift+m exec --no-startup-id monitor-hdmi.sh
 bindsym $mod+Shift+q kill
 
 # Close all windows on all workspaces (any class string)
-bindsym $mod+Shift+Control+q [class=”.*”] kill
+# bindsym $mod+Shift+Control+q focus parent,kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi location 0 -show drun
+bindsym $mod+d exec --no-startup-id rofi location 0 -show run -modi drun
 
 # split in horizontal orientation
 bindsym $mod+c split h
