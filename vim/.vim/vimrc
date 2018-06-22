@@ -125,7 +125,6 @@ command! -bang -nargs=* Rg
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
   nnoremap <leader>w :ALENextWrap<CR>
-  nnoremap <leader>j :%!python -c 'import json, sys; print(json.dumps(json.load(sys.stdin), indent=2))'<CR>
 " ------------------------------------------------
 
 " Billy's console log creator
