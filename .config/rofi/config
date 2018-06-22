@@ -1,7 +1,7 @@
-rofi.padding: 30
-rofi.bw: 3
-rofi.lines: 4
-rofi.line-margin: 10
+rofi.padding: 150
+rofi.color-enabled: true
+rofi.fullscreen: true
+rofi.line-margin: 12
 rofi.line-padding: 2
 rofi.font: DejaVu Sans Mono Bold 14
 
