@@ -13,12 +13,7 @@ source $ZSH/oh-my-zsh.sh
   # npm
   alias ys="yarn start"
   alias ns="npm start"
-  alias nrf="rm -rf node_modules && npm install"
-
-  # Lerna 
-  alias lb="lerna bootstrap"
-  alias lc="lerna clean --yes"
-  alias lrf="lc && lb"
+  alias nrf="rm -rfv node_modules && npm install"
 
   # Directories
   alias hxad="cd ~/working/admin-web-client"
@@ -45,13 +40,6 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# Custom cd
-function c() {
-  cd $1;
-  ls -al;
-}
-alias cd="c"
 
 # 10ms timeout to avoid delays with vim
 KEYTIMEOUT=1
