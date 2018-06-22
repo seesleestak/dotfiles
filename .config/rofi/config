@@ -1,9 +1,8 @@
-rofi.padding: 150
+rofi.padding: 200
 rofi.color-enabled: true
 rofi.fullscreen: true
 rofi.line-margin: 12
 rofi.line-padding: 2
 rofi.font: DejaVu Sans Mono Bold 14
-
 rofi.kb-mode-next: Control+N
 rofi.kb-mode-previous: Control+P
