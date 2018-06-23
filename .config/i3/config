@@ -16,6 +16,9 @@ exec --no-startup-id setxkbmap -option caps:swapescape
 # Start compton
 # exec_always --no-startup-id compton -b
 
+# STart dropbox
+# exec --no-startup-id dropbox start
+
 # Start polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
