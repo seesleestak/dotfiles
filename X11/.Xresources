@@ -1,8 +1,13 @@
-/* URxvt.termName: rxvt-unicode */
-/* URxvt.scrollBar: false */
-/* URxvt.font: xft:DejaVu Sans Mono:size=12,xft:Droid Sans Mono:size=10,xft:DejaVu Sans Mono:size=10,xft:Droid Sans Fallback:size=10,xft:FreeSans:size=10,xft:FreeSans:size=10 */
-/* URxvt.internalBorder: 4 */
-/* URxvt.perl-ext-common: font-size */
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.font: xft:DejaVu Sans Mono:size=10,\
+            xft:Space Mono Nerd Font Complete Mono:size=10,\
+            xft:Droid Sans Mono:size=10,\
+            xft:Droid Sans Fallback:size=10,\
+            xft:FreeSans:size=10,xft:FreeSans:size=10
+URxvt.internalBorder: 4
+URxvt.perl-ext-common: font-size
+URxvt.letterSpace: -1
 
 #define nord0 #2E3440
 #define nord1 #3B4252
@@ -46,5 +51,5 @@
 rofi.color-normal: nord0, nord4, nord0, nord3, nord4
 /* rofi.color-normal: nord6, nord0, nord6, nord4, nord3, nord11 */
 !                  'background', 'border', 'separator'
-rofi.color-window: nord0, nord0, nord0
+rofi.color-window: nord0, nord3, nord0
 /* rofi.color-window: nord6, nord4, nord6 */
