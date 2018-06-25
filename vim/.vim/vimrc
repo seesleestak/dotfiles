@@ -97,10 +97,10 @@ command! -bang -nargs=* Rg
   nnoremap <leader>q :q<CR>
 
   " Copy file path of current buffer
-  nnoremap <leader>p :let @+=expand("%:p")<CR>
+  nnoremap <leader>p :let @*=expand("%:p")<CR>
 
   " Copy directory of current buffer
-  nnoremap <leader>d :let @+=expand("%:p:h")<CR>
+  nnoremap <leader>d :let @*=expand("%:p:h")<CR>
   
   " Open and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
