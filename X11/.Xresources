@@ -1,13 +1,13 @@
-URxvt.termName: rxvt-unicode
-URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono:size=10,\
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+urxvt.font: xft:DejaVu Sans Mono:size=10,\
             xft:Space Mono Nerd Font Complete Mono:size=10,\
             xft:Droid Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
             xft:FreeSans:size=10,xft:FreeSans:size=10
-URxvt.internalBorder: 4
-URxvt.perl-ext-common: font-size
-URxvt.letterSpace: -1
+urxvt.internalBorder: 4
+urxvt.perl-ext-common: font-size
+urxvt.letterSpace: -1
 
 #define nord0 #2E3440
 #define nord1 #3B4252
