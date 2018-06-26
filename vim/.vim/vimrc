@@ -84,8 +84,8 @@ command! -bang -nargs=* Rg
 
   " Ale
   let g:ale_fixers = {}
-  " let g:ale_fixers['javascript'] = ['eslint']
-  let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+  let g:ale_fixers['javascript'] = ['eslint']
+  " let g:ale_fixers['javascript'] = ['prettier', 'eslint']
   let g:ale_fix_on_save = 1
 " ------------------------------------------------
 
@@ -97,10 +97,10 @@ command! -bang -nargs=* Rg
   nnoremap <leader>q :q<CR>
 
   " Copy file path of current buffer
-  nnoremap <leader>p :let @*=expand("%:p")<CR>
+  nnoremap <leader>p :call CopyPath()<CR>
 
   " Copy directory of current buffer
-  nnoremap <leader>d :let @*=expand("%:p:h")<CR>
+  nnoremap <leader>d :call CopyPathDir()<CR>
   
   " Open and source vimrc
   nnoremap <leader>v :e $MYVIMRC<CR>
@@ -131,6 +131,16 @@ command! -bang -nargs=* Rg
 function! EasyConsoleLog()
   let word = expand("<cword>")
   execute "normal! oconsole.log('".word." --- ', ".word.")"
+endfunction
+
+function! CopyPath() " Copy current buffer path to multiple buffers
+  execute "let @*=expand('%:p')"
+  execute "let @+=expand('%:p')"
+endfunction
+
+function! CopyPathDir() " Copy current buffer path directory to multiple buffers
+  execute "let @*=expand('%:p:h')"
+  execute "let @+=expand('%:p:h')"
 endfunction
 
 filetype plugin indent on
