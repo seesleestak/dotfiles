@@ -1,13 +1,16 @@
-urxvt.termName: rxvt-unicode
-urxvt.scrollBar: false
-urxvt.font: xft:DejaVu Sans Mono:size=10,\
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.font: xft:DejaVu Sans Mono:size=10,\
             xft:Space Mono Nerd Font Complete Mono:size=10,\
             xft:Droid Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
             xft:FreeSans:size=10,xft:FreeSans:size=10
-urxvt.internalBorder: 4
-urxvt.perl-ext-common: font-size
-urxvt.letterSpace: -1
+URxvt.internalBorder: 4
+URxvt.perl-ext-common: default,font-size, url-select
+URxvt.letterSpace: -1
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
 
 #define nord0 #2E3440
 #define nord1 #3B4252
