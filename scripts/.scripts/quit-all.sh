@@ -1,6 +1,6 @@
 # !/bin/sh
 
-# Kill all commonly used programs
+# Kill all commonly used apps
 killall slack
 killall chromium
 killall spotify
