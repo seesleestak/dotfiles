@@ -80,8 +80,8 @@ function note() {
       git push origin master
       popd
       ;;
-    -n) 
-      vim "$notes_dir/$1"
+    n) 
+      vim "$notes_dir/$2"
       ;;
     *)
       vim "$notes_dir/$(date -u '+%Y-%m-%d-%H:%M:%S').md"
