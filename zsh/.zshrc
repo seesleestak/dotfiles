@@ -10,7 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
   # npm
-  alias ys="yarn start"
   alias ns="npm start"
   alias nrf="rm -rfv node_modules && npm install"
 
