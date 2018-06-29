@@ -39,7 +39,7 @@ tray-position = right
 tray-padding = 2
 tray-detached = false
 tray-maxsize = 16
-tray-background = ${colors.background-alt}
+tray-transparent = false
 tray-offset-x = 0
 tray-offset-y = 0
 tray-scale = 1.0
@@ -168,3 +168,5 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
+
+; vim:filetype=dosini
