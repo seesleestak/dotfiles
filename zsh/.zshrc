@@ -17,8 +17,7 @@ source $ZSH/oh-my-zsh.sh
   # Directories
   alias hxad="cd ~/working/admin-web-client"
   alias hxen="cd ~/working/enrollme-web-client"
-  alias hxui="cd ~/working/hixme-ui"
-  alias hui="cd ~/working/hixme-ui-github"
+  alias hui="cd ~/working/hixme-ui"
   alias dot="cd ~/dotfiles"
   alias mor="cd ~/working/mor-web-client"
 
