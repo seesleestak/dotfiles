@@ -7,16 +7,19 @@ font pango:DejaVu Sans Mono 10
 # Hide window title bar
 for_window [class="^.*"] border pixel 0
 
-# gaps
-gaps inner 12
-# smart_gaps on
+# Window colors
+client.focused   #8FBCBB #8FBCBB #ffffff #8FBCBB
+client.unfocused #3B4252 #3B4252 #888888 #3B4252
 
-exec --no-startup-id setxkbmap -option caps:swapescape # Caps lock ESC swap
-exec --no-startup-id nm-applet # Start dropbox
-exec_always --no-startup-id dropbox start # Start dropbox
-exec_always --no-startup-id ~/.config/polybar/launch.sh # Start polybar
-exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG # Set wallpaper
-# exec --no-startup-id compton -b  # Start compton
+# gaps
+gaps inner 8
+
+exec --no-startup-id setxkbmap -option caps:swapescape
+exec --no-startup-id nm-applet
+exec --no-startup-id dropbox
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
+exec_always --no-startup-id feh --bg-fill /home/calvin/Dropbox/Photos/MotoGP/rossi-2016-04-gp-spain.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -42,9 +45,9 @@ bindsym $mod+c split h
 # split in vertical orientation
 bindsym $mod+v split v
 
-# Set no gaps/reset gaps
-# bindsym $mod+s gaps inner current set 12
-# bindsym $mod+Shift+s gaps inner current set 0
+# setup scratchpad window
+exec --no-startup-id $term -name "math" -e node
+for_window [instance="math"] resize set 500 200, border pixel 5, move scratchpad
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -54,9 +57,6 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -115,11 +115,11 @@ bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
 # i3Lock script
 bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# scratchpad
+bindsym $mod+a [instance="math"] scratchpad show
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -135,6 +135,11 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # Sreen brightness controls
 bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+
+# Assign classes to specific workspaces
+assign [class="^Slack"] $ws3
+assign [class="^TelegramDesktop"] $ws3
+assign [class="^Chromium"] $ws2
 
 # resize window (you can also use the mouse for that)
 mode "R" {
@@ -170,12 +175,6 @@ mode "S" {
         bindsym $mod+s mode "default"
 }
 
-# bar {
-# 	i3bar_command i3bar
-# 	status_command i3status
-# 	position bottom
-# }
-
-
 bindsym $mod+r mode "R"
 bindsym $mod+s mode "S"
+# vim:filetype=i3
