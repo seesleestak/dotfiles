@@ -1,10 +1,10 @@
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.font: xft:DejaVu Sans Mono:size=10,\
-            xft:Space Mono Nerd Font Complete Mono:size=10,\
+            xft:Noto Emoji:minspace=False,\
             xft:Droid Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
-            xft:FreeSans:size=10,xft:FreeSans:size=10
+            xft:FreeSans:size=10,\
 URxvt.internalBorder: 4
 URxvt.perl-ext-common: default,font-size,url-select
 URxvt.letterSpace: -1
