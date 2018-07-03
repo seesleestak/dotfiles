@@ -18,7 +18,6 @@ exec --no-startup-id setxkbmap -option caps:swapescape
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-# exec_always --no-startup-id feh --bg-fill ~/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
 exec_always --no-startup-id feh --bg-fill /home/calvin/Dropbox/Photos/MotoGP/rossi-2016-04-gp-spain.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -45,9 +44,8 @@ bindsym $mod+c split h
 # split in vertical orientation
 bindsym $mod+v split v
 
-# setup scratchpad window
-exec --no-startup-id $term -name "math" -e node
-for_window [instance="math"] resize set 500 200, border pixel 5, move scratchpad
+# format math window
+for_window [instance="math"] border pixel 5, floating enable
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -119,7 +117,7 @@ bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
 bindsym $mod+Shift+r restart
 
 # scratchpad
-bindsym $mod+a [instance="math"] scratchpad show
+bindsym $mod+a exec --no-startup-id $term -name "math" -e node
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
@@ -139,7 +137,6 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 # Assign classes to specific workspaces
 assign [class="^Slack"] $ws3
 assign [class="^TelegramDesktop"] $ws3
-assign [class="^Chromium"] $ws2
 
 # resize window (you can also use the mouse for that)
 mode "R" {
