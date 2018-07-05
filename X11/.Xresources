@@ -6,7 +6,7 @@ URxvt.font: xft:DejaVu Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
             xft:FreeSans:size=10,\
 URxvt.internalBorder: 4
-URxvt.perl-ext-common: default,font-size,url-select
+URxvt.perl-ext-common: default,font-size,url-select,selection-to-clipboard
 URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
