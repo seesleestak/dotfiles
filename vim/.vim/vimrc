@@ -19,9 +19,10 @@ set smarttab
 set expandtab
 set autoindent
 
-" Don't backup
-set nobackup
-set noswapfile
+" Backup handling
+set directory^=$HOME/.vim/swapfiles//
+set undodir=~/.vim/undodir
+set undofile
 
 " Clipboard
 set clipboard=unnamedplus,unnamed
@@ -84,8 +85,8 @@ command! -bang -nargs=* Rg
 
   " Ale
   let g:ale_fixers = {}
-  " let g:ale_fixers['javascript'] = ['eslint']
-  let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+  let g:ale_fixers['javascript'] = ['eslint']
+  " let g:ale_fixers['javascript'] = ['prettier', 'eslint']
   let g:ale_fix_on_save = 1
 " ------------------------------------------------
 
