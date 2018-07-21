@@ -1,3 +1,30 @@
+" vim-plug ---------------------------------------
+call plug#begin('~/.vim/plugged')
+  " Core editor functionality
+  Plug 'SirVer/ultisnips'
+  Plug 'alvan/vim-closetag'
+  Plug 'ap/vim-buftabline'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-eunuch'
+  Plug 'tpope/vim-surround'
+
+  " File management/navigation
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'justinmk/vim-dirvish'
+
+  " Git
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+
+  " JS
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'w0rp/ale'
+call plug#end()
+" ------------------------------------------------
+
+set nocompatible
 set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling
 set hidden " Hide buffers instead of closing
@@ -31,33 +58,13 @@ set clipboard=unnamedplus,unnamed
 set ruler
 set rulerformat=%l,%v
 
-" vim-plug ---------------------------------------
-call plug#begin('~/.vim/plugged')
-  " Core editor functionality
-  Plug 'SirVer/ultisnips'
-  Plug 'alvan/vim-closetag'
-  Plug 'ap/vim-buftabline'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-eunuch'
-  Plug 'tpope/vim-surround'
-
-  " File management/navigation
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'justinmk/vim-dirvish'
-
-  " Git
-  Plug 'airblade/vim-gitgutter'
-  Plug 'tpope/vim-fugitive'
-
-  " JS
-  Plug 'mxw/vim-jsx'
-  Plug 'pangloss/vim-javascript'
-  Plug 'w0rp/ale'
-call plug#end()
-" ------------------------------------------------
-
 " Syntax Highlighting
+if has("termguicolors")
+  " set t_8f=\[[38;2;%lu;%lu;%lum
+  " set t_8b=\[[48;2;%lu;%lu;%lum
+  set termguicolors
+endif
+
 syntax on
 colorscheme nord
 
