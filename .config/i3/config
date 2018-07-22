@@ -10,6 +10,7 @@ font pango:DejaVu Sans Mono Bold 9
 # Window colors
 client.focused   #8FBCBB #8FBCBB #2E3440 #8FBCBB
 client.unfocused #3B4252 #3B4252 #888888 #3B4252
+client.urgent    #BF616A #BF616A #ffffff #BF616A
 
 # gaps
 # gaps inner 8
