@@ -13,7 +13,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
   # npm
-  alias ns="npm start"
   alias nrf="rm -rfv node_modules && npm install"
 
   # Directories
@@ -25,16 +24,6 @@ source $ZSH/oh-my-zsh.sh
 
   # hiflow
   alias hic="hi commit"
-  alias hico="hi checkout"
-
-  # Video outputs
-  alias vga="monitor-vga.sh"
-  alias hdmi="monitor-hdmi.sh"
-  alias bimon="monitor-built-in.sh"
-
-  # nmcli
-  alias woff="nmcli radio wifi off"
-  alias won="nmcli radio wifi on"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
