@@ -47,7 +47,8 @@ set expandtab
 set autoindent
 
 " Backup handling
-set directory^=$HOME/.vim/swapfiles//
+" set directory^=$HOME/.vim/swapfiles/
+set noswapfile
 set undodir=~/.vim/undodir
 set undofile
 
