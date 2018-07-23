@@ -1,21 +1,9 @@
 rofi.padding: 400
 rofi.color-enabled: true	
-rofi.width: 100
-rofi.fullscreen: true	
 rofi.lines: 6
+rofi.bw: 0,
 rofi.line-margin: 10
 rofi.line-padding: 2	
 rofi.font: DejaVu Sans Mono Bold 14	
 rofi.kb-mode-next: Control+N	
 rofi.kb-mode-previous: Control+P
-
-// non-fullscreen
-/* rofi.padding: 40 */
-/* rofi.color-enabled: true */
-/* rofi.hide-scrollbar: true */
-/* rofi.location: 0 */
-/* rofi.bw: 6, */
-/* rofi.lines: 12 */
-/* rofi.font: DejaVu Sans Mono Bold 12 */
-/* rofi.kb-mode-next: Control+N */
-/* rofi.kb-mode-previous: Control+P */
