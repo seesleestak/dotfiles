@@ -93,8 +93,8 @@ command! -bang -nargs=* Rg
 
   " Ale
   let g:ale_fixers = {}
-  let g:ale_fixers['javascript'] = ['eslint']
-  " let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+  " let g:ale_fixers['javascript'] = ['eslint']
+  let g:ale_fixers['javascript'] = ['prettier', 'eslint']
   let g:ale_fix_on_save = 1
 " ------------------------------------------------
 
@@ -150,6 +150,11 @@ endfunction
 function! CopyPathDir() " Copy current buffer path directory to multiple buffers
   execute "let @*=expand('%:p:h')"
   execute "let @+=expand('%:p:h')"
+endfunction
+
+function! BreakDownArgumentList()
+  let @y = 'f,li@y'
+  execute "normal f(lif)ik@y"
 endfunction
 
 filetype plugin indent on
