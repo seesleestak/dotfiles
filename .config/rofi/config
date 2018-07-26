@@ -1,6 +1,4 @@
-rofi.padding: 400
-rofi.color-enabled: true	
-rofi.lines: 6
+rofi.padding: 150
 rofi.bw: 0,
 rofi.line-margin: 10
 rofi.line-padding: 2	
