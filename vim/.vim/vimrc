@@ -101,7 +101,7 @@ command! -bang -nargs=* Rg
 
 " Mappings -------------------------------------
   " <leader>
-  let mapleader = ','
+  let mapleader = "\<Space>"
 
   nnoremap <leader>s :update<CR>
   nnoremap <leader>q :q<CR>
