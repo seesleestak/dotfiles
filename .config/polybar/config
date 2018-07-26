@@ -18,6 +18,7 @@ purple = ${xrdb:color13}
 muted = ${xrdb:color8}
 
 [bar/top]
+monitor = ${env:MONITOR:}
 bottom = false
 width = 100%
 height = 22
