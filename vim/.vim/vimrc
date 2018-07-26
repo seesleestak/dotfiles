@@ -33,6 +33,7 @@ set lazyredraw " Only redraw once macro is done running
 set number " Show line numbers
 set relativenumber " Show relative line numbers
 set noeb vb t_vb= " Disable beep
+set nowrap " Don't wrap lines
 
 " Fixes ESC delay
 set timeoutlen=1000 
