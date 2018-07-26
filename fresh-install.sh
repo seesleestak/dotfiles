@@ -48,3 +48,6 @@ git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -si && 
 
 # Install slack with snap instead of AUR
 sudo snap install slack --classic
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
