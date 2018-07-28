@@ -17,8 +17,8 @@ sudo pacman -S --noconfirm \
   powertop \
   pulseaudio \
   ranger \
-  rofi \
   ripgrep \
+  rofi \
   rxvt-unicode \
   scrot \
   stow \
@@ -28,6 +28,7 @@ sudo pacman -S --noconfirm \
   ttf-freefont \
   ttf-liberation \
   urxvt-perls \
+  w3m \
   xorg-server \
   xorg-xinit \
   xorg-xrandr \
@@ -38,6 +39,7 @@ sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby
 
 # Create repos dir
 mkdir ~/working
+mkdir -p ~/Pictures/screenshots
 
 # Clone some stuff from AUR
 mkdir ~/aur && cd ~/aur
