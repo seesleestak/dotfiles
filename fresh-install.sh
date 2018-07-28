@@ -1,6 +1,6 @@
 # !/bin/sh
 # Install a whole bunch of programs
-sudo pacman -S \
+sudo pacman -S --noconfirm \
   dunst \
   feh \
   git \
@@ -17,6 +17,7 @@ sudo pacman -S \
   powertop \
   pulseaudio \
   ranger \
+  rofi \
   ripgrep \
   rxvt-unicode \
   scrot \
@@ -33,7 +34,7 @@ sudo pacman -S \
   zsh \
 
 # Install global npm packages
-sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless
+sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby
 
 # Create repos dir
 mkdir ~/working
@@ -47,6 +48,7 @@ git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && mak
 git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -si && cd ~
 
 # Install slack with snap instead of AUR
+sudo ln -s /var/lib/snapd/snap /snap
 sudo snap install slack --classic
 
 # Install oh-my-zsh

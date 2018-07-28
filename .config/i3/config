@@ -4,20 +4,15 @@ set $term urxvt
 
 font pango:DejaVu Sans Mono Bold 9
 
-# Hide window title bar
-# for_window [class="^.*"] border pixel 2
-
 # Window colors
 client.focused   #8FBCBB #8FBCBB #2E3440 #8FBCBB
 client.unfocused #3B4252 #3B4252 #D8DEE9 #3B4252
 client.urgent    #BF616A #BF616A #2E3440 #BF616A
 
-# gaps
-# gaps inner 8
-
 exec --no-startup-id setxkbmap -option caps:swapescape
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
+exec --no-startup-id xrandr --output eDP1 --dpi 123
 # exec_always --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill /home/calvin/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
