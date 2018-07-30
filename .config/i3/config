@@ -9,11 +9,9 @@ client.focused   #8FBCBB #8FBCBB #2E3440 #8FBCBB
 client.unfocused #3B4252 #3B4252 #D8DEE9 #3B4252
 client.urgent    #BF616A #BF616A #2E3440 #BF616A
 
-exec --no-startup-id setxkbmap -option caps:swapescape
+# Start up some applications
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
-exec --no-startup-id xrandr --output eDP1 --dpi 123
-# exec_always --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill /home/calvin/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
 
@@ -22,7 +20,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term
-# bindsym $mod+Shift+Return split v exec $term
 
 # Add bindings for switching monitors
 bindsym $mod+Shift+b exec --no-startup-id monitor-built-in.sh 
@@ -123,13 +120,15 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+
+# Using F9, F10, F11 for Prev, Play/pause, Next
+bindsym XF86Search exec --no-startup-id playerctl play-pause
+bindsym XF86LaunchA exec --no-startup-id playerctl next
+bindsym XF86Tools exec --no-startup-id playerctl previous
 
 # Sreen brightness controls
-bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
 # Assign classes to specific workspaces
 assign [class="^Slack"] $ws3
@@ -155,20 +154,5 @@ mode "R" {
         bindsym $mod+r mode "default"
 }
 
-mode "S" {
-        bindsym l exec --no-startup-id ~/.config/i3/lock.sh, mode "default"
-        # bindsym e exec --no-startup-id i3-msg exit, mode "default"
-        # bindsym s exec --no-startup-id systemctl suspend, mode "default"
-        # bindsym h exec --no-startup-id systemctl hibernate, mode "default"
-        bindsym r exec --no-startup-id systemctl reboot, mode "default"
-        bindsym p exec --no-startup-id systemctl poweroff, mode "default"
-
-        # back to normal: Enter or Escape or $mod+s
-        bindsym Return jode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+s mode "default"
-}
-
 bindsym $mod+r mode "R"
-bindsym $mod+s mode "S"
 # vim:filetype=i3

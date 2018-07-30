@@ -21,26 +21,26 @@ muted = ${xrdb:color8}
 monitor = ${env:MONITOR:}
 bottom = false
 width = 100%
-height = 30
+height = 22
 fixed-center = true
-dpi = 114
+; dpi = 112
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = DejaVu Sans Mono:size=10;2
 font-1 = DejaVu Sans Mono:style=Bold:size=10;2
-font-2 = SpaceMono Nerd Font Mono:size=16;5
-font-3 = SpaceMono Nerd Font Mono:size=12;5
+font-2 = SpaceMono Nerd Font Mono:size=16;3
+font-3 = SpaceMono Nerd Font Mono:size=12;3
 
 modules-left = i3
 modules-center = date
-modules-right = volume battery 
+modules-right = volume avg-battery 
 
 tray-position = right
 tray-padding = 2
 tray-detached = false
-tray-maxsize = 22
+tray-maxsize = 16
 tray-transparent = false
 tray-background = ${colors.background}
 tray-scale = 1.0
@@ -126,11 +126,17 @@ ramp-volume-2 = 
 
 format-volume-padding = 1
 
+[module/avg-battery]
+type = custom/script
+exec = "count=$(acpi -b | wc -l); sum=$(acpi -b | egrep -o '[0-9]{1,3}%' | tr -d '%' | xargs -I% echo -n '+%'); echo  $(( sum / count ))%" 
+interval = 5.0
+format-padding = 1
+
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ADP1
-full-at = 98
+full-at = 100
 poll-interval = 5.0
 
 format-charging = <animation-charging> <label-charging>

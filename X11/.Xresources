@@ -1,5 +1,3 @@
-Xft.dpi: 123
-
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.font: xft:DejaVu Sans Mono:size=10,\

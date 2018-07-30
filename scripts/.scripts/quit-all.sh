@@ -2,7 +2,7 @@
 
 # Kill all commonly used apps
 killall slack
-killall chromium
+killall chrome
 killall spotify
 killall urxvt
 killall telegram-desktop

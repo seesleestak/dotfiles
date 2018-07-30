@@ -25,6 +25,8 @@ source $ZSH/oh-my-zsh.sh
   # hiflow
   alias hic="hi commit"
 
+  alias vtop="vtop --theme nord"
+
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '

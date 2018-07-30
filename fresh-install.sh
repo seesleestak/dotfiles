@@ -1,6 +1,7 @@
 # !/bin/sh
 # Install a whole bunch of programs
 sudo pacman -S --noconfirm \
+  acpi \
   dunst \
   feh \
   git \
@@ -32,6 +33,7 @@ sudo pacman -S --noconfirm \
   xorg-server \
   xorg-xinit \
   xorg-xrandr \
+  xorg-xev \
   zsh \
 
 # Install global npm packages
