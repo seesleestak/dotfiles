@@ -5,6 +5,7 @@ sudo pacman -S --noconfirm \
   dunst \
   feh \
   git \
+  gpicview \
   gvim \
   i3 \
   imagemagick \
@@ -22,18 +23,20 @@ sudo pacman -S --noconfirm \
   rofi \
   rxvt-unicode \
   scrot \
+  slop \
   stow \
   telegram-desktop \
   tmux \
   ttf-dejavu \
+  ttf-font-awesome \
   ttf-freefont \
   ttf-liberation \
   urxvt-perls \
   w3m \
   xorg-server \
+  xorg-xev \
   xorg-xinit \
   xorg-xrandr \
-  xorg-xev \
   zsh \
 
 # Install global npm packages
