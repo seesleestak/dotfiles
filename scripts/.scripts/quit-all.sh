@@ -7,6 +7,7 @@ killall spotify
 killall urxvt
 killall telegram-desktop
 killall libreoffice
+killall gpicview
 
 # Go to first workspace
 i3-msg workspace "1"
