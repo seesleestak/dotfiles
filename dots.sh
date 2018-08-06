@@ -7,7 +7,7 @@ rm -rfv ~/.urxvt && rm -fv ~/.xinitrc ~/.Xresources && stow X11
 rm -fv ~/.gitconfig && stow git
 
 # Stow vim config and install plugins
-rm -rfv ~/.vim && stow vim && vim -E -c PlugInstall -c q
+rm -rfv ~/.vim && stow vim && vim -c PlugInstall -c q -c q
 
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
