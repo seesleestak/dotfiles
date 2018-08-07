@@ -15,11 +15,7 @@ convert $SCREENSHOT -blur $BLURTYPE $SCREENSHOT
 [[ -f ~/.config/i3/lock.png ]] && convert $SCREENSHOT $LOCK_IMAGE -gravity center -composite -matte $SCREENSHOT
 
 # Pause music (mocp and mpd):
-# mocp -P
-# mpc pause
+playerctl pause
 
 # Lock it up!
 i3lock -e -f -c 000000 -i $SCREENSHOT
-
-# If still locked after 20 seconds, turn off screen.
-# sleep 20 && pgrep i3lock && xset dpms force off

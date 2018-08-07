@@ -2,18 +2,18 @@
 set $mod Mod4
 set $term urxvt
 
-font pango:DejaVu Sans Mono Bold 9
+font pango:DejaVu Sans Mono Bold 8
 
 # Window colors
 client.focused   #8FBCBB #8FBCBB #2E3440 #8FBCBB
-client.unfocused #3B4252 #3B4252 #D8DEE9 #3B4252
+client.unfocused #434C5E #434C5E #D8DEE9 #434C5E
 client.urgent    #BF616A #BF616A #2E3440 #BF616A
 
 # Start up some applications
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill /home/calvin/Dropbox/Photos/MotoGP/movistar-yamaha-motogp-finish-first-outings-under-qatar-floodlights.JPG
+exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -23,14 +23,14 @@ bindsym $mod+Return exec $term
 
 # Add bindings for switching monitors
 bindsym $mod+Shift+b exec --no-startup-id monitor-built-in.sh 
-bindsym $mod+Shift+v exec --no-startup-id monitor-vga.sh
-bindsym $mod+Shift+m exec --no-startup-id monitor-hdmi.sh
+bindsym $mod+Shift+v exec --no-startup-id monitor-dp.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id exec rofi -1 -fullscreen -show run -modi drun
+bindsym $mod+d exec --no-startup-id exec bash -c "rofi -1 -show run -modi drun"
+# bindsym $mod+d exec --no-startup-id exec dmenu_run
 
 # split in horizontal orientation
 bindsym $mod+c split h
@@ -49,6 +49,9 @@ bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
+
+# Stop screen recording
+bindsym $mod+s exec --no-startup-id kill-screen-record.sh
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -99,10 +102,10 @@ bindsym $mod+Shift+k move up 30
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right 30
 
-bindsym $mod+Shift+y resize shrink width 5 px or 5ppt
-bindsym $mod+Shift+u resize shrink height 5 px or 5 ppt
-bindsym $mod+Shift+i resize grow height 5 px or 5 ppt
-bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+bindsym $mod+Shift+y resize shrink width 6 px or 6ppt
+bindsym $mod+Shift+u resize shrink height 6 px or 6 ppt
+bindsym $mod+Shift+i resize grow height 6 px or 6 ppt
+bindsym $mod+Shift+o resize grow width 6 px or 6 ppt
 
 # i3Lock script
 bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
@@ -153,6 +156,18 @@ mode "R" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+
+# bar {
+#   status_command i3blocks
+#   position top
+#   colors {
+#     background #2E3440
+#     focused_workspace  #8FBCBB #8FBCBB #2E3440
+#     inactive_workspace #2E3440 #2E3440 #D8DEE9
+#     urgent_workspace   #BF616A #BF616A #2E3440
+#   }
+#   font pango:DejaVu Sans Mono 9
+# }
 
 bindsym $mod+r mode "R"
 # vim:filetype=i3

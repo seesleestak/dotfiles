@@ -23,27 +23,28 @@ bottom = false
 width = 100%
 height = 22
 fixed-center = true
-; dpi = 112
+; dpi = 96
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = DejaVu Sans Mono:size=10;2
 font-1 = DejaVu Sans Mono:style=Bold:size=10;2
-font-2 = SpaceMono Nerd Font Mono:size=16;3
-font-3 = SpaceMono Nerd Font Mono:size=12;3
+font-2 = Font Awesome 5 Free:style=Regular:pixelsize=10;2
+font-3 = Font Awesome 5 Free:style=Solid:pixelsize=10;2
+font-4 = Font Awesome 5 Brands:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
 modules-right = volume avg-battery 
 
-tray-position = right
-tray-padding = 2
-tray-detached = false
-tray-maxsize = 16
-tray-transparent = false
-tray-background = ${colors.background}
-tray-scale = 1.0
+; tray-position = right
+; tray-padding = 2
+; tray-detached = false
+; tray-maxsize = 16
+; tray-transparent = false
+; tray-background = ${colors.background}
+; tray-scale = 1.0
 
 [module/i3]
 type = internal/i3
@@ -107,7 +108,7 @@ label-connected-padding = 1
 type = internal/date
 interval = 1.0
 date = %A, %d %B %I:%M %p
-format =  <label>
+format =  <label>
 
 [module/volume]
 type = internal/volume
@@ -116,7 +117,7 @@ format-volume = <ramp-volume> <label-volume>
 format-volume-foreground = ${colors.foreground-alt}
 label-volume = %percentage%
 
-format-muted = "ﱝ mute"
+format-muted = " mute"
 format-muted-foreground = ${colors.foreground-alt}
 format-muted-padding = 1
 
@@ -128,54 +129,9 @@ format-volume-padding = 1
 
 [module/avg-battery]
 type = custom/script
-exec = "count=$(acpi -b | wc -l); sum=$(acpi -b | egrep -o '[0-9]{1,3}%' | tr -d '%' | xargs -I% echo -n '+%'); echo  $(( sum / count ))%" 
+exec = battery.sh
 interval = 5.0
 format-padding = 1
-
-[module/battery]
-type = internal/battery
-battery = BAT1
-adapter = ADP1
-full-at = 100
-poll-interval = 5.0
-
-format-charging = <animation-charging> <label-charging>
-format-charging-padding = 1
-
-format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-padding = 1
-
-format-full = <ramp-capacity> <label-full>
-format-full-padding = 1
-format-full-foreground = ${colors.battery-full}
-
-label-charging = %percentage%%
-label-discharging = %percentage%%
-label-full = %percentage%%
-label-charging-foreground = ${colors.foreground-alt}
-label-discharging-foreground = ${colors.foreground-alt}
-label-full-foreground = ${colors.foreground-alt}
-label-font = 3
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-5 = 
-ramp-capacity-6 = 
-ramp-capacity-7 = 
-ramp-capacity-8 = 
-ramp-capacity-9 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 750
 
 ; polybar vim syntax highlighting
 ; vim:filetype=dosini
