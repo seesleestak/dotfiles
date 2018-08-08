@@ -51,7 +51,12 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # Stop screen recording
-bindsym $mod+s exec --no-startup-id kill-screen-record.sh
+bindsym $mod+Shift+s exec --no-startup-id kill-screen-record.sh
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
