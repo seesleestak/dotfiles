@@ -4,10 +4,14 @@ set $term urxvt
 
 font pango:DejaVu Sans Mono Bold 8
 
+for_window [class="^.*"] border pixel 3
+gaps inner 6
+
 # Window colors
-client.focused   #8FBCBB #8FBCBB #2E3440 #8FBCBB
-client.unfocused #434C5E #434C5E #D8DEE9 #434C5E
-client.urgent    #BF616A #BF616A #2E3440 #BF616A
+client.focused           #8FBCBB #8FBCBB #2E3440 #8FBCBB
+client.unfocused         #2E3440 #2E3440 #D8DEE9 #2E3440
+client.focused_inactive  #2E3440 #2E3440 #D8DEE9 #2E3440
+client.urgent            #BF616A #BF616A #2E3440 #BF616A
 
 # Start up some applications
 exec --no-startup-id nm-applet
@@ -52,6 +56,9 @@ bindsym $mod+space focus mode_toggle
 
 # Stop screen recording
 bindsym $mod+Shift+s exec --no-startup-id kill-screen-record.sh
+
+# Take screenshot
+bindsym $mod+Shift+t exec --no-startup-id screenshot.sh
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -161,18 +168,6 @@ mode "R" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
-# bar {
-#   status_command i3blocks
-#   position top
-#   colors {
-#     background #2E3440
-#     focused_workspace  #8FBCBB #8FBCBB #2E3440
-#     inactive_workspace #2E3440 #2E3440 #D8DEE9
-#     urgent_workspace   #BF616A #BF616A #2E3440
-#   }
-#   font pango:DejaVu Sans Mono 9
-# }
 
 bindsym $mod+r mode "R"
 # vim:filetype=i3
