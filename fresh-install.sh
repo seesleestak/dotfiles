@@ -3,6 +3,7 @@
 sudo pacman -S --noconfirm \
   acpi \
   dunst \
+  evince \
   feh \
   git \
   gpicview \
@@ -26,6 +27,7 @@ sudo pacman -S --noconfirm \
   slop \
   stow \
   telegram-desktop \
+  thunar \
   tmux \
   ttf-dejavu \
   ttf-font-awesome \
