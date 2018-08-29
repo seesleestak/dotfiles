@@ -1,4 +1,8 @@
 # !/bin/sh
+
+# Refresh repos and update system
+sudo pacman -Syyu --noconfirm
+
 # Install a whole bunch of programs
 sudo pacman -S --noconfirm \
   acpi \

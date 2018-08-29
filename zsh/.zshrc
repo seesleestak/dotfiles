@@ -21,7 +21,7 @@ source $ZSH/oh-my-zsh.sh
   alias hui="cd ~/working/hixme-ui"
   alias dot="cd ~/dotfiles"
   alias mor="cd ~/working/mor-web-client"
-  alias ser="cd ~/working/app-services"
+  alias bun="cd ~/working/bundle-service"
 
   # hiflow
   alias hic="hi commit"
@@ -35,6 +35,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # 10ms timeout to avoid delays with vim
 KEYTIMEOUT=1
+
+# Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # vimstart - by Billy Montgomery
 function vimstart() {
