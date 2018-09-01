@@ -33,10 +33,14 @@ sudo pacman -S --noconfirm \
   telegram-desktop \
   thunar \
   tmux \
+  ttf-bitstream-vera \
   ttf-dejavu \
   ttf-font-awesome \
   ttf-freefont \
   ttf-liberation \
+  ttf-meslo \
+  ttf-roboto \
+  ttf-ubuntu-font-family \
   urxvt-perls \
   w3m \
   xorg-server \
@@ -46,7 +50,7 @@ sudo pacman -S --noconfirm \
   zsh \
 
 # Install global npm packages
-sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby
+sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby jest
 
 # Create repos dir
 mkdir ~/working
