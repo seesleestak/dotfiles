@@ -1,0 +1,9 @@
+rofi.padding: 250
+rofi.width: 100
+rofi.fullscreen: true
+rofi.bw: 0,
+rofi.line-margin: 10
+rofi.line-padding: 2	
+rofi.font: DejaVu Sans Mono Bold 14
+rofi.kb-mode-next: Control+N	
+rofi.kb-mode-previous: Control+P
