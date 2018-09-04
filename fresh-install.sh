@@ -10,7 +10,7 @@ sudo pacman -S --noconfirm \
   evince \
   feh \
   git \
-  gpicview \
+  gvfs \
   gvim \
   i3 \
   imagemagick \
@@ -32,13 +32,13 @@ sudo pacman -S --noconfirm \
   stow \
   telegram-desktop \
   thunar \
+  thunar-volman \
   tmux \
   ttf-bitstream-vera \
   ttf-dejavu \
   ttf-font-awesome \
   ttf-freefont \
   ttf-liberation \
-  ttf-meslo \
   ttf-roboto \
   ttf-ubuntu-font-family \
   urxvt-perls \
