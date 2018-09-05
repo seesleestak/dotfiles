@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "275x4-14+32"
+    geometry = "0x4-14+32"
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -30,7 +30,8 @@
     ### Icons ###
     icon_position = off
     max_icon_size = 32
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    # icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/Paper/16x16/status/:/usr/share/icons/Paper/16x16/devices/
 
     ### History ###
     sticky_history = yes
