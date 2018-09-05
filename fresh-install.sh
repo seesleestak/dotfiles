@@ -6,6 +6,7 @@ sudo pacman -Syyu --noconfirm
 # Install a whole bunch of programs
 sudo pacman -S --noconfirm \
   acpi \
+  arc-gtk-theme \
   dunst \
   evince \
   feh \
@@ -58,10 +59,11 @@ mkdir -p ~/Pictures/screenshots
 
 # Clone some stuff from AUR
 mkdir ~/aur && cd ~/aur
-git clone https://aur.archlinux.org/polybar.git && cd polybar && makepkg -si && cd ..
-git clone https://aur.archlinux.org/spotify.git && cd spotify && makepkg -si && cd ..
-git clone https://aur.archlinux.org/snapd.git && cd snapd && makepkg -si && cd ..
-git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && makepkg -si && cd ..
+git clone https://aur.archlinux.org/polybar.git && cd polybar && makepkg -isr && cd ..
+git clone https://aur.archlinux.org/spotify.git && cd spotify && makepkg -isr && cd ..
+git clone https://aur.archlinux.org/snapd.git && cd snapd && makepkg -isr && cd ..
+git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && makepkg -isr && cd ..
+git clone https://aur.archlinux.org/paper-icon-theme.git && cd paper-icon-theme && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -si && cd ~
 
 # Install slack with snap instead of AUR
