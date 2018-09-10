@@ -5,17 +5,24 @@ SCREENSHOT=/tmp/screen.png
 scrot $SCREENSHOT
 
 # Lock image and blur type variables
-LOCK_IMAGE=~/.config/i3/lock.png
+LOCK_IMAGE=~/.config/i3/lock-arch-resize.png
 BLURTYPE="0x4"
 
 # Create a blur on the shot:
 convert $SCREENSHOT -blur $BLURTYPE $SCREENSHOT
 
+# Find number of currently connected monitors
+NUMCONNECTED=$(xrandr | grep -w connected | wc -l)
+
 # Add the lock to the blurred image:
-[[ -f ~/.config/i3/lock.png ]] && convert $SCREENSHOT $LOCK_IMAGE -gravity center -composite -matte $SCREENSHOT
+if [ NUMCONNECTED -eq 2 ]; then
+  [[ -f ~/.config/i3/lock-arch-resize.png ]] && convert $SCREENSHOT $LOCK_IMAGE -gravity center -composite -matte $SCREENSHOT
+else
+  [[ -f ~/.config/i3/lock-arch-resize.png ]] && convert $SCREENSHOT $LOCK_IMAGE -gravity center -composite -matte $SCREENSHOT
+fi
 
 # Pause music (mocp and mpd):
 playerctl pause
 
 # Lock it up!
-i3lock -e -f -c 000000 -i $SCREENSHOT
+i3lock -u -e -f -c 000000 -i $SCREENSHOT
