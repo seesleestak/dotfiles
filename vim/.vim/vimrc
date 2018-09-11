@@ -46,6 +46,7 @@ set softtabstop=2
 set smarttab
 set expandtab
 set autoindent
+autocmd Filetype cpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " Backup handling
 " set directory^=$HOME/.vim/swapfiles/
