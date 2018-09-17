@@ -53,9 +53,10 @@ sudo pacman -S --noconfirm \
 # Install global npm packages
 sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby jest
 
-# Create repos dir
+# Create directories
 mkdir ~/working
 mkdir -p ~/Pictures/screenshots
+mkdir -p ~/Videos/screen-record
 
 # Clone some stuff from AUR
 mkdir ~/aur && cd ~/aur
