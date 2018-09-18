@@ -12,4 +12,9 @@ rm -rfv ~/.vim && stow vim && vim -c PlugInstall -c q -c q
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
-cp -R ~/dotfiles/.config/* ~/.config/
+rm -rfv ~/.config/dunst && stow dunst
+rm -rfv ~/.config/gtk-3.0 ~/.gtkrc-2.0 && stow gtk
+rm -rfv ~/.config/i3 && stow i3
+rm -rfv ~/.config/polybar && stow polybar
+rm -rfv ~/.config/ranger && stow ranger
+rm -rfv ~/.config/rofi && stow rofi
