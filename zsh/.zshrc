@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh
   # hiflow
   alias hic="hi commit"
 
-  alias vtop="vtop --theme nord"
+  alias car="sh cpp-compile.sh"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
