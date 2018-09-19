@@ -33,7 +33,7 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = memory wireless-network volume avg-battery 
+modules-right = cpu memory wireless-network volume avg-battery 
 
 ; tray-position = right
 ; tray-padding = 2
@@ -135,6 +135,11 @@ format-padding = 1
 type = internal/memory
 interval = 3;
 label = RAM %gb_used%
+
+[module/cpu]
+type = internal/cpu
+label = CPU %percentage%%
+format-padding = 2
 
 ; polybar vim syntax highlighting
 ; vim:filetype=dosini
