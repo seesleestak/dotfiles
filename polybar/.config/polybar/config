@@ -33,7 +33,7 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = wireless-network volume avg-battery 
+modules-right = memory wireless-network volume avg-battery 
 
 ; tray-position = right
 ; tray-padding = 2
@@ -130,6 +130,11 @@ type = custom/script
 exec = battery.sh
 interval = 5.0
 format-padding = 1
+
+[module/memory]
+type = internal/memory
+interval = 3;
+label = RAM %gb_used%
 
 ; polybar vim syntax highlighting
 ; vim:filetype=dosini
