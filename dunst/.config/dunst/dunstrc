@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "375x4-14+32"
+    geometry = "375x4-22+45"
     indicate_hidden = yes
     shrink = yes
     transparency = 0
@@ -9,8 +9,7 @@
     separator_height = 2
     padding = 20
     horizontal_padding = 30
-    frame_width = 3
-    frame_color = "#4C566A"
+    frame_width = 5
     separator_color = frame
     sort = yes
     idle_threshold = 120
@@ -60,11 +59,13 @@
 [urgency_low]
     background = "#2E3440"
     foreground = "#ECEFF4"
+    frame_color = "#A3BE8C"
     timeout = 10
 
 [urgency_normal]
     background = "#2E3440"
     foreground = "#ECEFF4"
+    frame_color = "#A3BE8C"
     timeout = 10
 
 [urgency_critical]
