@@ -4,15 +4,13 @@ background-alt = ${xrdb:background}
 foreground = ${xrdb:color7}
 foreground-alt = ${xrdb:color15}
 primary = ${xrdb:color4}
-secondary = #00aaff
 alert = ${xrdb:color1}
-battery-charging = #00aaff
-battery-discharging = #ffaa00
-battery-full = #00ffaa
 highlight = ${xrdb:color1}
 magenta = ${xrdb:color5}
 green = ${xrdb:color2}
 yellow = ${xrdb:color3}
+orange = ${xrdb:color16}
+red = ${xrdb:color1}
 teal = ${xrdb:color14}
 purple = ${xrdb:color13}
 muted = ${xrdb:color8}
@@ -21,7 +19,7 @@ muted = ${xrdb:color8}
 monitor = ${env:MONITOR:}
 bottom = false
 width = 100%
-height = 22
+height = 24
 fixed-center = true
 
 background = ${colors.background}
@@ -97,28 +95,41 @@ type = internal/network
 interface = wlp4s0
 interval = 3.0
 
-format-connected-foreground = ${colors.foreground-alt}
-label-connected = "直 %essid%"
-label-connected-padding-right = 1
-label-connected-padding-left = 2
+format-connected = <ramp-signal> <label-connected>
+format-connected-foreground = ${colors.orange}
+format-connected-padding = 2
+
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 直
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
+ramp-signal-5 = 直
 
 [module/date]
 type = internal/date
 interval = 1.0
 date = %A, %d %B %I:%M %p
 format =  <label>
+format-foreground = ${colors.teal}
+label = %date%
+label-foreground = ${colors.foreground}
 
 [module/volume]
 type = internal/volume
+label-volume = %percentage%
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-foreground = ${colors.foreground-alt}
-label-volume = %percentage%
 
 format-muted = " mute"
 format-muted-foreground = ${colors.foreground-alt}
 format-muted-padding = 1
 
+ramp-volume-foreground = ${xrdb:color6}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -134,11 +145,18 @@ format-padding = 1
 [module/memory]
 type = internal/memory
 interval = 3;
-label = RAM %gb_used%
+format-prefix = "RAM: "
+format-prefix-foreground = ${colors.green}
+format-prefix-font = 2
+label = %gb_used%
 
 [module/cpu]
 type = internal/cpu
-label = CPU %percentage%%
+interval = 2
+format-prefix = "CPU: "
+format-prefix-foreground = ${colors.green}
+format-prefix-font = 2
+label = %percentage%%
 format-padding = 2
 
 ; polybar vim syntax highlighting
