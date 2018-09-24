@@ -119,22 +119,22 @@ label = %date%
 label-foreground = ${colors.foreground}
 
 [module/volume]
-type = internal/volume
+type = internal/pulseaudio
 label-volume = %percentage%
+label-muted = mute
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-foreground = ${colors.foreground-alt}
 
-format-muted = " mute"
+format-muted = <ramp-volume> <label-muted>
 format-muted-foreground = ${colors.foreground-alt}
 format-muted-padding = 1
+format-volume-padding = 1
 
 ramp-volume-foreground = ${xrdb:color6}
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-
-format-volume-padding = 1
 
 [module/avg-battery]
 type = custom/script
