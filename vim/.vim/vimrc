@@ -21,6 +21,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
+
+  " Markdown
+  " Plug 'JamshedVesuna/vim-markdown-preview'
 call plug#end()
 " ------------------------------------------------
 
@@ -98,6 +101,13 @@ command! -bang -nargs=* Rg
   " let g:ale_fixers['javascript'] = ['eslint']
   let g:ale_fixers['javascript'] = ['prettier', 'eslint']
   let g:ale_fix_on_save = 1
+
+  " Markdown preview
+  let vim_markdown_preview_github=1
+  let vim_markdown_preview_browser='google-chrome-stable'
+  " let vim_markdown_preview_temp_file=1
+  let vim_markdown_preview_github=1
+  let vim_markdown_preview_use_xdg_open=1
 " ------------------------------------------------
 
 " Mappings -------------------------------------
