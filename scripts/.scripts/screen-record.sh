@@ -7,4 +7,5 @@ ffmpeg -f x11grab \
   -s "$W"x"$H" \
   -i :0.0+$X,$Y \
   -framerate 60 \
+  -vcodec h264 \
   /home/calvin/Videos/screen-record/${FILE_NAME}
