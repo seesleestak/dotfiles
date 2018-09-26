@@ -8,4 +8,5 @@ ffmpeg -f x11grab \
   -i :0.0+$X,$Y \
   -framerate 60 \
   -vcodec h264 \
+  -pix_fmt yuv420p \
   /home/calvin/Videos/screen-record/${FILE_NAME}
