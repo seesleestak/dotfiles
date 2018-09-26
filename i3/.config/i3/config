@@ -149,6 +149,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 # Assign classes to specific workspaces
 assign [class="^Slack"] $ws3
-assign [class="^TelegramDesktop"] $ws8
+assign [class="^TelegramDesktop"] $ws9
 
 # vim:filetype=i3
