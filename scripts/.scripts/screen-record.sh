@@ -1,7 +1,7 @@
 # !/bin/bash
 FILE_NAME=screen-record-$(date -u '+%Y-%m-%d-%H-%M-%S').mp4
-SLOP=$(slop -f "%x %y %w %h %g %i") || exit 1
-read -r X Y W H G ID <<< $SLOP
+SLOP=$(slop -f "%x %y %w %h") || exit 1
+read -r X Y W H <<< $SLOP
 
 ffmpeg -f x11grab \
   -s "$W"x"$H" \
