@@ -17,7 +17,7 @@ client.urgent            #BF616A #BF616A #2E3440 #BF616A
 exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id compton
 
 # Use Mouse+$mod to drag floating windows to their wanted position
