@@ -3,7 +3,8 @@
 URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.font: xft:DejaVu Sans Mono:size=10,\
-            xft:Noto Emoji:minspace=False,\
+            xft:DejaVu Sans Mono for Powerline:size=10,\
+            xft:Noto Color Emoji:minspace=False,\
             xft:Droid Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
             xft:FreeSans:size=10
