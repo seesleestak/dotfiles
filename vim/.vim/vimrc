@@ -66,18 +66,14 @@ set clipboard=unnamedplus,unnamed
 set ruler
 set rulerformat=%l,%v
 
-" Color column
-" set colorcolumn=100
-" highlight ColorColumn ctermbg=darkgray
-
 " Syntax Highlighting
-if has("termguicolors")
-  " set t_8f=\[[38;2;%lu;%lu;%lum
-  " set t_8b=\[[48;2;%lu;%lu;%lum
+if (has("termguicolors"))
   " set termguicolors
+  " set t_8f=[38;2;%lu;%lu;%lum
+  " set t_8b=[48;2;%lu;%lu;%lum
 endif
 
-syntax on
+syntax enable
 colorscheme nord
 
 " Create Rg command for fzf
