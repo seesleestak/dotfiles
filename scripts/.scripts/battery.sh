@@ -8,27 +8,27 @@ COUNT=$(acpi -b | wc -l)
 SUM=$(acpi -b | egrep -o '[0-9]{1,3}%' | tr -d '%' | xargs -I% echo -n '+%')
 NUM=$((SUM/COUNT))
 IS_CHARGING=$(acpi -b | grep 'Charging')
+IS_DISCHARGING=$(acpi -b | grep 'Discharging')
+BATTERY_PERCENTAGE=" $NUM%"
 
-if [ -n "$IS_CHARGING" ]; then
-  echo CHR $NUM%
+if [ $NUM -gt 97 ]; then
+  BATTERY_PERCENTAGE=" 100%"
+elif [ $NUM -le 75 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -le 50 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -le 25 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -lt 10 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
 else
-  if [ $NUM -gt 97 ]; then
-    echo  100%
-  elif [ $NUM -le 75 ]; then
-    echo  $NUM%
-  elif [ $NUM -le 50 ]; then
-    echo  $NUM%
-  elif [ $NUM -le 25 ]; then
-    echo  $NUM%
-  elif [ $NUM -lt 10 ]; then
-    echo  $NUM%
-  else
-    echo  $NUM%
-  fi
+  BATTERY_PERCENTAGE=" $NUM%"
 fi
 
-# if [ -n "$IS_CHARGING" ]; then
-#   echo CHR $NUM%
-# else
-#   echo $NUM%
-# fi
+if [ -n "$IS_DISCHARGING" ]; then
+  echo $BATTERY_PERCENTAGE [DISCHARGING]
+elif [ -n "$IS_CHARGING" ]; then
+  echo $BATTERY_PERCENTAGE [CHARGING]
+else
+  echo $BATTERY_PERCENTAGE
+fi
