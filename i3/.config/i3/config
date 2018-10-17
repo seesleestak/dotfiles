@@ -1,3 +1,4 @@
+# ========================= SETTINGS ============================
 # Set mod as windows key
 set $mod Mod4
 set $term urxvt
@@ -13,6 +14,29 @@ client.unfocused         #3B4252 #3B4252 #D8DEE9 #3B4252
 client.focused_inactive  #3B4252 #3B4252 #D8DEE9 #3B4252
 client.urgent            #BF616A #BF616A #2E3440 #BF616A
 
+# format math window
+for_window [instance="math"] border pixel 5, floating enable
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1  "1" 
+set $ws2  "2" 
+set $ws3  "3" 
+set $ws4  "4" 
+set $ws5  "5" 
+set $ws6  "6" 
+set $ws7  "7" 
+set $ws8  "8" 
+set $ws9  "9" 
+set $ws10 "10"
+
+# Assign classes to specific workspaces
+assign [class="^Slack"] $ws3
+assign [class="^TelegramDesktop"] $ws9
+# ===============================================================
+
+
+# ========================= STARTUP =============================
 # Start up some applications
 exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -22,7 +46,10 @@ exec --no-startup-id compton
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+# ===============================================================
 
+
+# ========================= KEYBINDINGS =========================
 # start a terminal
 bindsym $mod+Return exec $term
 
@@ -43,9 +70,6 @@ bindsym $mod+c split h
 # split in vertical orientation
 bindsym $mod+v split v
 
-# format math window
-for_window [instance="math"] border pixel 5, floating enable
-
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -62,19 +86,6 @@ bindsym $mod+Shift+t exec --no-startup-id screenshot.sh
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1  "1" 
-set $ws2  "2" 
-set $ws3  "3" 
-set $ws4  "4" 
-set $ws5  "5" 
-set $ws6  "6" 
-set $ws7  "7" 
-set $ws8  "8" 
-set $ws9  "9" 
-set $ws10 "10"
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -142,9 +153,6 @@ bindsym XF86LaunchA exec --no-startup-id playerctl next
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
-
-# Assign classes to specific workspaces
-assign [class="^Slack"] $ws3
-assign [class="^TelegramDesktop"] $ws9
+# ===============================================================
 
 # vim:filetype=i3
