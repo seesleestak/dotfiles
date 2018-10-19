@@ -83,7 +83,7 @@ function note() {
       vim "$notes_dir/$2"
       ;;
     *)
-      vim "$notes_dir/$(date -u '+%Y-%m-%d-%H-%M-%S').md"
+      vim "$notes_dir/$(date -u '+%Y-%m-%d-%H-%M-%S')"
   esac
 }
 
