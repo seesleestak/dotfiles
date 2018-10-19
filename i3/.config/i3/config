@@ -5,7 +5,7 @@ set $term urxvt
 
 font pango:DejaVu Sans Mono Bold 8
 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 5
 gaps inner 8
 
 # Window colors
@@ -31,7 +31,6 @@ set $ws9  "9"
 set $ws10 "10"
 
 # Assign classes to specific workspaces
-assign [class="^Slack"] $ws3
 assign [class="^TelegramDesktop"] $ws9
 # ===============================================================
 
