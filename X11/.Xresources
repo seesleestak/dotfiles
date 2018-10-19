@@ -4,6 +4,7 @@ URxvt.termName: rxvt-unicode
 URxvt.scrollBar: false
 URxvt.font: xft:DejaVu Sans Mono:size=10,\
             xft:DejaVu Sans Mono for Powerline:size=10,\
+            xft:DejaVuSansMono Nerd Font:pixelsize=10,\
             xft:Noto Color Emoji:minspace=False,\
             xft:Droid Sans Mono:size=10,\
             xft:Droid Sans Fallback:size=10,\
