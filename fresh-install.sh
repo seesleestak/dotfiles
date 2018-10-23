@@ -1,5 +1,4 @@
 # !/bin/sh
-
 # Refresh repos and update system
 sudo pacman -Syyu --noconfirm
 
@@ -27,7 +26,6 @@ sudo pacman -S --noconfirm \
   ranger \
   ripgrep \
   rofi \
-  rxvt-unicode \
   scrot \
   slop \
   stow \
@@ -42,7 +40,6 @@ sudo pacman -S --noconfirm \
   ttf-liberation \
   ttf-roboto \
   ttf-ubuntu-font-family \
-  urxvt-perls \
   w3m \
   xorg-server \
   xorg-xev \
@@ -51,7 +48,15 @@ sudo pacman -S --noconfirm \
   zsh \
 
 # Install global npm packages
-sudo npm i -g hiflow ripsr prettier vtop eslint lerna serverless gatsby jest
+sudo npm i -g \
+  eslint \
+  gatsby \
+  hiflow \
+  jest
+  lerna \
+  prettier \
+  ripsr \
+  serverless \
 
 # Create directories
 mkdir ~/working
@@ -62,11 +67,13 @@ mkdir -p ~/Videos/screen-record
 mkdir ~/aur && cd ~/aur
 git clone https://aur.archlinux.org/polybar.git && cd polybar && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/spotify.git && cd spotify && makepkg -isr && cd ..
-git clone https://aur.archlinux.org/snapd.git && cd snapd && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/paper-icon-theme.git && cd paper-icon-theme && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/menu-calc.git && cd menu-calc && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -isr && cd ~
+
+# Install st build
+cd ~/working && git clone git@github.com:seesleestak/st.git && cd st && make && sudo make install
 
 # Install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
