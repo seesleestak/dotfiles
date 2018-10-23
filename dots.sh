@@ -1,4 +1,5 @@
 # !/bin/sh
+# Setup and stow home directory config files
 rm -fv ~/.tmux.conf && stow tmux
 rm -fv ~/.zprofile ~/.zshrc && stow zsh
 rm -rfv ~/.scripts && stow scripts
@@ -8,9 +9,8 @@ rm -fv ~/.gitconfig && stow git
 # Stow vim config and install plugins
 rm -rfv ~/.vim && stow vim && vim -c PlugInstall -c q -c q
 
-if [ ! -d ~/.config ]; then
-  mkdir ~/.config
-fi
+# Setup and stow config directories
+mkdir ~/.config
 rm -rfv ~/.config/dunst && stow dunst
 rm -rfv ~/.config/gtk-3.0 ~/.gtkrc-2.0 && stow gtk
 rm -rfv ~/.config/i3 && stow i3
