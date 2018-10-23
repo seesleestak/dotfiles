@@ -22,10 +22,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
 
-  Plug 'chriskempson/base16-vim'
-
   " Markdown
   " Plug 'JamshedVesuna/vim-markdown-preview'
+
+  " Colorschemes
+  Plug 'chriskempson/base16-vim'
 call plug#end()
 " ------------------------------------------------
 
@@ -68,9 +69,9 @@ set rulerformat=%l,%v
 
 " Syntax Highlighting
 if (has("termguicolors"))
-  " set termguicolors
-  " set t_8f=[38;2;%lu;%lu;%lum
-  " set t_8b=[48;2;%lu;%lu;%lum
+  set termguicolors
+  set t_8f=[38;2;%lu;%lu;%lum
+  set t_8b=[48;2;%lu;%lu;%lum
 endif
 
 syntax enable
@@ -105,11 +106,11 @@ command! -bang -nargs=* Rg
   let g:ale_fix_on_save = 1
 
   " Markdown preview
-  let vim_markdown_preview_github=1
-  let vim_markdown_preview_browser='google-chrome-stable'
-  " let vim_markdown_preview_temp_file=1
-  let vim_markdown_preview_github=1
-  let vim_markdown_preview_use_xdg_open=1
+  let vim_markdown_preview_github = 1
+  let vim_markdown_preview_browser = 'google-chrome-stable'
+  " let vim_markdown_preview_temp_file = 1
+  let vim_markdown_preview_github = 1
+  let vim_markdown_preview_use_xdg_open = 1
 " ------------------------------------------------
 
 " Mappings -------------------------------------
@@ -138,7 +139,7 @@ command! -bang -nargs=* Rg
   " Buffer related mappings
   nnoremap <C-l> :bnext<CR>
   nnoremap <C-h> :bprevious<CR>
-  nnoremap <leader>bq :bp <BAR> bd #<CR>
+  nnoremap <leader>bq :bprevious <BAR> bd #<CR>
 
   " fzf mappings
   nnoremap <leader>t :Files<CR>
