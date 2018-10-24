@@ -1,5 +1,6 @@
 # !/bin/sh
 local notes_dir="/home/calvin/working/notes/misc"
+local notes_dropbox_dir="/home/calvin/Dropbox/notes"
 case "$1" in
   c)
     cd "$notes_dir"
@@ -17,6 +18,9 @@ case "$1" in
     ;;
   n) 
     vim "$notes_dir/$2"
+    ;;
+  d)
+    vim "$notes_dropbox_dir/$(date -u '+%Y-%m-%d-%H-%M-%S')"
     ;;
   *)
     vim "$notes_dir/$(date -u '+%Y-%m-%d-%H-%M-%S')"
