@@ -6,6 +6,9 @@ sudo pacman -Syyu --noconfirm
 sudo pacman -S --noconfirm \
   acpi \
   arc-gtk-theme \
+  avahi \
+  cups \
+  cups-pdf \
   dunst \
   evince \
   feh \
