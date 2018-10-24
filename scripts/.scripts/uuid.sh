@@ -1,0 +1,1 @@
+uuidgen -r | xsel -ib
