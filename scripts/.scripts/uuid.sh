@@ -1,1 +1,1 @@
-uuidgen -r | xsel -ib
+uuidgen -r | tr -d '\n' | xsel -ib
