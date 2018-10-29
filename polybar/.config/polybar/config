@@ -35,13 +35,13 @@ modules-left = i3
 modules-center = date
 modules-right = cpu memory wireless-network volume avg-battery 
 
-tray-position = right
-tray-padding = 2
-tray-detached = false
-tray-maxsize = 16
-tray-transparent = false
-tray-background = ${colors.background}
-tray-scale = 1.0
+; tray-position = right
+; tray-padding = 2
+; tray-detached = false
+; tray-maxsize = 16
+; tray-transparent = false
+; tray-background = ${colors.background}
+; tray-scale = 1.0
 
 [module/i3]
 type = internal/i3
