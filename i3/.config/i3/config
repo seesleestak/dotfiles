@@ -5,7 +5,7 @@ set $term --no-startup-id $TERMINAL
 
 font pango:DejaVu Sans Mono Bold 8
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 4
 gaps inner 8
 
 # Window colors
