@@ -1,2 +1,3 @@
 # !/bin/bash
-killall ffmpeg && notify-send 'Screen capture' 'Stopped'
+killall ffmpeg
+notify-send 'Screen capture' 'Stopped'
