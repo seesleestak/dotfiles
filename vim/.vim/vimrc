@@ -68,11 +68,11 @@ set ruler
 set rulerformat=%l,%v
 
 " Syntax Highlighting
-if (has("termguicolors"))
+" if (has("termguicolors"))
   " set termguicolors
   " set t_8f=[38;2;%lu;%lu;%lum
   " set t_8b=[48;2;%lu;%lu;%lum
-endif
+" endif
 
 syntax enable
 colorscheme nord
@@ -106,11 +106,10 @@ command! -bang -nargs=* Rg
   let g:ale_fix_on_save = 1
 
   " Markdown preview
-  let vim_markdown_preview_github = 1
-  let vim_markdown_preview_browser = 'google-chrome-stable'
-  " let vim_markdown_preview_temp_file = 1
-  let vim_markdown_preview_github = 1
-  let vim_markdown_preview_use_xdg_open = 1
+  " let vim_markdown_preview_github = 1
+  " let vim_markdown_preview_browser = 'google-chrome-stable'
+  " let vim_markdown_preview_github = 1
+  " let vim_markdown_preview_use_xdg_open = 1
 " ------------------------------------------------
 
 " Mappings -------------------------------------
@@ -165,11 +164,6 @@ endfunction
 function! CopyPathDir() " Copy current buffer path directory to multiple buffers
   execute "let @*=expand('%:p:h')"
   execute "let @+=expand('%:p:h')"
-endfunction
-
-function! BreakDownArgumentList()
-  let @y = 'f,li@y'
-  execute "normal f(lif)ik@y"
 endfunction
 
 filetype plugin indent on
