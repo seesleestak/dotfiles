@@ -4,6 +4,10 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[red]%} [x]"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} [c]"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[blue]%} [^]"
 
+# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} ✘"
+# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%} ✔"
+# ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} ➦"
+
 # machine name
 function get_box_name {
   if [ -f ~/.box-name ]; then
