@@ -33,7 +33,7 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = cpu memory wireless-network volume avg-battery 
+modules-right = cpu memory notification wireless-network volume avg-battery 
 
 tray-position = right
 tray-padding = 2
@@ -99,7 +99,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.orange}
-format-connected-padding = 2
+format-connected-padding = 1
 
 label-connected = %essid%
 label-connected-foreground = ${colors.foreground-alt}
@@ -150,6 +150,7 @@ interval = 3;
 format-prefix = "RAM: "
 format-prefix-foreground = ${colors.green}
 format-prefix-font = 2
+format-padding = 1
 label = %gb_used%
 
 [module/cpu]
@@ -159,7 +160,14 @@ format-prefix = "CPU: "
 format-prefix-foreground = ${colors.green}
 format-prefix-font = 2
 label = %percentage%%
-format-padding = 2
+format-padding = 1
+
+[module/notification]
+type = custom/script
+exec = ~/.config/polybar/scripts/notification.sh
+; interval = 2
+click-left = ~/.config/polybar/scripts/toggle-notifications.sh
+format-padding = 1
 
 ; polybar vim syntax highlighting
 ; vim:filetype=dosini
