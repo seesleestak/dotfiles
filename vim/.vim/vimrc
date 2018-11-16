@@ -22,9 +22,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
 
-  " Markdown
-  " Plug 'JamshedVesuna/vim-markdown-preview'
-
   " Colorschemes
   Plug 'chriskempson/base16-vim'
 call plug#end()
@@ -98,18 +95,6 @@ command! -bang -nargs=* Rg
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
-
-  " Ale
-  let g:ale_fixers = {}
-  " let g:ale_fixers['javascript'] = ['eslint']
-  let g:ale_fixers['javascript'] = ['prettier', 'eslint']
-  let g:ale_fix_on_save = 1
-
-  " Markdown preview
-  " let vim_markdown_preview_github = 1
-  " let vim_markdown_preview_browser = 'google-chrome-stable'
-  " let vim_markdown_preview_github = 1
-  " let vim_markdown_preview_use_xdg_open = 1
 " ------------------------------------------------
 
 " Mappings -------------------------------------
@@ -147,23 +132,13 @@ command! -bang -nargs=* Rg
   nnoremap <leader>gst :GFiles?<CR>
 
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
+
+  " ALE
   nnoremap <leader>w :ALENextWrap<CR>
+  nnoremap <C-p> :call FixPrettierEslint()<CR>
+  nnoremap <leader>e :call FixEslint()<CR>
 " ------------------------------------------------
 
-" Billy's console log creator
-function! EasyConsoleLog()
-  let word = expand("<cword>")
-  execute "normal! oconsole.log('".word." --- ', ".word.")"
-endfunction
-
-function! CopyPath() " Copy current buffer path to multiple buffers
-  execute "let @*=expand('%:p')"
-  execute "let @+=expand('%:p')"
-endfunction
-
-function! CopyPathDir() " Copy current buffer path directory to multiple buffers
-  execute "let @*=expand('%:p:h')"
-  execute "let @+=expand('%:p:h')"
-endfunction
+source ~/.vim/functions.vim
 
 filetype plugin indent on
