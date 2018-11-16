@@ -1,6 +1,9 @@
 # !/bin/sh
-STATE=$(ps -e | grep dunst | head -n 1)
-if [[ -n $STATE ]]; then
+if [[ -z $NOTIFICATION_STATUS ]]; then
+  export NOTIFICATION_STATUS=true
+fi
+
+if [[ $NOTIFICATION_STATUS = true ]]; then
   echo 
 else
   echo 
