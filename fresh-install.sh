@@ -49,6 +49,7 @@ sudo pacman -S --noconfirm \
   xorg-xinit \
   xorg-xrandr \
   xsel \
+  yad \
   zsh \
 
 # Install global npm packages
