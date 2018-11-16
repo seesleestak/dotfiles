@@ -27,8 +27,8 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-top = 8
-border-left = 8
+border-top   = 8
+border-left  = 8
 border-right = 8
 
 radius = 3
