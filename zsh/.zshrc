@@ -49,7 +49,7 @@ function vimstart() {
 
   echo $ORANGE
   TOTAL=0
-  for i in {1..10}
+  for i in {1..20}
   do
     vim -c\ q --startuptime /tmp/vim.log
     VAL=$(tail -n1 /tmp/vim.log | awk '{print $1}')
@@ -58,7 +58,7 @@ function vimstart() {
   done
 
   echo $PURPLE
-  echo $TOTAL | awk '{print $1/10 " Average \n"}'
+  echo $TOTAL | awk '{print $1/20 " Average \n"}'
 }
 
 # Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
