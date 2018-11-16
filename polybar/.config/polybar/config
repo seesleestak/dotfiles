@@ -19,7 +19,7 @@ muted = ${xrdb:color8}
 monitor = ${env:MONITOR:}
 bottom = false
 width = 100%
-height = 24
+height = 30
 fixed-center = true
 ; wm-restack = i3
 ; override-redirect = true
@@ -27,19 +27,26 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+border-top = 8
+border-left = 8
+border-right = 8
+
+radius = 3
+
 font-0 = DejaVu Sans Mono:size=10;2
 font-1 = DejaVu Sans Mono:style=Bold:size=10;2
 font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = cpu memory notification wireless-network volume avg-battery 
+modules-right = cpu memory wireless-network volume avg-battery 
 
-tray-position = right
-tray-padding = 2
-tray-detached = false
-tray-transparent = false
-tray-background = ${colors.background}
+; tray-position = right
+; tray-padding = 2
+; tray-detached = false
+; tray-transparent = false
+; tray-background = ${colors.background}
+; tray-offset-x = ${self.radius}
 
 [module/i3]
 type = internal/i3
