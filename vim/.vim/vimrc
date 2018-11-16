@@ -23,7 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Colorschemes
-  Plug 'chriskempson/base16-vim'
+  " Plug 'chriskempson/base16-vim'
 call plug#end()
 " ------------------------------------------------
 

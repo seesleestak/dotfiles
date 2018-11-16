@@ -4,21 +4,25 @@ function! EasyConsoleLog()
   execute "normal! oconsole.log('".word." --- ', ".word.")"
 endfunction
 
-function! CopyPath() " Copy current buffer path to multiple buffers
+" Copy current buffer path to multiple buffers
+function! CopyPath() 
   execute "let @*=expand('%:p')"
   execute "let @+=expand('%:p')"
 endfunction
 
-function! CopyPathDir() " Copy current buffer path directory to multiple buffers
+" Copy current buffer path directory to multiple buffers
+function! CopyPathDir() 
   execute "let @*=expand('%:p:h')"
   execute "let @+=expand('%:p:h')"
 endfunction
 
+" Run ALEFix for eslint only
 function! FixEslint()
   let b:ale_fixers = {'javascript': ['eslint']}
   execute "ALEFix"
 endfunction
 
+" Run ALEFix for prettier and eslint
 function! FixPrettierEslint()
   let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
   execute "ALEFix"
