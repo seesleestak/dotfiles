@@ -77,8 +77,9 @@ git clone https://aur.archlinux.org/paper-icon-theme.git && cd paper-icon-theme 
 git clone https://aur.archlinux.org/menu-calc.git && cd menu-calc && makepkg -isr && cd ..
 git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -isr && cd ~
 
-# Install st build
+# Install custom suckless builds
 cd ~/working && git clone git@github.com:seesleestak/st.git && cd st && make && sudo make install
+cd ~/working && git clone git@github.com:seesleestak/dmenu.git && cd dmenu && make && sudo make install
 
 # Install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
