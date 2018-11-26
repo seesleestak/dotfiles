@@ -154,4 +154,4 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase s
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 # ===============================================================
 
-# vim:filetype=i3
+# vim:syntax=i3
