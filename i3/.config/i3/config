@@ -41,6 +41,7 @@ exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
 exec --no-startup-id nm-applet
+exec --no-startup-id compton
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
