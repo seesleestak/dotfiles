@@ -41,7 +41,6 @@ exec --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
 exec --no-startup-id nm-applet
-exec --no-startup-id compton
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -122,10 +121,10 @@ bindsym $mod+Shift+k move up 30
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right 30
 
-bindsym $mod+Shift+y resize shrink width 5 px or 5ppt
-bindsym $mod+Shift+u resize shrink height 5 px or 5 ppt
-bindsym $mod+Shift+i resize grow height 5 px or 5 ppt
-bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+bindsym $mod+Shift+y resize shrink width  60px or 5 ppt
+bindsym $mod+Shift+u resize shrink height 60px or 5 ppt
+bindsym $mod+Shift+i resize grow   height 60px or 5 ppt
+bindsym $mod+Shift+o resize grow   width  60px or 5 ppt
 
 # i3Lock script
 bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
