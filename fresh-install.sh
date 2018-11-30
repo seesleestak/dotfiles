@@ -1,5 +1,5 @@
 # !/bin/sh
-archPackages() {
+pacmanSetup() {
   # Refresh repos and update system
   sudo pacman -Syyu
 
@@ -51,7 +51,7 @@ archPackages() {
     xorg-xrandr \
     xsel \
     yad \
-    zsh \
+    zsh
 
   # Get packages from AUR
   aurPackages
@@ -71,9 +71,17 @@ aurPackages() {
   git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -isr && cd ~
 }
 
-debianPackages() {
+aptSetup() {
   # Get all the rest that don't depend on apt
-  # distroAgnosticSetup
+  sudo apt install \
+    git \
+    stow \
+    tmux \
+    vim \
+    xclip \
+    xsel
+
+  distroAgnosticSetup
 }
 
 distroAgnosticSetup() {
@@ -86,7 +94,7 @@ distroAgnosticSetup() {
     lerna \
     prettier \
     ripsr \
-    serverless \
+    serverless
 
   # Create directories
   mkdir ~/working
@@ -103,10 +111,10 @@ distroAgnosticSetup() {
 
 case $1 in
   -d)
-    debianPackages
+    aptSetup
     ;;
   -a)
-    archPackages
+    pacmanSetup
     ;; 
   *)
     echo "Please specify which distro to install packages for: "
