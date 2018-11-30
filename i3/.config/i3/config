@@ -111,21 +111,21 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+h focus left
-bindsym $mod+Shift+h move left 30
+bindsym $mod+Shift+h move left 50
 
 bindsym $mod+j focus down
-bindsym $mod+Shift+j move down 30
+bindsym $mod+Shift+j move down 50
 
 bindsym $mod+k focus up
-bindsym $mod+Shift+k move up 30
+bindsym $mod+Shift+k move up 50
 
 bindsym $mod+l focus right
-bindsym $mod+Shift+l move right 30
+bindsym $mod+Shift+l move right 50
 
-bindsym $mod+Shift+y resize shrink width  60px or 5 ppt
-bindsym $mod+Shift+u resize shrink height 60px or 5 ppt
-bindsym $mod+Shift+i resize grow   height 60px or 5 ppt
-bindsym $mod+Shift+o resize grow   width  60px or 5 ppt
+bindsym $mod+Shift+y resize shrink width  70px or 5 ppt
+bindsym $mod+Shift+u resize shrink height 70px or 5 ppt
+bindsym $mod+Shift+i resize grow   height 70px or 5 ppt
+bindsym $mod+Shift+o resize grow   width  70px or 5 ppt
 
 # i3Lock script
 bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
