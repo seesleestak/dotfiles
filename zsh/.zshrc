@@ -7,7 +7,9 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Load plugins
-plugins=(git)
+plugins+=(git \
+  # zsh-nvm \
+)
 
 source $ZSH/oh-my-zsh.sh
 
