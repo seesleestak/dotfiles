@@ -1,24 +1,24 @@
 # !/bin/sh
-pacmanSetup() {
-  # Refresh repos and update system
-  sudo pacman -Syyu
+pacmanFonts() {
+  sudo pacman -S \
+    ttf-bitstream-vera \
+    ttf-dejavu \
+    ttf-font-awesome \
+    ttf-freefont \
+    ttf-liberation \
+    ttf-roboto \
+    ttf-ubuntu-font-family
+}
 
-  # Install a whole bunch of programs
+pacmanUtilities() {
   sudo pacman -S \
     acpi \
-    arc-gtk-theme \
     avahi \
     cups \
     cups-pdf \
-    dunst \
-    evince \
-    feh \
-    git \
     gvfs \
-    gvim \
     i3 \
     imagemagick \
-    neofetch \
     network-manager-applet \
     networkmanager \
     nodejs \
@@ -27,6 +27,23 @@ pacmanSetup() {
     playerctl \
     powertop \
     pulseaudio \
+    thunar \
+    thunar-volman \
+    w3m \
+    xorg-server \
+    xorg-xev \
+    xorg-xinit \
+    xorg-xrandr
+}
+
+pacmanPreferredPrograms() {
+  sudo pacman -S \
+    arc-gtk-theme \
+    dunst \
+    feh \
+    git \
+    gvim \
+    neofetch \
     ranger \
     ripgrep \
     rofi \
@@ -34,24 +51,25 @@ pacmanSetup() {
     slop \
     stow \
     telegram-desktop \
-    thunar \
-    thunar-volman \
     tmux \
-    ttf-bitstream-vera \
-    ttf-dejavu \
-    ttf-font-awesome \
-    ttf-freefont \
-    ttf-liberation \
-    ttf-roboto \
-    ttf-ubuntu-font-family \
-    w3m \
-    xorg-server \
-    xorg-xev \
-    xorg-xinit \
-    xorg-xrandr \
     xsel \
+    xclip \
     yad \
+    zathura \
+    zathura-pdf-poppler \
+    zathura-ps \
     zsh
+}
+
+pacmanSetup() {
+  # Refresh repos and update system
+  sudo pacman -Syyu
+
+  # Install a whole bunch of programs
+  pacmanUtilities
+
+  # Install fonts from Arch repositories
+  pacmanFonts
 
   # Get packages from AUR
   aurPackages
@@ -73,7 +91,7 @@ aurPackages() {
 
 aptSetup() {
   # Get all the rest that don't depend on apt
-  sudo apt install \
+  sudo apt-get install \
     git \
     stow \
     tmux \
@@ -113,13 +131,16 @@ case $1 in
   -d)
     aptSetup
     ;;
-  -a)
+  -p)
     pacmanSetup
     ;; 
+  -pp)
+    pacmanPreferredPrograms
+    ;; 
   *)
-    echo "Please specify which distro to install packages for: "
-    echo "   -d (Debian-based distro)"
-    echo "   -a (Arch-based distro)"
+    echo "Please specify which package manager to install packages from: "
+    echo "   -a (apt)"
+    echo "   -p (pacman)"
     exit
     ;;
 esac
