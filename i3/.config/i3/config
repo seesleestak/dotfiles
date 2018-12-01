@@ -150,8 +150,8 @@ bindsym XF86Search exec --no-startup-id playerctl play-pause
 bindsym XF86LaunchA exec --no-startup-id playerctl next
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 # ===============================================================
 
 # vim:syntax=i3
