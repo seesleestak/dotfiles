@@ -64,6 +64,9 @@ set clipboard=unnamedplus,unnamed
 set ruler
 set rulerformat=%l,%v
 
+" Disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Syntax Highlighting
 " if (has("termguicolors"))
   " set termguicolors
