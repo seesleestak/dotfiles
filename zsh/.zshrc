@@ -29,6 +29,7 @@ source $ZSH/oh-my-zsh.sh
   alias hic="hi commit"
 
   alias car="sh cpp-compile.sh"
+  alias standup="vim ~/Dropbox/notes/standup.txt"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
