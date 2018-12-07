@@ -33,7 +33,7 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = updates-arch cpu memory wireless-network volume avg-battery 
+modules-right = updates-arch wireless-network volume avg-battery 
 
 tray-position    = right
 tray-padding     = 2
@@ -172,6 +172,7 @@ format-padding = 1
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-arch.sh
 interval = 600
+format-padding = 1
 
 ; polybar vim syntax highlighting
 ; vim:syntax=dosini
