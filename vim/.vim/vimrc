@@ -134,12 +134,14 @@ command! -bang -nargs=* Rg
   nnoremap <leader>f :Rg <C-r><C-w><CR>
   nnoremap <leader>gst :GFiles?<CR>
 
-  nnoremap <leader>lg :call EasyConsoleLog()<CR>
-
   " ALE
   nnoremap <leader>w :ALENextWrap<CR>
   nnoremap <C-p> :call FixPrettierEslint()<CR>
   nnoremap <leader>e :call FixEslint()<CR>
+
+  " Show entire path on Ctrl+g
+  nnoremap <C-g> 1<C-g>
+  nnoremap <leader>lg :call EasyConsoleLog()<CR>
 " ------------------------------------------------
 
 source ~/.vim/functions.vim
