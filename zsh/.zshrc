@@ -7,7 +7,8 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Load plugins
-plugins+=(git \
+plugins=( \
+  git \
   # zsh-nvm \
 )
 
@@ -29,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
   alias hic="hi commit"
 
   alias car="sh cpp-compile.sh"
-  alias standup="vim ~/Dropbox/notes/standup.txt"
+  alias standup="vim ~/Dropbox/notes/standup.md"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
