@@ -6,7 +6,7 @@ set $term --no-startup-id $TERMINAL
 font pango:DejaVu Sans Mono Bold 8
 
 for_window [class="^.*"] border pixel 4
-gaps inner 8
+# gaps inner 8
 
 # Window colors
 client.focused           #8FBCBB #8FBCBB #2E3440 #8FBCBB
@@ -40,7 +40,7 @@ assign [class="^TelegramDesktop"] $ws9
 exec        --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec        --no-startup-id nm-applet
-exec        --no-startup-id compton
+# exec        --no-startup-id compton
 
 # Background
 exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
