@@ -11,3 +11,5 @@ case $1 in
     google-chrome-stable --app="https://hixme.slack.com/messages"
     ;; 
 esac
+
+# vim:syntax=sh
