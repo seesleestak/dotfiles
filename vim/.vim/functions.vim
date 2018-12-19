@@ -1,7 +1,7 @@
 " Billy Montgomery's console log creator
 function! EasyConsoleLog()
   let word = expand("<cword>")
-  execute "normal! oconsole.log('".word." --- ', ".word.")"
+  execute "normal! oconsole.log(\"".word." --- \", ".word.")"
 endfunction
 
 " Copy current buffer path to multiple buffers
