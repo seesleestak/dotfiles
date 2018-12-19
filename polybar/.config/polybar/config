@@ -35,11 +35,11 @@ modules-left = i3
 modules-center = date
 modules-right = updates-arch wireless-network volume avg-battery 
 
-tray-position    = right
-tray-padding     = 2
-tray-detached    = false
-tray-transparent = false
-tray-background  = ${colors.background}
+; tray-position    = right
+; tray-padding     = 2
+; tray-detached    = false
+; tray-transparent = false
+; tray-background  = ${colors.background}
 
 [module/i3]
 type = internal/i3
