@@ -17,6 +17,8 @@ client.urgent            #BF616A #BF616A #2E3440 #BF616A
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+for_window [class="Yad"] floating enable
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1  "1" 
@@ -40,7 +42,7 @@ assign [class="^TelegramDesktop"] $ws9
 exec        --no-startup-id dropbox
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec        --no-startup-id nm-applet
-exec        --no-startup-id compton
+exec_always --no-startup-id compton
 
 # Background
 exec_always --no-startup-id feh --bg-fill ~/wallpaper/plant.jpg
