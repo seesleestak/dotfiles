@@ -142,6 +142,8 @@ command! -bang -nargs=* Rg
   " Show entire path on Ctrl+g
   nnoremap <C-g> 1<C-g>
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
+
+  noremap <leader>m :call ReplaceUnderCursor("")<left><left>
 " ------------------------------------------------
 
 source ~/.vim/functions.vim

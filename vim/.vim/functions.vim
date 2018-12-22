@@ -27,3 +27,8 @@ function! FixPrettierEslint()
   let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
   execute "ALEFix"
 endfunction
+
+function! ReplaceUnderCursor(replaceWord)
+  let word = expand("<cword>")
+  execute "%s/".word."/".a:replaceWord."/gc"
+endfunction
