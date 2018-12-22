@@ -143,6 +143,7 @@ command! -bang -nargs=* Rg
   nnoremap <C-g> 1<C-g>
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 
+  " Find and replace
   noremap <leader>m :call ReplaceUnderCursor("")<left><left>
 " ------------------------------------------------
 
