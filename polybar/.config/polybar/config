@@ -33,7 +33,7 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
 modules-center = date
-modules-right = updates-arch wireless-network volume avg-battery 
+modules-right = cpu memory updates-arch wireless-network volume avg-battery 
 
 ; tray-position    = right
 ; tray-padding     = 2
@@ -162,17 +162,17 @@ format-prefix-font = 2
 label = %percentage%%
 format-padding = 1
 
-[module/notification]
-type = custom/script
-exec = ~/.config/polybar/scripts/notification.sh
-click-left = ~/.config/polybar/scripts/toggle-notifications.sh
-format-padding = 1
-
 [module/updates-arch]
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-arch.sh
 interval = 600
 format-padding = 1
+
+; [module/notification]
+; type = custom/script
+; exec = ~/.config/polybar/scripts/notification.sh
+; click-left = ~/.config/polybar/scripts/toggle-notifications.sh
+; format-padding = 1
 
 ; polybar vim syntax highlighting
 ; vim:syntax=dosini
