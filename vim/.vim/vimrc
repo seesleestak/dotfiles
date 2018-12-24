@@ -144,7 +144,7 @@ command! -bang -nargs=* Rg
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 
   " Find and replace
-  noremap <leader>m :call ReplaceUnderCursor("")<left><left>
+  nnoremap <leader>m :call ReplaceUnderCursor("")<left><left>
 " ------------------------------------------------
 
 source ~/.vim/functions.vim
