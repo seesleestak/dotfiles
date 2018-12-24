@@ -11,24 +11,24 @@ IS_CHARGING=$(acpi -b | grep 'Charging')
 IS_DISCHARGING=$(acpi -b | grep 'Discharging')
 BATTERY_PERCENTAGE=" $NUM%"
 
-if [ $NUM -gt 97 ]; then
-  BATTERY_PERCENTAGE=" 100%"
-elif [ $NUM -le 75 ]; then
-  BATTERY_PERCENTAGE=" $NUM%"
+if [ $NUM -lt 10 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -le 30 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
 elif [ $NUM -le 50 ]; then
   BATTERY_PERCENTAGE=" $NUM%"
-elif [ $NUM -le 25 ]; then
-  BATTERY_PERCENTAGE=" $NUM%"
-elif [ $NUM -lt 10 ]; then
-  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -le 75 ]; then
+  BATTERY_PERCENTAGE=" $NUM%"
+elif [ $NUM -gt 97 ]; then
+  BATTERY_PERCENTAGE=" 100%"
 else
   BATTERY_PERCENTAGE=" $NUM%"
 fi
 
 if [ -n "$IS_DISCHARGING" ]; then
-  echo $BATTERY_PERCENTAGE [DISCHARGING]
+  echo $BATTERY_PERCENTAGE 
 elif [ -n "$IS_CHARGING" ]; then
-  echo $BATTERY_PERCENTAGE [CHARGING]
+  echo $BATTERY_PERCENTAGE 
 else
   echo $BATTERY_PERCENTAGE
 fi
