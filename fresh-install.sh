@@ -16,13 +16,12 @@ pacmanUtilities() {
     avahi \
     cups \
     cups-pdf \
+    git \
     gvfs \
     i3 \
     imagemagick \
     network-manager-applet \
     networkmanager \
-    nodejs \
-    npm \
     pavucontrol \
     playerctl \
     powertop \
@@ -41,9 +40,10 @@ pacmanPreferredPrograms() {
     arc-gtk-theme \
     dunst \
     feh \
-    git \
     gvim \
     neofetch \
+    nodejs \
+    npm \
     ranger \
     ripgrep \
     rofi \
@@ -52,8 +52,8 @@ pacmanPreferredPrograms() {
     stow \
     telegram-desktop \
     tmux \
-    xsel \
     xclip \
+    xsel \
     yad \
     zathura \
     zathura-pdf-poppler \
@@ -137,10 +137,18 @@ case $1 in
   -pp)
     pacmanPreferredPrograms
     ;; 
+  -pa)
+    aurPackages
+    ;; 
+  -da)
+    distroAgnosticSetup
+    ;; 
   *)
-    echo "Please specify which package manager to install packages from: "
-    echo "   -a (apt)"
-    echo "   -p (pacman)"
+    echo "Please specify an install falg: "
+    echo "   -a  (apt)"
+    echo "   -p  (pacman)"
+    echo "   -pp (preferred pacman packages)"
+    echo "   -da (distro agnostic packages)"
     exit
     ;;
 esac
