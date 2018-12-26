@@ -1,4 +1,8 @@
 # !/bin/sh
+
+fileList=""
+appendOld() {}
+
 # Setup and stow home directory config files
 rm -fv ~/.tmux.conf && stow tmux
 rm -fv ~/.zprofile ~/.zshrc && stow zsh
@@ -10,10 +14,11 @@ rm -fv ~/.gitconfig && stow git
 rm -rfv ~/.vim && stow vim && vim -c PlugInstall -c q -c q
 
 # Setup and stow config directories
-mkdir ~/.config
+mkdir -p ~/.config
 rm -rfv ~/.config/dunst && stow dunst
 rm -rfv ~/.config/gtk-3.0 ~/.gtkrc-2.0 && stow gtk
 rm -rfv ~/.config/i3 && stow i3
 rm -rfv ~/.config/polybar && stow polybar
 rm -rfv ~/.config/ranger && stow ranger
 rm -rfv ~/.config/rofi && stow rofi
+rm -rfv ~/wallpaper && stow wallpaper
