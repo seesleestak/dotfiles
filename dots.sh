@@ -23,8 +23,8 @@ appendOld() {
   for i in ${fileList[@]}
   do
     if [[ -e $i ]]; then
-      echo $i
-      # mv $i "$i.old"
+      echo "$i exists, moving..."
+      mv $i "$i.old"
     fi
   done
 }
