@@ -1,24 +1,52 @@
 # !/bin/sh
+appendOld() {
+  fileList=(
+    ~/.tmux.conf \
+    ~/.zprofile \
+    ~/.zshrc \
+    ~/.scripts \
+    ~/.urxvt   \
+    ~/.xinitrc \
+    ~/.Xresources \
+    ~/.gitconfig \
+    ~/.vim \
+    ~/.config/dunst \
+    ~/.config/gtk-3.0 \
+    ~/.gtkrc-2.0 \
+    ~/.config/i3 \
+    ~/.config/polybar \
+    ~/.config/ranger \
+    ~/.config/rofi \
+    ~/wallpaper \
+    )
 
-fileList=""
-appendOld() {}
+  for i in ${fileList[@]}
+  do
+    if [[ -e $i ]]; then
+      echo $i
+      # mv $i "$i.old"
+    fi
+  done
+}
+
+appendOld
 
 # Setup and stow home directory config files
-rm -fv ~/.tmux.conf && stow tmux
-rm -fv ~/.zprofile ~/.zshrc && stow zsh
-rm -rfv ~/.scripts && stow scripts
-rm -rfv ~/.urxvt && rm -fv ~/.xinitrc ~/.Xresources && stow X11
-rm -fv ~/.gitconfig && stow git
+stow tmux
+stow zsh
+stow scripts
+stow X11
+stow git
 
 # Stow vim config and install plugins
-rm -rfv ~/.vim && stow vim && vim -c PlugInstall -c q -c q
+stow vim && vim -c PlugInstall -c q -c q
 
 # Setup and stow config directories
 mkdir -p ~/.config
-rm -rfv ~/.config/dunst && stow dunst
-rm -rfv ~/.config/gtk-3.0 ~/.gtkrc-2.0 && stow gtk
-rm -rfv ~/.config/i3 && stow i3
-rm -rfv ~/.config/polybar && stow polybar
-rm -rfv ~/.config/ranger && stow ranger
-rm -rfv ~/.config/rofi && stow rofi
-rm -rfv ~/wallpaper && stow wallpaper
+stow dunst
+stow gtk
+stow i3
+stow polybar
+stow ranger
+stow rofi
+stow wallpaper
