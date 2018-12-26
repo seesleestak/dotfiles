@@ -23,7 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Colorschemes
-  " Plug 'chriskempson/base16-vim'
+  Plug 'chriskempson/base16-vim'
 call plug#end()
 " ------------------------------------------------
 
@@ -69,9 +69,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Syntax Highlighting
 " if (has("termguicolors"))
-  " set termguicolors
-  " set t_8f=[38;2;%lu;%lu;%lum
-  " set t_8b=[48;2;%lu;%lu;%lum
+"   set termguicolors
+"   set t_8f=[38;2;%lu;%lu;%lum
+"   set t_8b=[48;2;%lu;%lu;%lum
 " endif
 
 syntax enable
@@ -141,6 +141,8 @@ command! -bang -nargs=* Rg
 
   " Show entire path on Ctrl+g
   nnoremap <C-g> 1<C-g>
+
+  " JS console.log function
   nnoremap <leader>lg :call EasyConsoleLog()<CR>
 
   " Find and replace
