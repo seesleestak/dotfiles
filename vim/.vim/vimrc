@@ -1,32 +1,3 @@
-" vim-plug ---------------------------------------
-call plug#begin('~/.vim/plugged')
-  " Core editor functionality
-  Plug 'SirVer/ultisnips'
-  Plug 'alvan/vim-closetag'
-  Plug 'ap/vim-buftabline'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-eunuch'
-  Plug 'tpope/vim-surround'
-
-  " File management/navigation
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-  Plug 'justinmk/vim-dirvish'
-
-  " Git
-  Plug 'airblade/vim-gitgutter'
-  Plug 'tpope/vim-fugitive'
-
-  " JS
-  Plug 'mxw/vim-jsx'
-  Plug 'pangloss/vim-javascript'
-  Plug 'w0rp/ale'
-
-  " Colorschemes
-  Plug 'chriskempson/base16-vim'
-call plug#end()
-" ------------------------------------------------
-
 set nocompatible
 set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling
@@ -100,57 +71,8 @@ command! -bang -nargs=* Rg
   let g:dirvish_relative_paths = 1
 " ------------------------------------------------
 
-" Mappings -------------------------------------
-  " <leader>
-  let mapleader = "\<Space>"
-
-  nnoremap <leader>s :update<CR>
-  nnoremap <leader>q :q<CR>
-
-  " Copy file path of current buffer
-  nnoremap <leader>p :call CopyPath()<CR>
-
-  " Copy directory of current buffer
-  nnoremap <leader>d :call CopyPathDir()<CR>
-  
-  " Open and source vimrc
-  nnoremap <leader>v :e $MYVIMRC<CR>
-  nnoremap <leader>r :source $MYVIMRC<CR>
-
-  " Open zshrc
-  nnoremap <leader>z :e ~/dotfiles/zsh/.zshrc<CR>
-
-  " commentary mapping
-  noremap <leader>c :Commentary<CR>
-
-  " Buffer related mappings
-  nnoremap <C-l> :bnext<CR>
-  nnoremap <C-h> :bprevious<CR>
-  nnoremap <leader>bq :bprevious <BAR> bd #<CR>
-
-  " fzf mappings
-  nnoremap <leader>t :Files<CR>
-  nnoremap <leader>a :Rg<space>
-  nnoremap <leader>f :Rg <C-r><C-w><CR>
-  nnoremap <leader>gst :GFiles?<CR>
-
-  " ALE
-  nnoremap <leader>w :ALENextWrap<CR>
-  nnoremap <C-p> :call FixPrettierEslint()<CR>
-  nnoremap <leader>e :call FixEslint()<CR>
-
-  " Show entire path on Ctrl+g
-  nnoremap <C-g> 1<C-g>
-
-  " JS console.log function
-  nnoremap <leader>lg :call EasyConsoleLog(0)<CR>
-  vnoremap <leader>lg "zy:call EasyConsoleLog(1)<CR>
-
-  " Find and replace
-  nnoremap <leader>m :call ReplaceUnderCursor("")<left><left>
-  vnoremap <leader>n "zy:call ReplaceUnderVisual("")<left><left>
-" ------------------------------------------------
-
+source ~/.vim/plugins.vim
+source ~/.vim/mappings.vim
 source ~/.vim/functions.vim
 
 filetype plugin indent on
