@@ -3,15 +3,12 @@ rofi.kb-mode-next: Control+N
 rofi.kb-mode-previous: Control+P
 rofi.line-padding: 2	
 rofi.line-margin: 10
+rofi.padding: 50
+rofi.bw: 8,
+rofi.lines: 8
 
 // Full screen config
 /* rofi.padding: 250 */
 /* rofi.width: 100 */
 /* rofi.fullscreen: true */
 /* rofi.bw: 0, */
-
-rofi.padding: 50
-rofi.bw: 8,
-rofi.lines: 8
-rofi.line-margin: 10
-rofi.line-padding: 2	
