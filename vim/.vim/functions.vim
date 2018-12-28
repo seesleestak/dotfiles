@@ -1,6 +1,10 @@
 " Billy Montgomery's console log creator
-function! EasyConsoleLog()
-  let word = expand("<cword>")
+function! EasyConsoleLog(isVisual)
+  if a:isVisual
+    let word = @z
+  else
+    let word = expand("<cword>")
+  endif 
   execute "normal! oconsole.log(\"".word." --- \", ".word.")"
 endfunction
 

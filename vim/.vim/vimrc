@@ -143,7 +143,8 @@ command! -bang -nargs=* Rg
   nnoremap <C-g> 1<C-g>
 
   " JS console.log function
-  nnoremap <leader>lg :call EasyConsoleLog()<CR>
+  nnoremap <leader>lg :call EasyConsoleLog(0)<CR>
+  vnoremap <leader>lg "zy:call EasyConsoleLog(1)<CR>
 
   " Find and replace
   nnoremap <leader>m :call ReplaceUnderCursor("")<left><left>
