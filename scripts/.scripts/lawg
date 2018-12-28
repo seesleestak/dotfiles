@@ -1,1 +1,28 @@
-/home/calvin/working/lawg/lawg
+# !/bin/sh
+TIMESTAMP=$(date -Iseconds)
+
+if [ -z $1 ]; then
+  echo "Must include a directory name"
+  exit
+fi
+
+LOG_NAME=$1
+
+TARGET_DIR=""
+case $2 in
+  -d)
+    TARGET_DIR=$3 
+    ;;
+  *)
+    TARGET_DIR="/tmp"
+    ;; 
+esac
+TARGET_PATH="$TARGET_DIR/$LOG_NAME"
+
+# Create path for log
+mkdir -p $TARGET_PATH
+
+# tee input into timestamped file
+cat | tee $TARGET_PATH/$TIMESTAMP -i
+
+# vim:syntax=sh
