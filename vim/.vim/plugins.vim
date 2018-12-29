@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'alvan/vim-closetag'
   Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-surround'
 
   " File management/navigation
@@ -22,3 +21,17 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 call plug#end()
 
+" Plugin config ----------------------------------
+  " Closetag
+  let g:closetag_filenames = '*.html,*.js'
+
+  " UltiSnips
+  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+
+  " vim-javascript
+  let g:javascript_conceal = 0
+  
+  " dirvish config
+  let g:dirvish_mode = 2
+  let g:dirvish_relative_paths = 1
+" ------------------------------------------------
