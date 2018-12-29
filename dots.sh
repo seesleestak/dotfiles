@@ -18,7 +18,7 @@ appendOld() {
     ~/.config/ranger \
     ~/.config/rofi \
     ~/wallpaper \
-    )
+  )
 
   for i in ${fileList[@]}
   do
