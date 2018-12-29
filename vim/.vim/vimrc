@@ -1,6 +1,6 @@
-set nocompatible
+" set nocompatible
 set backspace=indent,eol,start " Allow backspace
-set mouse=n " Allow scrolling
+set mouse=n " Allow scrolling in normal mode
 set hidden " Hide buffers instead of closing
 set autoread " Auto reload if file changes outside of vim
 set lazyredraw " Only redraw once macro is done running
@@ -14,13 +14,11 @@ set timeoutlen=1000
 set ttimeoutlen=0 
 
 " Tab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
 set smarttab
 set expandtab
 set autoindent
-autocmd Filetype cpp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 " Backup handling
 " set directory^=$HOME/.vim/swapfiles/
@@ -55,21 +53,6 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
-
-" Plugin config ----------------------------------
-  " Closetag
-  let g:closetag_filenames = '*.html,*.js'
-
-  " UltiSnips
-  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
-
-  " vim-javascript
-  let g:javascript_conceal = 0
-  
-  " dirvish config
-  let g:dirvish_mode = 2
-  let g:dirvish_relative_paths = 1
-" ------------------------------------------------
 
 source ~/.vim/plugins.vim
 source ~/.vim/mappings.vim
