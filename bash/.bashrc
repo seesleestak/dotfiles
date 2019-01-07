@@ -31,6 +31,7 @@ export BROWSER=/usr/bin/google-chrome-stable
   alias ga="git add"
   alias gcb="git checkout -b"
   alias gcd="git checkout develop"
+  alias gcmsg="git commit -m"
   alias gco="git checkout"
   alias gd="git diff"
   alias gf="git fetch"
