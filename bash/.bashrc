@@ -78,7 +78,6 @@ function vimstart {
     TOTAL=$(echo $VAL | awk '{print $1+"'$TOTAL'"}')
   done
 
-  echo $PURPLE
   echo $TOTAL | awk '{print $1/20 " Average \n"}'
 }
 
@@ -89,7 +88,6 @@ function vimstart {
 # Git prompt config
 source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
-# GIT_PS1_SHOWCOLORHINTS=1
 PROMPT_COMMAND='__git_ps1 "$(tput bold)$(tput setaf 2)\u$(tput sgr0)@\h $(tput setaf 3)\w$(tput sgr0)" "\\n$ "'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
