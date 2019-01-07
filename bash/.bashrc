@@ -39,6 +39,12 @@ export BROWSER=/usr/bin/google-chrome-stable
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias gss="git status -s"
 
+if [[ $- == *i* ]]
+then
+  bind '"\e[A": history-search-backward'
+  bind '"\e[B": history-search-forward'
+fi
+
 # Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
 function note {
   source $HOME/.scripts/note.sh
@@ -83,7 +89,7 @@ function vimstart {
 # Git prompt config
 source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWCOLORHINTS=1
+# GIT_PS1_SHOWCOLORHINTS=1
 PROMPT_COMMAND='__git_ps1 "$(tput bold)$(tput setaf 2)\u$(tput sgr0)@\h $(tput setaf 3)\w$(tput sgr0)" "\\n$ "'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
