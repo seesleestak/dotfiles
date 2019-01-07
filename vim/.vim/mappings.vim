@@ -15,7 +15,7 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 " Open zshrc
-nnoremap <leader>z :e ~/dotfiles/zsh/.zshrc<CR>
+nnoremap <leader>z :e ~/.bashrc<CR>
 
 " commentary mapping
 noremap <leader>c :Commentary<CR>
