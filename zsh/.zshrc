@@ -25,6 +25,7 @@
   alias gco="git checkout"
   alias gd="git diff"
   alias gf="git fetch"
+  alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias gss="git status -s"
@@ -86,10 +87,19 @@ function riplace {
   rg -l "$a" | xargs sed -i"" "s|$a|$b|g"
 }
 
+# Complete history on arrow up/down
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 # Prompt
 source ~/.git-prompt.sh
+autoload -U colors && colors
 GIT_PS1_SHOWDIRTYSTATE=1
-precmd () { __git_ps1 "%n@%m %~" $'\n'"$ " " (%s)" }
+precmd () { __git_ps1 "%{$fg_bold[green]%}%n%{$reset_color%}@%m %{$fg[yellow]%}%~%{$reset_color%}" $'\n'"$ " " (%s)" }
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
