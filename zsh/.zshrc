@@ -1,17 +1,4 @@
-ZSH_THEME="sleestak"
-
-# Load plugins
-plugins=( \
-  git \
-  # zsh-nvm \
-)
-
-source $ZSH/oh-my-zsh.sh
-
 # Aliases
-  # npm
-  alias nrf="rm -rfv node_modules && npm install"
-
   # Directories
   alias hxad="cd ~/working/admin-web-client"
   alias hxen="cd ~/working/enrollme-web-client"
@@ -23,16 +10,34 @@ source $ZSH/oh-my-zsh.sh
   # hiflow
   alias hic="hi commit"
 
+  # Scripts
   alias car="sh cpp-compile.sh"
   alias standup="standup.sh"
+
+  # For ls with bash
+  alias ls="ls --color=always"
+
+  # Git
+  alias ga="git add"
+  alias gcb="git checkout -b"
+  alias gcd="git checkout develop"
+  alias gcmsg="git commit -m"
+  alias gco="git checkout"
+  alias gd="git diff"
+  alias gf="git fetch"
+  alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
+  alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
+  alias gss="git status -s"
 
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+bindkey -e
+
 # 10ms timeout to avoid delays with vim
-KEYTIMEOUT=1
+# KEYTIMEOUT=1
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -41,7 +46,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # vimstart - by Billy Montgomery
-function vimstart() {
+function vimstart {
   PURPLE="\033[0;35m"
   ORANGE="\033[0;33m"
 
@@ -60,12 +65,12 @@ function vimstart() {
 }
 
 # Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
-function note() {
+function note {
   source $HOME/.scripts/note.sh
 }
 
 # riplace - by Billy Montgomery
-function riplace() {
+function riplace {
   if [ ${#1} -eq 0 ]; then
     read "a?Search: "
   else
@@ -80,6 +85,11 @@ function riplace() {
 
   rg -l "$a" | xargs sed -i"" "s|$a|$b|g"
 }
+
+# Prompt
+source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+precmd () { __git_ps1 "%n@%m %~" $'\n'"$ " " (%s)" }
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
