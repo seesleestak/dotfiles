@@ -35,6 +35,7 @@
 export FZF_DEFAULT_COMMAND='rg --files '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Use emacs mode for navigation
 bindkey -e
 
 # 10ms timeout to avoid delays with vim
