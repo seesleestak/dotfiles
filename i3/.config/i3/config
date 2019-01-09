@@ -48,7 +48,8 @@ exec        --no-startup-id nm-applet
 exec_always --no-startup-id compton
 
 # Background
-exec_always --no-startup-id feh --bg-fill ~/wallpaper/plant.jpg
+exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
+# exec_always --no-startup-id feh --bg-fill ~/wallpaper/plant.jpg
 # exec_always --no-startup-id hsetroot -solid "#9d9c9f"
 # ===============================================================
 
