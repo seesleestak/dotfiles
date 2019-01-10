@@ -1,3 +1,24 @@
+autoload -U colors && colors
+
+# VCS info - https://dustri.org/b/my-zsh-configuration.html
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' formats "%{$fg[green]%}%c%{$fg[red]%}%u%{$reset_color%} [%{$fg_bold[cyan]%}%b%{$reset_color%}]"
+precmd() {  vcs_info }
+
+# Prompt - https://dustri.org/b/my-zsh-configuration.html
+setopt PROMPT_SUBST     # allow funky stuff in prompt
+color="green"
+if [ "$USER" = "root" ]; then
+    color="red"         # root is red, user is green
+fi;
+PROMPT="%{$fg_bold[$color]%}%n%{$reset_color%}@%m%{$reset_color%}%u %{$fg[yellow]%}%~%b%{$reset_color%}"$'\n'"$ "
+RPROMPT='${vcs_info_msg_0_}'
+# source ~/.git-prompt.sh
+# GIT_PS1_SHOWDIRTYSTATE=1
+# precmd () { __git_ps1 "%{$fg_bold[green]%}%n%{$reset_color%}@%m %{$fg[yellow]%}%~%{$reset_color%}" $'\n'"$ " " (%s)" }
+
 # Aliases
   # Directories
   alias hxad="cd ~/working/admin-web-client"
@@ -35,7 +56,7 @@
 export FZF_DEFAULT_COMMAND='rg --files '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# Use emacs mode for navigation
+# emacs mode
 bindkey -e
 
 # 10ms timeout to avoid delays with vim
@@ -107,12 +128,6 @@ setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
 setopt inc_append_history       # add commands as they are typed, don't wait until shell exit 
 setopt share_history            # share hist between sessions
-
-# Prompt
-source ~/.git-prompt.sh
-autoload -U colors && colors
-GIT_PS1_SHOWDIRTYSTATE=1
-precmd () { __git_ps1 "%{$fg_bold[green]%}%n%{$reset_color%}@%m %{$fg[yellow]%}%~%{$reset_color%}" $'\n'"$ " " (%s)" }
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
