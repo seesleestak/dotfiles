@@ -4,8 +4,8 @@ autoload -U colors && colors
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "%{$fg[green]%}%c%{$fg[red]%}%u%{$reset_color%} [%{$fg_bold[cyan]%}%b%{$reset_color%}]"
-precmd() {  vcs_info }
+zstyle ':vcs_info:*' formats "(%{$fg_bold[cyan]%}%b%{$reset_color%}) %{$fg[red]%}%u%{$reset_color%}%{$fg[green]%}%c%{$reset_color%}"
+precmd() { vcs_info }
 
 # Prompt - https://dustri.org/b/my-zsh-configuration.html
 setopt PROMPT_SUBST     # allow funky stuff in prompt
@@ -13,11 +13,7 @@ color="green"
 if [ "$USER" = "root" ]; then
     color="red"         # root is red, user is green
 fi;
-PROMPT="%{$fg_bold[$color]%}%n%{$reset_color%}@%m%{$reset_color%}%u %{$fg[yellow]%}%~%b%{$reset_color%}"$'\n'"$ "
-RPROMPT='${vcs_info_msg_0_}'
-# source ~/.git-prompt.sh
-# GIT_PS1_SHOWDIRTYSTATE=1
-# precmd () { __git_ps1 "%{$fg_bold[green]%}%n%{$reset_color%}@%m %{$fg[yellow]%}%~%{$reset_color%}" $'\n'"$ " " (%s)" }
+PROMPT="%{$fg_bold[$color]%}%n%{$reset_color%}@%m%{$reset_color%}%u %{$fg[yellow]%}%~%b%{$reset_color%} "'${vcs_info_msg_0_}'$'\n'"$ "
 
 # Aliases
   # Directories
@@ -35,7 +31,7 @@ RPROMPT='${vcs_info_msg_0_}'
   alias car="sh cpp-compile.sh"
   alias standup="standup.sh"
 
-  # For ls with bash
+  # ls color always
   alias ls="ls --color=always"
 
   # Git
