@@ -2,9 +2,20 @@ autoload -U colors && colors
 
 # VCS info - https://dustri.org/b/my-zsh-configuration.html
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats "(%{$fg_bold[cyan]%}%b%{$reset_color%}) %{$fg[red]%}%u%{$reset_color%}%{$fg[green]%}%c%{$reset_color%}"
+zstyle ':vcs_info:git*' enable git
+zstyle ':vcs_info:git*' check-for-changes true
+zstyle ':vcs_info:git*' formats "(%{$fg_bold[cyan]%}%b%{$reset_color%}) %{$fg[red]%}%u%{$reset_color%}%{$fg[red]%}%m%{$reset_color%}%{$fg[green]%}%c%{$reset_color%}"
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
+# Untracked changes
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+     git status --porcelain | grep -m 1 '^??' &>/dev/null
+  then
+    hook_com[misc]='?'
+  fi
+}
+
 precmd() { vcs_info }
 
 # Prompt - https://dustri.org/b/my-zsh-configuration.html
@@ -36,6 +47,7 @@ PROMPT="%{$fg_bold[$color]%}%n%{$reset_color%}@%m%{$reset_color%}%u %{$fg[yellow
 
   # Git
   alias ga="git add"
+  alias gb="git branch"
   alias gcb="git checkout -b"
   alias gcd="git checkout develop"
   alias gcmsg="git commit -m"
