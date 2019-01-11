@@ -26,7 +26,7 @@ nnoremap <C-h> :bprevious<CR>
 nnoremap <leader>bq :bprevious <BAR> bd #<CR>
 
 " fzf mappings
-nnoremap <leader>t :GFiles<CR>
+nnoremap <leader>t :Files<CR>
 nnoremap <leader>a :Rg<space>
 nnoremap <leader>f :Rg <C-r><C-w><CR>
 nnoremap <leader>gst :GFiles?<CR>
