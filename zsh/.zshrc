@@ -67,9 +67,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # emacs mode
 bindkey -e
 
-# 10ms timeout to avoid delays with vim
-# KEYTIMEOUT=1
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
