@@ -42,12 +42,12 @@ RPROMPT='$(gitBranchPrompt)'
 
 # Aliases
   # Directories
-  alias hxad="cd ~/working/admin-web-client"
-  alias hxen="cd ~/working/enrollme-web-client"
-  alias hui="cd ~/working/hixme-ui"
+  alias hxad="cd ~/repos/admin-web-client"
+  alias hxen="cd ~/repos/enrollme-web-client"
+  alias hui="cd ~/repos/hixme-ui"
   alias dot="cd ~/dotfiles"
-  alias mor="cd ~/working/mor-web-client"
-  alias bun="cd ~/working/bundle-service"
+  alias mor="cd ~/repos/mor-web-client"
+  alias bun="cd ~/repos/bundle-service"
 
   # hiflow
   alias hic="hi commit"
@@ -151,7 +151,7 @@ setopt share_history            # share hist between sessions
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/calvin/working/report-service/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/calvin/working/report-service/node_modules/tabtab/.completions/serverless.zsh
+[[ -f /home/calvin/repos/report-service/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/calvin/repos/report-service/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/calvin/working/report-service/node_modules/tabtab/.completions/sls.zsh ]] && . /home/calvin/working/report-service/node_modules/tabtab/.completions/sls.zsh
+[[ -f /home/calvin/repos/report-service/node_modules/tabtab/.completions/sls.zsh ]] && . /home/calvin/repos/report-service/node_modules/tabtab/.completions/sls.zsh
