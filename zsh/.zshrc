@@ -4,39 +4,14 @@ autoload -U colors && colors
 autoload -U compinit
 compinit
 
-# # VCS info - https://dustri.org/b/my-zsh-configuration.html
-# autoload -Uz vcs_info
-# zstyle ':vcs_info:git*' enable git
-# zstyle ':vcs_info:git*' check-for-changes true
-# zstyle ':vcs_info:git*' formats "(%{$fg_bold[cyan]%}%b%{$reset_color%}) %{$fg[red]%}%u%{$reset_color%}%{$fg[red]%}%m%{$reset_color%}%{$fg[green]%}%c%{$reset_color%}"
-# zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-
-# # Untracked changes
-# +vi-git-untracked() {
-#   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-#      git status --porcelain | grep -m 1 '^??' &>/dev/null
-#   then
-#     hook_com[misc]='?'
-#   fi
-# }
-
-# precmd() { vcs_info }
-#
-
 function gitBranchPrompt {
   if [[ -e "$(pwd)/.git" ]]; then
     echo "($(git symbolic-ref --short HEAD))"
   fi
 }
 
-
 # Prompt - https://dustri.org/b/my-zsh-configuration.html
 setopt PROMPT_SUBST     # allow funky stuff in prompt
-# color="green"
-# if [ "$USER" = "root" ]; then
-#     color="red"         # root is red, user is green
-# fi;
-# PROMPT="%{$fg_bold[$color]%}%n%{$reset_color%}@%m%{$reset_color%}%u %{$fg[yellow]%}%~%b%{$reset_color%} "'${vcs_info_msg_0_}'$'\n'"$ "
 PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
 RPROMPT='$(gitBranchPrompt)'
 
@@ -54,7 +29,6 @@ RPROMPT='$(gitBranchPrompt)'
 
   # Scripts
   alias car="sh cpp-compile.sh"
-  alias standup="standup.sh"
 
   # ls color always
   alias ls="ls --color=always"
