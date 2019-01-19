@@ -118,13 +118,13 @@ distroAgnosticSetup() {
     serverless
 
   # Create directories
-  mkdir -p ~/working
+  mkdir -p ~/repos
   mkdir -p ~/Pictures/screenshots
   mkdir -p ~/Videos/screen-record
 
   # Install custom suckless builds
-  cd ~/working && git clone https://github.com/seesleestak/st.git && cd st && make && sudo make install
-  cd ~/working && git clone https://github.com/seesleestak/dmenu.git && cd dmenu && make && sudo make install
+  cd ~/repos && git clone https://github.com/seesleestak/st.git && cd st && make && sudo make install
+  cd ~/repos && git clone https://github.com/seesleestak/dmenu.git && cd dmenu && make && sudo make install
 }
 
 case $1 in
