@@ -17,8 +17,6 @@ client.urgent            #BF616A #BF616A #2E3440 #BF616A
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-for_window [class="Yad"] floating enable
-
 for_window [title="scratch"] floating enable
 for_window [title="scratch"] resize set 700 525
 
