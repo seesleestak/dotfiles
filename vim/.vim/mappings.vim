@@ -1,6 +1,9 @@
 " <leader>
 let mapleader = "\<Space>"
 
+nnoremap j gj
+nnoremap k gk
+
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
 
@@ -46,4 +49,3 @@ vnoremap <leader>lg "zy:call EasyConsoleLog(1)<CR>
 " Find and replace
 nnoremap <leader>m :call ReplaceUnderCursor("")<left><left>
 vnoremap <leader>n "zy:call ReplaceUnderVisual("")<left><left>
-
