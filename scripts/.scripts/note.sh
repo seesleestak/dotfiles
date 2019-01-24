@@ -24,9 +24,9 @@ case "$1" in
     ;;
   h) 
     if [[ -n $2 ]]; then
-      vim "$notes_dropbox_dir/hixme/$2"
+      vim "$notes_dir/hixme/$2"
     else
-      vim "$notes_dropbox_dir/hixme/$(date -u '+%Y-%m-%d-%H-%M-%S')"
+      vim "$notes_dir/hixme/$(date -u '+%Y-%m-%d-%H-%M-%S')"
     fi
     ;;
   *)
