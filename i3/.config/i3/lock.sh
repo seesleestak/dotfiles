@@ -1,8 +1,12 @@
-#!/bin/bash
-LOCK_IMAGE=~/.config/i3/screen.png
+#!/bin/sh
+SCREENSHOT=/tmp/blurwall.png
+WALLPAPER=~/wallpaper/plant-resize.png
+LOCK_IMAGE=~/.config/i3/lock-icon.png
 
-# Pause music (mocp and mpd):
+convert $WALLPAPER $LOCK_IMAGE -gravity center -composite -matte $SCREENSHOT
+
+# Pause music
 playerctl pause
 
 # Lock it up!
-i3lock -u -e -f -c 000000 -i $LOCK_IMAGE -t
+i3lock -e -f -c 000000 -i $SCREENSHOT -t
