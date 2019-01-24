@@ -1,5 +1,5 @@
 # !/bin/sh
-local notes_dir="/home/calvin/working/notes/misc"
+local notes_dir="/home/calvin/repos/notes/misc"
 local notes_dropbox_dir="/home/calvin/Dropbox/notes"
 case "$1" in
   c)
