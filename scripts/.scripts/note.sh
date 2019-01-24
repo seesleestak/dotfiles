@@ -17,13 +17,17 @@ case "$1" in
     popd
     ;;
   n) 
-    vim "$notes_dir/$2"
+    vim "$notes_dir/misc/$2"
     ;;
   d)
     vim "$notes_dropbox_dir/$(date -u '+%Y-%m-%d-%H-%M-%S')"
     ;;
   h) 
-    vim "$notes_dropbox_dir/hixme/$(date -u '+%Y-%m-%d-%H-%M-%S')"
+    if [[ -n $2 ]]; then
+      vim "$notes_dropbox_dir/hixme/$2"
+    else
+      vim "$notes_dropbox_dir/hixme/$(date -u '+%Y-%m-%d-%H-%M-%S')"
+    fi
     ;;
   *)
     vim "$notes_dir/misc/$(date -u '+%Y-%m-%d-%H-%M-%S')"
