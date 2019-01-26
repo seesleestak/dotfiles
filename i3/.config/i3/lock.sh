@@ -8,27 +8,43 @@ LOCK_IMAGE=~/.config/i3/lock-image.png
 # Pause music
 playerctl pause
 
+# Colors
+BLACK="000000FF"
+BLUE="5E81ACFF"
+CYAN="8FBCBBFF"
+DARK="2E3440FF"
+GREEN="A3BE8CFF"
+RED="BF616AFF"
+TEAL="88C0D0FF"
+WHITE="FFFFFFFF"
+MUTED="FFFFFF7F"
+TRANSPARENT="00000000"
+
 # Lock it up!
 i3lock \
   -e \
-  -f \
   -c 000000 \
-  -i $LOCK_IMAGE \
   -t \
   --clock \
-  --timepos="ix:iy+210" \
   --timestr="%I:%M:%S %p" \
   --time-font="Roboto" \
-  --timesize=42 \
-  --timecolor=E5E9F0FF \
-  --datesize=24 \
-  --datecolor=4C566AFF \
+  --timesize=68 \
+  --timecolor=$WHITE \
+  --datesize=36 \
+  --datepos="tx:ty+40" \
+  --datecolor=$MUTED \
   --date-font="Roboto" \
-  --radius 135 \
+  --radius 230 \
   --ring-width 10 \
+  --ringcolor=$MUTED \
+  --ringvercolor=$TEAL \
+  --ringwrongcolor=$RED \
   --veriftext="" \
-  --insidevercolor=00000000 \
+  --insidevercolor=$TRANSPARENT \
   --noinputtext="" \
   --wrongtext="incorrect" \
-  --insidecolor=00000000 \
-  --insidewrongcolor=00000000
+  --insidecolor=$TRANSPARENT \
+  --insidewrongcolor=$TRANSPARENT \
+  --keyhlcolor=$WHITE \
+  --bshlcolor=$WHITE \
+  --line-uses-inside
