@@ -3,6 +3,8 @@ let mapleader = "\<Space>"
 
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
