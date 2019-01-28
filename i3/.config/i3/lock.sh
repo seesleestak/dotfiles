@@ -30,7 +30,7 @@ i3lock \
   --time-font="Roboto" \
   --timesize=68 \
   --timecolor=$WHITE \
-  --datesize=36 \
+  --datesize=26 \
   --datepos="tx:ty+40" \
   --datecolor=$MUTED \
   --date-font="Roboto" \
