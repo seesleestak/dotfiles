@@ -4,7 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
 export PATH=$PATH:$HOME/.scripts:~/.local/bin
-export TERMINAL=/usr/bin/urxvt
+export TERMINAL=/usr/bin/xterm
+# export TERMINAL=/usr/bin/urxvt
 # export TERMINAL=/usr/local/bin/st
 
 # fix "xdg-open fork-bomb" export your preferred browser from here
