@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
+  Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " Plugin config ----------------------------------

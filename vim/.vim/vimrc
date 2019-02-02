@@ -1,3 +1,7 @@
+source ~/.vim/plugins.vim
+source ~/.vim/mappings.vim
+source ~/.vim/functions.vim
+
 " set nocompatible
 set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling in normal mode
@@ -38,11 +42,11 @@ set rulerformat=%l,%v
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Syntax Highlighting
-" if (has("termguicolors"))
-"   set termguicolors
-"   set t_8f=[38;2;%lu;%lu;%lum
-"   set t_8b=[48;2;%lu;%lu;%lum
-" endif
+if (has("termguicolors"))
+  set termguicolors
+  set t_8f=[38;2;%lu;%lu;%lum
+  set t_8b=[48;2;%lu;%lu;%lum
+endif
 
 syntax enable
 colorscheme nord
@@ -54,9 +58,5 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
-
-source ~/.vim/plugins.vim
-source ~/.vim/mappings.vim
-source ~/.vim/functions.vim
 
 filetype plugin indent on
