@@ -6,8 +6,7 @@ pacmanFonts() {
     ttf-font-awesome \
     ttf-freefont \
     ttf-liberation \
-    ttf-roboto \
-    ttf-ubuntu-font-family
+    ttf-roboto
 }
 
 pacmanUtilities() {
@@ -85,6 +84,7 @@ pacmanSetup() {
 aurPackages() {
   # Clone some stuff from AUR
   mkdir -p ~/aur && cd ~/aur
+  git clone https://aur.archlinux.org/rxvt-unicode-truecolor.git && cd rxvt-unicode-truecolor && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/spotify.git && cd spotify && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/paper-icon-theme.git && cd paper-icon-theme && makepkg -isr && cd ..
