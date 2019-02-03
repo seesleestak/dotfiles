@@ -86,7 +86,7 @@ bindsym $mod+Shift+s exec --no-startup-id kill-screen-record.sh
 bindsym $mod+Shift+t exec --no-startup-id screenshot.sh
 
 # Start ranger
-bindsym $mod+r exec $TERMINAL -e ranger
+bindsym $mod+r exec $term -e ranger
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
