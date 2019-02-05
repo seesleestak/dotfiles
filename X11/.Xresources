@@ -12,13 +12,16 @@ URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
-URxvt.internalBorder: 8
+URxvt.internalBorder: 4
 URxvt.iso14755: False
 
 xterm*faceName: DejaVu Sans Mono
 xterm*faceSize: 10
 xterm*renderFont: true
 xterm.vt100.metaSendsEscape: true
+xterm.VT100.translations: #override \
+Meta <Key> minus: smaller-vt-font() \n\
+Meta <Key> plus: larger-vt-font() \n\
 
 #define nord0 #2E3440
 #define nord1 #3B4252
