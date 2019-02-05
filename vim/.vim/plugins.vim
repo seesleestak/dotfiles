@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
+
+  " Color schemes
   Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 

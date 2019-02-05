@@ -35,6 +35,7 @@ nnoremap <leader>t :Files<CR>
 nnoremap <leader>a :Rg<space>
 nnoremap <leader>f :Rg <C-r><C-w><CR>
 nnoremap <leader>gst :GFiles?<CR>
+nnoremap <leader>bf :Buffers<CR>
 
 " ALE
 nnoremap <leader>w :ALENextWrap<CR>
