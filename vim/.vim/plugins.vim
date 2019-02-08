@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'SirVer/ultisnips'
   Plug 'alvan/vim-closetag'
-  Plug 'ap/vim-buftabline'
+  " Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
 
@@ -21,7 +21,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Color schemes
-  Plug 'drewtempelmeyer/palenight.vim'
+  " Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " Plugin config ----------------------------------
