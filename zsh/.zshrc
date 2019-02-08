@@ -46,6 +46,7 @@ RPROMPT='$(gitBranchPrompt)'
   alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
+  alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
 
 # fzf config
