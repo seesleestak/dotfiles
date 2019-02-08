@@ -26,9 +26,8 @@ nnoremap <leader>z :e ~/.zshrc<CR>
 noremap <leader>c :Commentary<CR>
 
 " Buffer related mappings
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprevious<CR>
-nnoremap <leader>bq :bprevious <BAR> bd #<CR>
+nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bb :b #<CR>
 
 " fzf mappings
 nnoremap <leader>t :Files<CR>
