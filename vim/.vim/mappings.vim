@@ -26,6 +26,8 @@ nnoremap <leader>z :e ~/.zshrc<CR>
 noremap <leader>c :Commentary<CR>
 
 " Buffer related mappings
+nnoremap <C-l> :bn<CR>
+nnoremap <C-h> :bp<CR>
 nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bb :b #<CR>
 
