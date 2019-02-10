@@ -31,7 +31,7 @@ RPROMPT='$(gitBranchPrompt)'
   alias car="sh cpp-compile.sh"
 
   # ls color always
-  alias ls="ls --color=always"
+  alias ls="ls -G"
 
   # Git
   alias ga="git add"
