@@ -31,7 +31,7 @@ appendOld() {
 
 appendOld
 
-# Setup and stow home directory config files
+# Stow home directory config files
 stow tmux
 stow zsh
 stow scripts
