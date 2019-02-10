@@ -31,7 +31,7 @@ RPROMPT='$(gitBranchPrompt)'
   alias car="sh cpp-compile.sh"
 
   # ls color always
-  if [[ $(uname | grep -q "Darwin") ]]; then
+  if [[ $(uname -s) = "Darwin" ]]; then
     alias ls="ls -G"
   else
     alias ls="ls --color=always"
