@@ -144,7 +144,7 @@ case $1 in
     distroAgnosticSetup
     ;; 
   *)
-    echo "Please specify an install falg: "
+    echo "Please specify an install flag: "
     echo "   -a  (apt)"
     echo "   -p  (pacman)"
     echo "   -pp (preferred pacman packages)"
