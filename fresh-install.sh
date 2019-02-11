@@ -140,6 +140,9 @@ case $1 in
   -pa)
     aurPackages
     ;; 
+  -pf)
+    pacmanFonts
+    ;; 
   -da)
     distroAgnosticSetup
     ;; 
@@ -148,6 +151,8 @@ case $1 in
     echo "   -a  (apt)"
     echo "   -p  (pacman)"
     echo "   -pp (preferred pacman packages)"
+    echo "   -pa (AUR packages)"
+    echo "   -pf (pacman font packages)"
     echo "   -da (distro agnostic packages)"
     exit
     ;;
