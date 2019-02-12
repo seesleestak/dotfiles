@@ -13,7 +13,8 @@ function gitBranchPrompt {
 # Prompt - https://dustri.org/b/my-zsh-configuration.html
 setopt PROMPT_SUBST     # allow funky stuff in prompt
 PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
-RPROMPT='$(gitBranchPrompt)'
+# RPROMPT='$(gitBranchPrompt)'
+# PROMPT="%{$fg[green]%}%c%{$reset_color%} "'$(gitBranchPrompt)'$'\n'"$ "
 
 # Aliases
   # Directories
