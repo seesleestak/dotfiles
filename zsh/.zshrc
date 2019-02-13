@@ -1,20 +1,13 @@
+# Load colors
 autoload -U colors && colors
 
 # Git branch auto completion
 autoload -U compinit
 compinit
 
-function gitBranchPrompt {
-  if [[ -e "$(pwd)/.git" ]]; then
-    echo "($(git symbolic-ref --short HEAD))"
-  fi
-}
-
 # Prompt - https://dustri.org/b/my-zsh-configuration.html
 setopt PROMPT_SUBST     # allow funky stuff in prompt
 PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
-# RPROMPT='$(gitBranchPrompt)'
-# PROMPT="%{$fg[green]%}%c%{$reset_color%} "'$(gitBranchPrompt)'$'\n'"$ "
 
 # Aliases
   # Directories
@@ -61,6 +54,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # emacs mode
 bindkey -e
+bindkey '\e[1;5C' vi-forward-word   # C-Right
+bindkey '\e[1;5D' vi-backward-word  # C-Left
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -87,7 +82,6 @@ function vimstart {
   echo $TOTAL | awk '{print $1/20 " Average \n"}'
 }
 
-# Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
 function note {
   source $HOME/.scripts/note.sh
 }
