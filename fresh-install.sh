@@ -25,6 +25,7 @@ pacmanUtilities() {
     playerctl \
     powertop \
     pulseaudio \
+    system-config-printer \
     thunar \
     thunar-volman \
     w3m \
