@@ -38,6 +38,9 @@ set clipboard=unnamedplus,unnamed
 set ruler
 set rulerformat=%l,%v
 
+" Don't polute home directory with viminfo
+set viminfo+=n~/.vim/viminfo
+
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
