@@ -50,7 +50,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 # fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files '
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # emacs mode
 bindkey -e
@@ -102,7 +101,7 @@ function riplace {
 
   rg -l "$a" | xargs sed -i"" "s|$a|$b|g"
 }
-
+  
 # Complete history on arrow up/down
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
