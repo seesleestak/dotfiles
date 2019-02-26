@@ -72,6 +72,9 @@ pacmanSetup() {
   # Install a whole bunch of programs
   pacmanUtilities
 
+  # Install preferred packages
+  pacmanPreferredPrograms
+
   # Install fonts from Arch repositories
   pacmanFonts
 
