@@ -7,6 +7,3 @@ export PATH=$PATH:$HOME/.scripts:~/.local/bin
 export TERMINAL=/usr/bin/urxvt
 # export TERMINAL=/usr/local/bin/st
 # export TERMINAL=/usr/bin/xterm
-
-# fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/google-chrome-stable
