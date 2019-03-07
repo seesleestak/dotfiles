@@ -3,14 +3,24 @@ TMP_FILE=/tmp/release-$(date -I'seconds').log
 
 git log origin/master..origin/develop --oneline --no-merges --no-decorate > $TMP_FILE
 
+if [[ -z "$USERNAME" ]] || [[ -z "$PASS" ]]; then
+  echo "Enter JIRA credentials"
+  echo -n "Username: "
+  read USERNAME
+
+  echo -n "Password: "
+  read -s PASS
+  printf "\n"
+fi
+
 downloadIssue() {
   BRANCH_NAME=$1
   ISSUE_KEY=$(echo $BRANCH_NAME | cut -d '/' -f 2)
 
   # Issue call requires auth token to be passed as environment variable on JIRA_AUTH
   curl -s --request GET \
+    -u "$USERNAME:$PASS" \
     --url "https://$JIRA_DOMAIN.atlassian.net/rest/api/3/issue/$ISSUE_KEY?fields=summary" \
-    --header "Authorization: Basic $JIRA_AUTH" \
     --header "Accept: application/json" | \
    perl -nle'print $& while m{"'"summary"'"\s*:\s*"\K([^"]*)}g'
 }
