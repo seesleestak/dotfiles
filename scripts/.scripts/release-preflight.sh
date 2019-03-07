@@ -2,7 +2,7 @@
 git fetch origin master develop -q
 
 IFS=$'\n'
-TMP_FILE=/tmp/release.log
+TMP_FILE=/tmp/release-$(date -I'seconds').log
 
 git log master..develop --oneline --no-merges --no-decorate > $TMP_FILE
 
@@ -11,15 +11,19 @@ CONVENTIONAL=()
 while read -r commit ; do
   if echo $commit | grep -q -e "^[^:]*$"; then 
     OTHER=("${OTHER[@]}" "$(echo $commit | cut -c 10-)")
-  elif echo $commit | grep -q -v "release/*"; then
+  elif echo $commit | grep -q -E "[A-Za-z]{3,11}\/[A-Za-z]{2,4}-[0-9]{1,5}"; then
     CONVENTIONAL=("${CONVENTIONAL[@]}" "$(echo $commit | cut -c 10- | cut -d ":" -f 1)")
+  elif echo $commit | grep -q "release/*"; then
+    continue
+  else
+    OTHER=("${OTHER[@]}" "$(echo $commit | cut -c 10- | cut -d ":" -f 1)")
   fi
-done < /tmp/release.log
+done < $TMP_FILE
 
-echo "TICKETS ===>"
+echo "======= TICKETS ======="
 sort -u <<<"${CONVENTIONAL[*]}"
 
-echo "OTHER ===>"
+echo "======= OTHER ======="
 echo "${OTHER[*]}"
 
 rm $TMP_FILE
