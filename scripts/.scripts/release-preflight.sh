@@ -1,10 +1,7 @@
-# Get latest
-git fetch origin master develop -q
-
 IFS=$'\n'
 TMP_FILE=/tmp/release-$(date -I'seconds').log
 
-git log master..develop --oneline --no-merges --no-decorate > $TMP_FILE
+git log origin/master..origin/develop --oneline --no-merges --no-decorate > $TMP_FILE
 
 OTHER=()
 CONVENTIONAL=()
