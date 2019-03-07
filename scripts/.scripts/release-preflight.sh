@@ -1,5 +1,5 @@
 IFS=$'\n'
-TMP_FILE=/tmp/release-$(date -I'seconds').log
+TMP_FILE=/tmp/release-$(date +"%T").log
 
 git log origin/master..origin/develop --oneline --no-merges --no-decorate > $TMP_FILE
 
