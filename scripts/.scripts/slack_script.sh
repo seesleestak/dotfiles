@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 case $1 in
   -a|--all)
     google-chrome-stable --app="https://hixme.slack.com/messages" && \

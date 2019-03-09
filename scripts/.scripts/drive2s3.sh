@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 # Path for tmp list file
 FILE=/tmp/gdrive-list
 

@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 # Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
 local notes_dir="/home/calvin/repos/notes"
 local notes_dropbox_dir="/home/calvin/Dropbox/notes"
