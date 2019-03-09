@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 pacmanFonts() {
   sudo pacman -S \
     ttf-bitstream-vera \

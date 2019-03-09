@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 appendOld() {
   fileList=(
     ~/.tmux.conf \
