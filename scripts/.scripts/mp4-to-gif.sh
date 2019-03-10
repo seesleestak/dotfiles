@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 EXTENSIONLESS=$(echo $1 | cut -d\. -f1)
 
 ffmpeg -y \

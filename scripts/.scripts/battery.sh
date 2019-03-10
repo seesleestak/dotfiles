@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/bash
 COUNT=$(acpi -b | wc -l)
 # WEIGHT_1=$(acpi -bi | grep -E -o '[0-9]{1,4} mAh' | tr -d ' mAh' | sed g\;n | sed /^$/d | head -1)
 # WEIGHT_2=$(acpi -bi | grep -E -o '[0-9]{1,4} mAh' | tr -d ' mAh' | sed g\;n | sed /^$/d | tail -1)

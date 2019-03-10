@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 FILE_NAME=screen-record-$(date -u '+%Y-%m-%d-%H-%M-%S')
 BASE_PATH=/home/calvin/Videos/screen-record
 SLOP=$(slop -f "%x %y %w %h") || exit 1
