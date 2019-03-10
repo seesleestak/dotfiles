@@ -31,8 +31,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
     alias ls="ls --color=always"
   fi
 
-  alias ll="ls -al"
-
   # Git
   alias ga="git add"
   alias gb="git branch"
