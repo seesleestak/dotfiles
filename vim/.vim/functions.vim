@@ -32,12 +32,6 @@ function! FixPrettierEslint()
   execute "ALEFix"
 endfunction
 
-" Find and replace word under cursor with argument
-function! ReplaceUnderCursor(replaceWord)
-  let word = expand("<cword>")
-  execute "%s/".word."/".a:replaceWord."/gc"
-endfunction
-
 " Find and replace visual selection with argument
 function! ReplaceUnderVisual(replaceWord)
   let word = @z

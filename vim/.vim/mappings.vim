@@ -46,5 +46,5 @@ nnoremap <leader>lg :call EasyConsoleLog(0)<CR>
 vnoremap <leader>lg "zy:call EasyConsoleLog(1)<CR>
 
 " Find and replace
-nnoremap <leader>m :call ReplaceUnderCursor("")<left><left>
-vnoremap <leader>n "zy:call ReplaceUnderVisual("")<left><left>
+nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
+vnoremap <leader>m "zy:call ReplaceUnderVisual("")<left><left>
