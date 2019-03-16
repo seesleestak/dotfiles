@@ -3,8 +3,6 @@
 set $mod Mod4
 set $term --no-startup-id $TERMINAL
 
-font pango:DejaVu Sans Mono Bold 8
-
 for_window [class="^.*"] border pixel 4
 gaps inner 8
 
@@ -46,8 +44,9 @@ exec        --no-startup-id nm-applet
 exec_always --no-startup-id compton
 
 # Background
+exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi-wheelie.jpg
 # exec_always --no-startup-id feh --bg-fill ~/wallpaper/rossi.jpg
-exec_always --no-startup-id feh --bg-fill ~/wallpaper/plant.jpg
+# exec_always --no-startup-id feh --bg-fill ~/wallpaper/plant.jpg
 # exec_always --no-startup-id hsetroot -solid "#9d9c9f"
 # ===============================================================
 
