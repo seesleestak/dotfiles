@@ -1,1 +1,1 @@
-/Users/calvincieslak/repos/release-preflight/release-preflight.sh
+/home/calvin/repos/release-preflight/release-preflight.sh
