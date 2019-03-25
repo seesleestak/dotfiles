@@ -112,8 +112,8 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
-HISTSIZE=1024                   # big history
-SAVEHIST=1024                   # big history
+HISTSIZE=2048                   # big history
+SAVEHIST=2048                   # big history
 setopt append_history           # append
 setopt hist_ignore_all_dups     # no duplicate
 unsetopt hist_ignore_space      # ignore space prefixed commands
