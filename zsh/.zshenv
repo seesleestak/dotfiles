@@ -1,9 +1,4 @@
-# Path to oh-my-zsh installation
-export ZSH=$HOME/.oh-my-zsh
-
 export VISUAL=/usr/bin/vim
 export EDITOR="$VISUAL"
 export PATH=$PATH:$HOME/.scripts:~/.local/bin
 export TERMINAL=/usr/bin/urxvt
-# export TERMINAL=/usr/local/bin/st
-# export TERMINAL=/usr/bin/xterm
