@@ -1,6 +1,6 @@
 #!/bin/bash
 pacmanFonts() {
-  sudo pacman -S \
+  sudo pacman -S --needed \
     ttf-bitstream-vera \
     ttf-dejavu \
     ttf-font-awesome \
@@ -10,7 +10,7 @@ pacmanFonts() {
 }
 
 pacmanUtilities() {
-  sudo pacman -S \
+  sudo pacman -S --needed \
     acpi \
     avahi \
     cups \
@@ -36,7 +36,7 @@ pacmanUtilities() {
 }
 
 pacmanPreferredPrograms() {
-  sudo pacman -S \
+  sudo pacman -S --needed \
     arc-gtk-theme \
     dunst \
     feh \
