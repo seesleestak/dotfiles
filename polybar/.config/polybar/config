@@ -58,8 +58,8 @@ label-mode-font = 2
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-background = ${colors.teal}
-label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.teal}
 label-focused-padding = 1
 label-focused-font = 2
 
@@ -71,15 +71,15 @@ label-unfocused-font = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${self.label-focused-foreground}
-label-visible-foreground = ${self.label-focused-background}
+label-visible-background = ${self.label-focused-background}
+label-visible-foreground = ${colors.muted}
 label-visible-font = 2
 label-visible-padding = 1
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
-label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.background}
+label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1
 label-urgent-font = 2
 
