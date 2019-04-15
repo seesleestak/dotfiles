@@ -30,9 +30,7 @@ export default createReducer(initialState, {})" > ./reducer.js
 }
 
 createActions() {
-echo "import { getWaiter } from 'redux-waiter'
-
-import t from './actionTypes'
+echo "import t from './actionTypes'
 
 export const testAction = (payload) => ({
   type: t.TEST_ACTION,
@@ -48,7 +46,7 @@ const TEST_ACTION = 'TEST_ACTION'
 
 export default namespaceActions(NAME)([
   TEST_ACTION,
-])" > ./action-types.js
+])" > ./actionTypes.js
 }
 
 createConstants() {
