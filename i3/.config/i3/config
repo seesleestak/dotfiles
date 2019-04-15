@@ -63,8 +63,8 @@ bindsym $mod+Shift+v exec --no-startup-id monitor-dp.sh
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec --no-startup-id dmenu_run -i -p "run:"
-# bindsym $mod+d exec --no-startup-id "rofi -show combi -combi-modi 'window,run' -modi combi"
+# bindsym $mod+d exec --no-startup-id dmenu_run -i -p "run:"
+bindsym $mod+d exec --no-startup-id "rofi -show combi -combi-modi 'window,run' -modi combi"
 
 # screenkey
 bindsym $mod+Delete exec --no-startup-id "killall screenkey || screenkey -s small"
