@@ -21,15 +21,13 @@ nnoremap <leader>z :e ~/.zshrc<CR>
 noremap <leader>c :Commentary<CR>
 
 " Buffer related mappings
-nnoremap <C-l> :bn<CR>
-nnoremap <C-h> :bp<CR>
 nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bb :b #<CR>
 
 " fzf mappings
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>a :Rg<space>
-nnoremap <leader>f :Rg <C-r><C-w><CR>
+nnoremap <leader>f :Rg <C-R><C-W><CR>
 nnoremap <leader>gst :GFiles?<CR>
 nnoremap <leader>bf :Buffers<CR>
 

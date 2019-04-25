@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
   " Core editor functionality
   Plug 'SirVer/ultisnips'
   Plug 'alvan/vim-closetag'
-  Plug 'ap/vim-buftabline'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
 
