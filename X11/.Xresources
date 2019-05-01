@@ -1,9 +1,9 @@
 ! urxvt
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono:size=10,\
-            xft:Droid Sans Mono:size=10,\
-            xft:Droid Sans Fallback:size=10,\
-            xft:FreeSans:size=10
+URxvt.font: xft:DejaVu Sans Mono:size=10:antialias=true,\
+            xft:Droid Sans Mono:size=10:antialias=true,\
+            xft:Droid Sans Fallback:size=10:antialias=true,\
+            xft:FreeSans:size=10:antialias=true
 URxvt.perl-ext-common: default,font-size,url-select,selection-to-clipboard
 URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
