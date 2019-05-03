@@ -14,9 +14,6 @@ nnoremap <leader>d :call CopyPathDir()<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 nnoremap <leader>r :source $MYVIMRC<CR>
 
-" Open zshrc
-nnoremap <leader>z :e ~/.zshrc<CR>
-
 " commentary mapping
 noremap <leader>c :Commentary<CR>
 
@@ -28,13 +25,15 @@ nnoremap <leader>bb :b #<CR>
 nnoremap <leader>t :Files<CR>
 nnoremap <leader>a :Rg<space>
 nnoremap <leader>f :Rg <C-R><C-W><CR>
-nnoremap <leader>gst :GFiles?<CR>
 nnoremap <leader>bf :Buffers<CR>
+nnoremap <leader>gst :GFiles?<CR>
+
+" Fugitive mappings
+nnoremap <leader>gd :Gdiff<CR>
 
 " ALE
 nnoremap <leader>w :ALENextWrap<CR>
 nnoremap <C-p> :call FixPrettierEslint()<CR>
-nnoremap <leader>e :call FixEslint()<CR>
 
 " Show entire path on Ctrl+g
 nnoremap <C-g> 1<C-g>
