@@ -34,3 +34,6 @@ call plug#end()
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
 " ------------------------------------------------
+
+" Open all folds when viewing fugitive commit files
+autocmd BufEnter fugitive://* silent! %foldopen!
