@@ -22,18 +22,19 @@ nnoremap <leader>bd :bd<CR>
 nnoremap <leader>bb :b #<CR>
 
 " fzf mappings
-nnoremap <leader>t :Files<CR>
-nnoremap <leader>a :Rg<space>
-nnoremap <leader>f :Rg <C-R><C-W><CR>
-nnoremap <leader>bf :Buffers<CR>
-nnoremap <leader>gst :GFiles?<CR>
+nnoremap <leader>t   :Files<CR>     
+nnoremap <leader>a   :Rg<space>     
+nnoremap <leader>f   :Rg<C-R><C-W><CR>
+nnoremap <leader>bf  :Buffers<CR>   
+nnoremap <leader>gst :GFiles?<CR>   
+nnoremap <leader>bc  :BCommits<CR>  
 
 " Fugitive mappings
 nnoremap <leader>gd :Gdiff<CR>
 
 " ALE
 nnoremap <leader>w :ALENextWrap<CR>
-nnoremap <C-p> :call FixPrettierEslint()<CR>
+nnoremap <C-p>     :call FixPrettierEslint()<CR>
 
 " Show entire path on Ctrl+g
 nnoremap <C-g> 1<C-g>
