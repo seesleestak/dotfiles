@@ -1,27 +1,19 @@
 [colors]
 background = ${xrdb:background}
-background-alt = ${xrdb:background}
 foreground = ${xrdb:color7}
-foreground-alt = ${xrdb:color15}
 primary = ${xrdb:color4}
 alert = ${xrdb:color1}
 highlight = ${xrdb:color1}
-magenta = ${xrdb:color5}
 green = ${xrdb:color2}
-yellow = ${xrdb:color3}
 orange = ${xrdb:color16}
-red = ${xrdb:color1}
 teal = ${xrdb:color14}
 purple = ${xrdb:color13}
 muted = ${xrdb:color8}
 
 [bar/top]
 monitor = ${env:MONITOR:}
-bottom = false
 width = 100%
 height = 22
-; wm-restack = i3
-; override-redirect = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -33,12 +25,6 @@ font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 modules-left = i3
 modules-center = date
 modules-right = cpu memory wireless-network volume avg-battery 
-
-; tray-position    = right
-; tray-padding     = 2
-; tray-detached    = false
-; tray-transparent = false
-; tray-background  = ${colors.background}
 
 [module/i3]
 type = internal/i3
@@ -93,7 +79,7 @@ format-connected-foreground = ${colors.orange}
 format-connected-padding = 1
 
 label-connected = %essid%
-label-connected-foreground = ${colors.foreground-alt}
+label-connected-foreground = ${colors.foreground}
 
 ramp-signal-0 = 直
 ramp-signal-1 = 直
@@ -117,10 +103,10 @@ label-volume = %percentage%
 label-muted = mute
 
 format-volume = <ramp-volume> <label-volume>
-format-volume-foreground = ${colors.foreground-alt}
+format-volume-foreground = ${colors.foreground}
 
 format-muted = <ramp-volume> <label-muted>
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.foreground}
 format-muted-padding = 1
 format-volume-padding = 1
 
@@ -152,18 +138,6 @@ format-prefix-foreground = ${colors.green}
 format-prefix-font = 2
 label = %percentage%%
 format-padding = 1
-
-; [module/updates-arch]
-; type = custom/script
-; exec = ~/.config/polybar/scripts/updates-arch.sh
-; interval = 600
-; format-padding = 1
-
-; [module/notification]
-; type = custom/script
-; exec = ~/.config/polybar/scripts/notification.sh
-; click-left = ~/.config/polybar/scripts/toggle-notifications.sh
-; format-padding = 1
 
 ; polybar vim syntax highlighting
 ; vim:syntax=dosini
