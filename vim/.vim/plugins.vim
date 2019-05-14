@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'alvan/vim-closetag'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'danro/rename.vim'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -18,6 +19,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
+
+  Plug 'tpope/vim-dadbod'
+  Plug 'tpope/vim-dotenv'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -37,3 +41,5 @@ call plug#end()
 
 " Open all folds when viewing fugitive commit files
 autocmd BufEnter fugitive://* silent! %foldopen!
+
+" autocmd BufReadPost *.dbout execute pclose | edit %:p

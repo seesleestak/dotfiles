@@ -23,10 +23,9 @@ set smarttab
 set expandtab
 set autoindent
 set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd Filetype cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 " Backup handling
-" set directory^=$HOME/.vim/swapfiles/
 set noswapfile
 set undodir=~/.vim/undodir
 set undofile
