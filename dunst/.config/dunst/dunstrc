@@ -13,7 +13,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = DejaVu Sans Mono 9
+    font = Meslo LG M 9
     line_height = 4
     markup = full
     format = "<b>%s</b>\n%b"

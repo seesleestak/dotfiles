@@ -1,4 +1,4 @@
-rofi.font: DejaVu Sans Mono 14
+rofi.font: Meslo LG M 14
 rofi.kb-mode-next: Control+N	
 rofi.kb-mode-previous: Control+P
 rofi.line-padding: 2

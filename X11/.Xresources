@@ -1,6 +1,6 @@
 ! urxvt
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono:size=10:antialias=true,\
+URxvt.font: xft:Meslo LG M:size=10:antialias=true,\
             xft:Droid Sans Mono:size=10:antialias=true,\
             xft:Droid Sans Fallback:size=10:antialias=true,\
             xft:FreeSans:size=10:antialias=true

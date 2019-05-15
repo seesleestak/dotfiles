@@ -18,8 +18,8 @@ height = 22
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-font-0 = DejaVu Sans Mono:size=10;2
-font-1 = DejaVu Sans Mono:style=Bold:size=10;2
+font-0 = Meslo LG M:size=10;2
+font-1 = Meslo LG M:style=Bold:size=10;2
 font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
 
 modules-left = i3
