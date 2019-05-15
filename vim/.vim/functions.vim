@@ -28,7 +28,7 @@ endfunction
 
 function Format()
   let ft = &filetype
-  if ft == 'cpp'
+  if ft == 'cpp' || ft == 'c'
     silent execute "!clang-format -i " . bufname("%")
     execute "redraw!"
   elseif ft == 'javascript.jsx'
