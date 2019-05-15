@@ -32,9 +32,11 @@ nnoremap <leader>bc  :BCommits<CR>
 " Fugitive mappings
 nnoremap <leader>gd :Gdiff<CR>
 
+" Format buffer with clang-format if cpp, prettier + eslint if js
+nnoremap <C-i> :call Format()<CR>
+
 " ALE
 nnoremap <leader>w :ALENextWrap<CR>
-nnoremap <C-p>     :call FixPrettierEslint()<CR>
 
 " Show entire path on Ctrl+g
 nnoremap <C-g> 1<C-g>
