@@ -23,13 +23,6 @@ case "$1" in
   d)
     vim "$notes_dropbox_dir/$(date -u '+%Y-%m-%d-%H-%M-%S')"
     ;;
-  h) 
-    if [[ -n $2 ]]; then
-      vim "$notes_dir/hixme/$2"
-    else
-      vim "$notes_dir/hixme/$(date -u '+%Y-%m-%d-%H-%M-%S')"
-    fi
-    ;;
   *)
     vim "$notes_dir/misc/$(date -u '+%Y-%m-%d-%H-%M-%S')"
 esac
