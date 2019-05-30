@@ -46,7 +46,6 @@ pacmanPreferredPrograms() {
     npm \
     ranger \
     ripgrep \
-    polybar \
     rofi \
     scrot \
     slop \
@@ -93,6 +92,7 @@ aurPackages() {
   git clone https://aur.archlinux.org/google-chrome.git && cd google-chrome && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/paper-icon-theme.git && cd paper-icon-theme && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/menu-calc.git && cd menu-calc && makepkg -isr && cd ..
+  git clone https://aur.archlinux.org/ttf-meslo.git && cd ttf-meslo && makepkg -isr && cd ..
   git clone https://aur.archlinux.org/dropbox.git && cd dropbox && makepkg -isr && cd ~
 }
 
@@ -114,12 +114,8 @@ distroAgnosticSetup() {
   sudo npm i -g \
     eslint \
     gatsby \
-    hiflow \
-    jest
-    lerna \
     prettier \
-    ripsr \
-    serverless
+    ripsr
 
   # Create directories
   mkdir -p ~/repos
