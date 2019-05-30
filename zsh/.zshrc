@@ -15,6 +15,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias hxen="cd ~/repos/enrollme-web-client"
   alias hui="cd ~/repos/hixme-ui"
   alias mor="cd ~/repos/mor-web-client"
+  alias mora="cd ~/repos/mor-api"
   alias dot="cd ~/dotfiles"
 
   # hiflow
