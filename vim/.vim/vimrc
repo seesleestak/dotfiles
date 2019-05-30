@@ -31,7 +31,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 " Clipboard
-set clipboard=unnamedplus,unnamed
+set clipboard=unnamedplus
 
 " Show col,row at bottom
 set ruler
