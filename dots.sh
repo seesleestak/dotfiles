@@ -16,8 +16,7 @@ appendOld() {
     ~/.config/i3 \
     ~/.config/polybar \
     ~/.config/ranger \
-    ~/.config/rofi \
-    ~/wallpaper \
+    ~/.config/rofi
   )
 
   for i in ${fileList[@]}
@@ -49,4 +48,3 @@ stow i3
 stow polybar
 stow ranger
 stow rofi
-stow wallpaper
