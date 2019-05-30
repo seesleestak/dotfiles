@@ -1,3 +1,11 @@
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
 ! urxvt
 URxvt.scrollBar: false
 URxvt.font: xft:Meslo LG M:size=10:antialias=true,\
@@ -63,9 +71,9 @@ Meta <Key> plus: larger-vt-font() \n\
 *.color16: nord12
 
 ! Colors states:   'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
-rofi.color-normal: nord0, nord4, nord0, nord1, nord7
-rofi.color-active: nord0, nord4, nord0, nord1, nord7
+! rofi.color-normal: nord0, nord4, nord0, nord1, nord7
+! rofi.color-active: nord0, nord4, nord0, nord1, nord7
 !                  'background', 'border', 'separator'
-rofi.color-window: nord0, nord7, nord0
+! rofi.color-window: nord0, nord7, nord0
 
 ! vim:syntax=xdefaults
