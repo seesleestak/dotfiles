@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
 
+  " Database
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-dotenv'
 call plug#end()
