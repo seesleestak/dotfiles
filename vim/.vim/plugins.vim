@@ -21,8 +21,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
 
   " Database
-  Plug 'tpope/vim-dadbod'
-  Plug 'tpope/vim-dotenv'
+  " Plug 'tpope/vim-dadbod'
+  " Plug 'tpope/vim-dotenv'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -41,6 +41,6 @@ call plug#end()
 " ------------------------------------------------
 
 " Open all folds when viewing fugitive commit files
-autocmd BufEnter fugitive://* silent! %foldopen!
+" autocmd BufEnter fugitive://* silent! %foldopen!
 
 " autocmd BufReadPost *.dbout execute pclose | edit %:p
