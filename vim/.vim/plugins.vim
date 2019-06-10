@@ -19,10 +19,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
-
-  " Database
-  " Plug 'tpope/vim-dadbod'
-  " Plug 'tpope/vim-dotenv'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -39,8 +35,3 @@ call plug#end()
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
 " ------------------------------------------------
-
-" Open all folds when viewing fugitive commit files
-" autocmd BufEnter fugitive://* silent! %foldopen!
-
-" autocmd BufReadPost *.dbout execute pclose | edit %:p
