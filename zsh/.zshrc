@@ -11,9 +11,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 
 # Aliases
   # Directories
-  alias hxad="cd ~/repos/admin-web-client"
-  alias hxen="cd ~/repos/enrollme-web-client"
-  alias hui="cd ~/repos/hixme-ui"
+  alias re="cd ~/repos"
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
   alias dot="cd ~/dotfiles"
