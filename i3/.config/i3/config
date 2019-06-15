@@ -32,17 +32,17 @@ for_window [class="^.*"] border pixel 3
 gaps inner 8
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
+smart_borders on
 
 # Window colors
 client.focused           $term_color14 $term_color14 $term_background $term_color14
-client.unfocused         $term_color0 $term_color0 $term_foreground $term_color0
-client.focused_inactive  $term_color0 $term_color0 $term_foreground $term_color0
-client.urgent            $term_color1 $term_color1 $term_background $term_color1
+client.unfocused         $term_color0  $term_color0  $term_foreground $term_color0
+client.focused_inactive  $term_color0  $term_color0  $term_foreground $term_color0
+client.urgent            $term_color1  $term_color1  $term_background $term_color1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -69,19 +69,15 @@ assign [class="^TelegramDesktop"] $ws9
 
 
 # ========================= STARTUP =============================
-# Start up some applications
 exec --no-startup-id dropbox
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id clipit
-exec --no-startup-id xautolock -time 10 -locker ~/.config/i3/lock.sh
+exec --no-startup-id xautolock -time 20 -locker ~/.config/i3/lock.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-
-# exec --no-startup-id pulseaudio
-exec --no-startup-id pa-applet
+exec --no-startup-id volumeicon
 # ===============================================================
 
 
