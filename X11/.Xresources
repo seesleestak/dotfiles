@@ -17,13 +17,13 @@ URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
-URxvt.internalBorder: 4
+URxvt.internalBorder: 8
 
 ! Prevent ISO notification when attempting to copy/paste
 URxvt.iso14755: False
 
 ! xterm
-xterm*faceName: DejaVu Sans Mono
+xterm*faceName: Meslo LG M
 xterm*faceSize: 10
 xterm*renderFont: true
 xterm.vt100.metaSendsEscape: true
@@ -71,9 +71,9 @@ Meta <Key> plus: larger-vt-font() \n\
 *.color16: nord12
 
 ! Colors states:   'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
-! rofi.color-normal: nord0, nord4, nord0, nord1, nord7
-! rofi.color-active: nord0, nord4, nord0, nord1, nord7
+rofi.color-normal: nord0, nord4, nord0, nord1, nord7
+rofi.color-active: nord0, nord4, nord0, nord1, nord7
 !                  'background', 'border', 'separator'
-! rofi.color-window: nord0, nord7, nord0
+rofi.color-window: nord0, nord7, nord0
 
 ! vim:syntax=xdefaults
