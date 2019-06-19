@@ -32,11 +32,11 @@ for_window [class="^.*"] border pixel 3
 gaps inner 8
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+# smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Window colors
 client.focused           $term_color14 $term_color14 $term_background $term_color14
@@ -147,7 +147,7 @@ bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
 bindsym $mod+Ctrl+9 move container to workspace $ws9
-bindsym $mod+Ctrl+10 move container to workspace $ws10
+bindsym $mod+Ctrl+0 move container to workspace $ws10
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -159,7 +159,7 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
-bindsym $mod+Shift+10 move container to workspace $ws10; workspace $ws10
+bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Move focus
 bindsym $mod+$left  focus left
@@ -220,11 +220,10 @@ bar {
         statusline $term_foreground
         separator  $term_color0
 
-#                      border  backgr. text
-        focused_workspace  $term_color8 $term_color8 $term_foreground
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace $term_background $term_background $term_color8
-        # binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   $term_color1 $term_color1 $term_foreground
+                          # border            backgr.           text
+        focused_workspace   $term_color8      $term_color8      $term_foreground
+        active_workspace    $term_background  $term_background  $term_foreground
+        inactive_workspace  $term_background  $term_background  $term_color8
+        urgent_workspace    $term_color1      $term_color1      $term_foreground
     }
 }
