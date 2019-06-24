@@ -1,5 +1,5 @@
 " Billy Montgomery's console log creator
-function! EasyConsoleLog(isVisual)
+function! EasyConsoleLog(isVisual) abort
   if a:isVisual
     let word = @z
   else
@@ -9,24 +9,24 @@ function! EasyConsoleLog(isVisual)
 endfunction
 
 " Copy current buffer path to multiple buffers
-function! CopyPath() 
+function! CopyPath() abort
   execute "let @*=expand('%:p')"
   execute "let @+=expand('%:p')"
 endfunction
 
 " Copy current buffer path directory to multiple buffers
-function! CopyPathDir() 
+function! CopyPathDir() abort
   execute "let @*=expand('%:p:h')"
   execute "let @+=expand('%:p:h')"
 endfunction
 
 " Run ALEFix for eslint only
-function! FixEslint()
+function! FixEslint() abort
   let b:ale_fixers = {'javascript': ['eslint']}
   execute "ALEFix"
 endfunction
 
-function! Format()
+function! Format() abort
   let ft = &filetype
   if ft == 'cpp' || ft == 'c'
     silent execute "!clang-format -i " . bufname("%")
@@ -38,7 +38,7 @@ function! Format()
 endfunction
 
 " Find and replace visual selection with argument
-function! ReplaceUnderVisual(replaceWord)
+function! ReplaceUnderVisual(replaceWord) abort
   let word = @z
   execute "%s/".word."/".a:replaceWord."/gc"
 endfunction
