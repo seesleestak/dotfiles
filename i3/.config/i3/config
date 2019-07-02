@@ -32,11 +32,11 @@ for_window [class="^.*"] border pixel 3
 gaps inner 8
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-# smart_gaps on
+smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
+smart_borders on
 
 # Window colors
 client.focused           $term_color14 $term_color14 $term_background $term_color14
@@ -206,9 +206,9 @@ bar {
 	status_command i3status
 	position top
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+  ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+  #	tray_output primary
+  #	tray_output eDP1
 
 	bindsym button4 nop
 	bindsym button5 nop
