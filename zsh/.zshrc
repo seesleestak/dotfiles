@@ -16,9 +16,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias mora="cd ~/repos/mor-api"
   alias dot="cd ~/dotfiles"
 
-  # hiflow
-  alias hic="hi commit"
-
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
     alias ls="ls -G"
