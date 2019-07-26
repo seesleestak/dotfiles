@@ -33,7 +33,7 @@ nnoremap <leader>bc  :BCommits<CR>
 nnoremap <leader>gd :Gdiff<CR>
 
 " Format buffer with clang-format if cpp, prettier + eslint if js
-nnoremap <C-i> :call Format()<CR>
+nnoremap <leader>i :call Format()<CR>
 
 " ALE
 nnoremap <leader>w :ALENextWrap<CR>

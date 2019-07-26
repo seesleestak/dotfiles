@@ -1,10 +1,14 @@
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
-  Plug 'SirVer/ultisnips'
   Plug 'alvan/vim-closetag'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'danro/rename.vim'
+
+  " Snippets
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'garbas/vim-snipmate'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -24,9 +28,6 @@ call plug#end()
 " Plugin config ----------------------------------
   " Closetag
   let g:closetag_filenames = '*.html,*.js'
-
-  " UltiSnips
-  let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
 
   " vim-javascript
   let g:javascript_conceal = 0
