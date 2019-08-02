@@ -23,6 +23,11 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
     alias ls="ls --color=always"
   fi
 
+  # Homebrew vim alias
+  if [[ $(uname -s) = "Darwin" ]]; then
+    alias vim="/usr/local/Cellar/vim/8.1.1750/bin/vim"
+  fi
+
   # Git
   alias ga="git add"
   alias gb="git branch"
