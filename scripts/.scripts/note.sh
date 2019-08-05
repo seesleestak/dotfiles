@@ -1,7 +1,7 @@
 #!/bin/bash
 # Notes function stolen from https://aonemd.github.io/blog/how-i-take-notes
-local notes_dir="/home/calvin/repos/notes"
-local notes_dropbox_dir="/home/calvin/Dropbox/notes"
+local notes_dir="$HOME/repos/notes"
+local notes_dropbox_dir="$HOME/Dropbox/notes"
 case "$1" in
   c)
     cd "$notes_dir"
