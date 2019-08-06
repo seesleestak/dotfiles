@@ -1,6 +1,6 @@
 #!/bin/bash
 FILE_NAME=screen-record-$(date -u '+%Y-%m-%d-%H-%M-%S')
-BASE_PATH=/home/calvin/Videos/screen-record
+BASE_PATH=$HOME/Videos/screen-record
 mkdir -p $BASE_PATH
 
 SLOP=$(slop -f "%x %y %w %h") || exit 1
