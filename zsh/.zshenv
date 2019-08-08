@@ -1,4 +1,3 @@
 export VISUAL=/usr/bin/vim
 export EDITOR=$VISUAL
-export PATH=$PATH:$HOME/.scripts:~/.local/bin
-export TERMINAL=/usr/bin/urxvt
+export PATH=$PATH:$HOME/.scripts:$HOME/.local/bin
