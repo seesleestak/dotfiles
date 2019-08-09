@@ -10,13 +10,7 @@ appendOld() {
     ~/.Xresources \
     ~/.gitconfig \
     ~/.vim \
-    ~/.config/dunst \
-    ~/.config/gtk-3.0 \
-    ~/.gtkrc-2.0 \
-    ~/.config/i3 \
-    ~/.config/polybar \
-    ~/.config/ranger \
-    ~/.config/rofi
+    ~/.config/ranger
   )
 
   for i in ${fileList[@]}
@@ -42,9 +36,4 @@ stow vim && vim -c PlugInstall -c q -c q
 
 # Setup and stow config directories
 mkdir -p ~/.config
-stow dunst
-stow gtk
-stow i3
-stow polybar
 stow ranger
-stow rofi
