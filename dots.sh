@@ -28,7 +28,6 @@ appendOld
 stow tmux
 stow zsh
 stow scripts
-stow X11
 stow git
 
 # Stow vim config and install plugins
