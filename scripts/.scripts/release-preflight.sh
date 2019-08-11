@@ -1,1 +1,0 @@
-/home/calvin/repos/release-preflight/release-preflight.sh
