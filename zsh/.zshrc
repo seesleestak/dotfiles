@@ -28,6 +28,11 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
     alias vim="/usr/local/Cellar/vim/8.1.1750/bin/vim"
   fi
 
+  # Shell scripts
+  alias note="source $HOME/.scripts/note.sh"
+  alias vimstart="source $HOME/.scripts/vimstart.sh"
+  alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
+
   # Git
   alias ga="git add"
   alias gb="git branch"
@@ -53,57 +58,6 @@ bindkey -e
 bindkey '\e[1;5C' vi-forward-word   # C-Right
 bindkey '\e[1;5D' vi-backward-word  # C-Left
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-# vimstart - by Billy Montgomery
-function vimstart {
-  PURPLE="\033[0;35m"
-  ORANGE="\033[0;33m"
-
-  echo $ORANGE
-  TOTAL=0
-  for i in {1..20}
-  do
-    vim -c\ q --startuptime /tmp/vim.log
-    VAL=$(tail -n1 /tmp/vim.log | awk '{print $1}')
-    echo $VAL
-    TOTAL=$(echo $VAL | awk '{print $1+"'$TOTAL'"}')
-  done
-
-  echo $PURPLE
-  echo $TOTAL | awk '{print $1/20 " Average \n"}'
-}
-
-function note {
-  source $HOME/.scripts/note.sh
-}
-
-function rsr {
-  if [[ -n $1 ]] && [[ -n $2 ]]; then
-    COUNT=$(rg -l $1 | wc -l | xargs)
-    if [[ $COUNT -gt 0 ]]; then
-      rg $1 --replace $2
-      echo -n "\n\033[0;36mContinue? (y/n) \033[0;39m" 
-      read ANSWER
-      case $ANSWER in
-        y|Y) 
-          rg -l $1 | xargs sed -i '' "s|$1|$2|g"
-          echo "\033[0;32mSuccessfully made $COUNT substitutions"
-          ;;
-        n|N|*) ;;
-      esac
-    else
-      echo "\033[0;33mNo matches found"
-    fi
-  else 
-    echo "\033[0;31mNot enough arguments"
-  fi
-}
-  
 # Complete history on arrow up/down
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
