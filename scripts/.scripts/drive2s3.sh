@@ -1,1 +1,0 @@
-/home/calvin/repos/sbc-drive-to-s3/drive2s3.sh
