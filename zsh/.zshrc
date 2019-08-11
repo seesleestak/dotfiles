@@ -82,21 +82,15 @@ function note {
   source $HOME/.scripts/note.sh
 }
 
-# riplace - by Billy Montgomery
-function riplace {
-  if [ ${#1} -eq 0 ]; then
-    read "a?Search: "
-  else
-    a=${#1}
-  fi
+function rsr {
+  if [[ -n $1 ]] && [[ -n $2 ]]; then
+    COUNT=$(rg -l $1 | wc -l | xargs)
+    rg -l $1 | xargs sed -i '' "s|$1|$2|g"
 
-  if [ ${#2} -eq 0 ]; then
-    read "b?Replace: "
-  else
-    b=${#2}
+    echo "\033[0;32mSuccessfully made $COUNT substitutions"
+  else 
+    echo "\033[0;31mNot enough arguments"
   fi
-
-  rg -l "$a" | xargs sed -i"" "s|$a|$b|g"
 }
   
 # Complete history on arrow up/down
