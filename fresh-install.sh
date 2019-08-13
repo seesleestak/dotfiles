@@ -64,6 +64,18 @@ pacmanPreferredPrograms() {
   # chsh -s $(which zsh)
 }
 
+macOsSetup() {
+  brew install \
+    node \
+    ripgrep \
+    tmux \
+    stow \
+    vim \
+    ranger \
+    reattach-to-user-namespace \
+    zsh
+}
+
 pacmanSetup() {
   # Refresh repos and update system
   sudo pacman -Syyu
@@ -134,6 +146,9 @@ case $1 in
   -p)
     pacmanSetup
     ;; 
+  -m)
+    macOsSetup
+    ;;
   -pp)
     pacmanPreferredPrograms
     ;; 
@@ -150,6 +165,7 @@ case $1 in
     echo "Please specify an install flag: "
     echo "   -a  (apt)"
     echo "   -p  (pacman)"
+    echo "   -m  (brew)"
     echo "   -pp (preferred pacman packages)"
     echo "   -pa (AUR packages)"
     echo "   -pf (pacman font packages)"
