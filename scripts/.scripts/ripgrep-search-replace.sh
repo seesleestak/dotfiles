@@ -8,7 +8,11 @@ if [[ -n $1 ]] && [[ -n $2 ]]; then
     read ANSWER
     case $ANSWER in
       y|Y) 
-        rg -l $1 | xargs sed -i '' "s|$1|$2|g"
+        if [[ $(uname -s) = "Darwin" ]]; then
+          rg -l $1 | xargs sed -i '' "s|$1|$2|g"
+        else
+          rg -l $1 | xargs sed -i'' "s|$1|$2|g"
+        fi
         echo "\033[0;32mSuccessfully made $COUNT substitutions"
         ;;
       n|N|*) 
