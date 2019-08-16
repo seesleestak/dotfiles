@@ -31,6 +31,11 @@ function! Format() abort
   if ft == 'cpp' || ft == 'c'
     silent execute "!clang-format -i " . bufname("%")
     execute "redraw!"
+  elseif ft == 'svelte'
+    let b:ale_linter_aliases = {'svelte': ['css', 'javascript']}
+    let b:ale_linters = {'svelte': ['eslint']}
+    let b:ale_fixers = {'svelte': ['prettier', 'eslint']}
+    execute "ALEFix"
   elseif ft == 'javascript.jsx'
     let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
     execute "ALEFix"

@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
+  Plug 'burner/vim-svelte'
 call plug#end()
 
 " Plugin config ----------------------------------
