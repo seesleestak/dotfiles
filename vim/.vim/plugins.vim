@@ -28,7 +28,7 @@ call plug#end()
 
 " Plugin config ----------------------------------
   " Closetag
-  let g:closetag_filenames = '*.html,*.js'
+  let g:closetag_filenames = '*.html,*.js,*.svelte'
 
   " vim-javascript
   let g:javascript_conceal = 0
