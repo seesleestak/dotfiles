@@ -15,7 +15,9 @@ if [[ -n $1 ]] && [[ -n $2 ]]; then
         fi
         echo "\033[0;32mSuccessfully made $COUNT substitutions"
         ;;
-      n|N|*) ;;
+      n|N|*) 
+        echo "Exiting..."
+        ;;
     esac
   else
     echo "\033[0;33mNo matches found"
