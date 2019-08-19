@@ -8,11 +8,7 @@ Xft.lcdfilter: lcddefault
 
 ! urxvt
 URxvt.scrollBar: false
-URxvt.font: xft:Meslo LG M:size=10:antialias=true,\
-            xft:TerminessTTF Nerd Font Mono:size=14,\
-            xft:Droid Sans Mono:size=10:antialias=true,\
-            xft:Droid Sans Fallback:size=10:antialias=true,\
-            xft:FreeSans:size=10:antialias=true
+URxvt.font: xft:Meslo LG M:size=10:antialias=true,xft:TerminessTTF Nerd Font Mono:size=14
 URxvt.perl-ext-common: default,font-size,url-select,selection-to-clipboard
 URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
@@ -22,15 +18,6 @@ URxvt.internalBorder: 10
 
 ! Prevent ISO notification when attempting to copy/paste
 URxvt.iso14755: False
-
-! xterm
-xterm*faceName: Meslo LG M
-xterm*faceSize: 10
-xterm*renderFont: true
-xterm.vt100.metaSendsEscape: true
-xterm.VT100.translations: #override \
-Meta <Key> minus: smaller-vt-font() \n\
-Meta <Key> plus: larger-vt-font() \n\
 
 #define nord0 #2E3440
 #define nord1 #3B4252
