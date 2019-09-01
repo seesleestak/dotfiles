@@ -4,6 +4,8 @@
 " Project: Nord Vim
 " Repository: https://github.com/arcticicestudio/nord-vim
 " License: MIT
+" ----------------------------------------------
+" NOTE: Fork of nord with some modifications
 
 if version > 580
   hi clear
@@ -72,21 +74,9 @@ let s:nord3_gui_brightened = [
   \ "#7b88a1",
 \ ]
 
-if !exists("g:nord_bold")
-  let g:nord_bold = 1
-endif
-
 let s:bold = "bold,"
-if g:nord_bold == 0
-  let s:bold = ""
-endif
-
 let s:italic = "italic,"
-
 let s:underline = "underline,"
-if ! get(g:, "nord_underline", 1)
-  let s:underline = "NONE,"
-endif
 
 if !exists('g:nord_uniform_status_lines')
   let g:nord_uniform_status_lines = 0
@@ -97,13 +87,6 @@ function! s:logWarning(msg)
   echomsg 'nord: warning: ' . a:msg
   echohl None
 endfunction
-
-if exists("g:nord_comment_brightness")
-  call s:logWarning('Variable g:nord_comment_brightness has been deprecated and will be removed in version 1.0.0!' .
-                   \' The comment color brightness has been increased by 10% by default.' .
-                   \' Please see https://github.com/arcticicestudio/nord-vim/issues/145 for more details.')
-  let g:nord_comment_brightness = 10
-endif
 
 if !exists("g:nord_uniform_diff_background")
   let g:nord_uniform_diff_background = 0
