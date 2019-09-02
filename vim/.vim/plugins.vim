@@ -24,6 +24,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
   Plug 'burner/vim-svelte'
+
+  Plug 'nerdypepper/vim-colors-plain'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -32,7 +34,7 @@ call plug#end()
 
   " vim-javascript
   let g:javascript_conceal = 0
-  
+
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
