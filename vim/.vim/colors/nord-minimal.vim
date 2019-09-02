@@ -18,7 +18,8 @@ let g:colors_name = "nord-minimal"
 let s:nord_vim_version="0.12.0"
 set background=dark
 
-let s:nord0_gui = "#2E3440"
+" let s:nord0_gui = "#2E3440"
+let s:nord0_gui = "#252A33"
 let s:nord1_gui = "#3B4252"
 let s:nord2_gui = "#434C5E"
 let s:nord3_gui = "#4C566A"
@@ -498,16 +499,14 @@ hi! link vimFunc Function
 hi! link vimFunction Function
 hi! link vimUserFunc Function
 
-call s:hi("xmlAttrib", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("xmlCdataStart", s:nord3_gui_bright, "", s:nord3_term, "", s:bold, "")
-call s:hi("xmlNamespace", s:nord7_gui, "", s:nord7_term, "", "", "")
-hi! link xmlAttribPunct Delimiter
+" call s:hi("xmlAttrib", s:nord7_gui, "", s:nord7_term, "", "", "")
+" call s:hi("xmlNamespace", s:nord7_gui, "", s:nord7_term, "", "", "")
+" call s:hi("xmlCdataStart", s:nord3_gui_bright, "", s:nord3_term, "", s:bold, "")
+call s:hi("xmlTag", s:nord9_gui, "", s:nord9_term, "", "", "")
 hi! link xmlCdata Comment
-hi! link xmlCdataCdata xmlCdataStart
-hi! link xmlCdataEnd xmlCdataStart
-hi! link xmlEndTag xmlTagName
-hi! link xmlProcessingDelim Keyword
-hi! link xmlTagName Keyword
+hi link xmlTagName xmlTag
+hi link xmlEndTag xmlTag
+hi link xmlAttrib xmlTag
 
 call s:hi("yamlBlockMappingKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 hi! link yamlBool Keyword
