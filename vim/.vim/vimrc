@@ -50,7 +50,7 @@ if (has("termguicolors"))
 endif
 
 syntax enable
-colorscheme nord-minimal
+colorscheme duo-mini
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
