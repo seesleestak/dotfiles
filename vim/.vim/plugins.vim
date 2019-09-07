@@ -25,7 +25,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'burner/vim-svelte'
 
+  Plug 'seesleestak/nord-vim'
   Plug 'nerdypepper/vim-colors-plain'
+  Plug 'seesleestak/duo-mini'
 call plug#end()
 
 " Plugin config ----------------------------------
