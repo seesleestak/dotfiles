@@ -38,7 +38,7 @@ stow X11
 stow git
 
 # Stow vim config and install plugins
-stow vim && vim -c PlugInstall -c q -c q
+stow vim && vim -c "PlugInstall | q | q"
 
 # Setup and stow config directories
 mkdir -p ~/.config
