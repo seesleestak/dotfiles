@@ -22,6 +22,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   else
     alias ls="ls --color=always"
   fi
+  alias ll="ls -al"
 
   # Homebrew vim alias
   if [[ $(uname -s) = "Darwin" ]]; then
