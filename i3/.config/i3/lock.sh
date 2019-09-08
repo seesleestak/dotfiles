@@ -22,14 +22,14 @@ i3lock \
   -t \
   --clock \
   --timestr="%I:%M:%S %p" \
-  --time-font="Roboto" \
+  --time-font="Meslo LG M" \
   --timesize=68 \
   --timecolor=$WHITE \
   --datesize=26 \
   --datepos="tx:ty+40" \
   --datecolor=$MUTED \
-  --date-font="Roboto" \
-  --radius 230 \
+  --date-font="Meslo LG M" \
+  --radius 75 \
   --ring-width 10 \
   --ringcolor=$MUTED \
   --ringvercolor=$TEAL \
