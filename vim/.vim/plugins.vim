@@ -24,8 +24,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'w0rp/ale'
 
-  Plug 'seesleestak/nord-vim'
-  Plug 'nerdypepper/vim-colors-plain'
+  " Plug 'seesleestak/nord-vim'
+  " Plug 'nerdypepper/vim-colors-plain'
   Plug 'seesleestak/duo-mini'
 call plug#end()
 
