@@ -125,6 +125,7 @@ distroAgnosticSetup() {
   # Install global npm packages
   sudo npm i -g \
     eslint \
+    hiflow \
     gatsby \
     prettier
 

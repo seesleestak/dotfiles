@@ -26,13 +26,16 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 
   # Homebrew vim alias
   if [[ $(uname -s) = "Darwin" ]]; then
-    alias vim="/usr/local/Cellar/vim/8.1.1750/bin/vim"
+    alias vim="/usr/local/Cellar/vim/8.1.2000/bin/vim"
   fi
 
   # Shell scripts
   alias note="source $HOME/.scripts/note.sh"
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
+
+  # Hiflow
+  alias hic="hi commit"
 
   # Git
   alias ga="git add"
