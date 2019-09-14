@@ -34,6 +34,9 @@ function! Format() abort
   elseif ft == 'javascript.jsx'
     let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
     execute "ALEFix"
+  elseif ft == 'scss'
+    let b:ale_fixers = {'scss': ['stylelint']}
+    execute "ALEFix"
   endif
 endfunction
 
