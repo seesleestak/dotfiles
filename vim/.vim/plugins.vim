@@ -25,14 +25,12 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'burner/vim-svelte'
 
-  " Plug 'seesleestak/nord-vim'
-  " Plug 'nerdypepper/vim-colors-plain'
   Plug 'seesleestak/duo-mini'
 call plug#end()
 
 " Plugin config ----------------------------------
   " Closetag
-  let g:closetag_filenames = '*.html,*.js,*.svelte'
+  let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
 
   " vim-javascript
   let g:javascript_conceal = 0
