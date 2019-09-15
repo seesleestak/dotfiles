@@ -25,6 +25,7 @@ i3lock \
   --time-font="Meslo LG M" \
   --timesize=68 \
   --timecolor=$WHITE \
+  --datestr="%A %d, %Y" \
   --datesize=26 \
   --datepos="tx:ty+40" \
   --datecolor=$MUTED \
@@ -37,7 +38,7 @@ i3lock \
   --veriftext="" \
   --insidevercolor=$TRANSPARENT \
   --noinputtext="" \
-  --wrongtext="incorrect" \
+  --wrongtext="" \
   --insidecolor=$TRANSPARENT \
   --insidewrongcolor=$TRANSPARENT \
   --keyhlcolor=$WHITE \
