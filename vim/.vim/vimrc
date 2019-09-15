@@ -9,7 +9,7 @@ set autoread " Auto reload if file changes outside of vim
 set lazyredraw " Only redraw once macro is done running
 set number " Show line numbers
 set relativenumber " Show relative line numbers
-set noerrorbells vb t_vb= " Disable beep
+set noeb vb t_vb= " Disable beep
 set nowrap " Don't wrap lines
 set linebreak " Break lines at words when wrap
 

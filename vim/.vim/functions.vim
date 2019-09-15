@@ -1,11 +1,16 @@
-" Billy Montgomery's console log creator
-function! EasyConsoleLog(isVisual) abort
+" Billy Montgomery's log creator
+function! Log(isVisual) abort
   if a:isVisual
     let word = @z
   else
     let word = expand("<cword>")
   endif 
-  execute "normal! oconsole.log(\"".word." --- \", ".word.")"
+
+  if &filetype == 'rust'
+    execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
+  else
+    execute "normal! oconsole.log(\"".word." --- \", ".word.")"
+  endif
 endfunction
 
 " Copy current buffer path to multiple buffers
@@ -20,12 +25,6 @@ function! CopyPathDir() abort
   execute "let @+=expand('%:p:h')"
 endfunction
 
-" Run ALEFix for eslint only
-function! FixEslint() abort
-  let b:ale_fixers = {'javascript': ['eslint']}
-  execute "ALEFix"
-endfunction
-
 function! Format() abort
   let ft = &filetype
   if ft == 'cpp' || ft == 'c'
@@ -36,6 +35,8 @@ function! Format() abort
     let b:ale_linters = {'svelte': ['eslint']}
     let b:ale_fixers = {'svelte': ['prettier', 'eslint']}
     execute "ALEFix"
+  elseif ft == 'rust'
+    execute "RustFmt"
   elseif ft == 'javascript.jsx'
     let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
     execute "ALEFix"
