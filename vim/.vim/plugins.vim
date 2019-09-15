@@ -23,6 +23,7 @@ call plug#begin('~/.vim/plugged')
   " JS
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
+  Plug 'burner/vim-svelte'
 
   Plug 'seesleestak/duo-mini'
 
@@ -31,7 +32,7 @@ call plug#end()
 
 " Plugin config ----------------------------------
   " Closetag
-  let g:closetag_filenames = '*.html,*.js,*.jsx'
+  let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
 
   " vim-javascript
   let g:javascript_conceal = 0
