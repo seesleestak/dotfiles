@@ -41,9 +41,9 @@ nnoremap <leader>w :ALENextWrap<CR>
 " Show entire path on Ctrl+g
 nnoremap <C-g> 1<C-g>
 
-" JS console.log function
-nnoremap <leader>lg :call EasyConsoleLog(0)<CR>
-vnoremap <leader>lg "zy:call EasyConsoleLog(1)<CR>
+" Log function
+nnoremap <leader>lg :call Log(0)<CR>
+vnoremap <leader>lg "zy:call Log(1)<CR>
 
 " Find and replace
 nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
