@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'danro/rename.vim'
+  Plug 'w0rp/ale'
 
   " Snippets
   Plug 'MarcWeber/vim-addon-mw-utils'
@@ -22,9 +23,10 @@ call plug#begin('~/.vim/plugged')
   " JS
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
-  Plug 'w0rp/ale'
 
   Plug 'seesleestak/duo-mini'
+
+  Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -37,4 +39,6 @@ call plug#end()
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
+
+  " let g:rustfmt_emit_files = 1
 " ------------------------------------------------
