@@ -25,7 +25,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'burner/vim-svelte'
 
-  Plug 'seesleestak/duo-mini'
+  " Plug 'seesleestak/duo-mini'
+  Plug 'seesleestak/nord-vim'
 
   Plug 'rust-lang/rust.vim'
 call plug#end()
