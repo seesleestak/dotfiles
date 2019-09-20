@@ -5,11 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'danro/rename.vim'
   Plug 'w0rp/ale'
-
-  " Snippets
-  Plug 'MarcWeber/vim-addon-mw-utils'
-  Plug 'tomtom/tlib_vim'
-  Plug 'garbas/vim-snipmate'
+  Plug 'msanders/snipmate.vim'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -25,10 +21,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'burner/vim-svelte'
 
-  " Plug 'seesleestak/duo-mini'
-  Plug 'seesleestak/nord-vim'
-
+  " Rust
   Plug 'rust-lang/rust.vim'
+
+  Plug 'seesleestak/nord-vim'
 call plug#end()
 
 " Plugin config ----------------------------------
