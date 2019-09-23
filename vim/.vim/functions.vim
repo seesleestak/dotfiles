@@ -8,6 +8,8 @@ function! Log(isVisual) abort
 
   if &filetype == 'rust'
     execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
+  elseif &filetype == 'sh'
+    execute "normal! oecho \"".word." --- $".word."\""
   else
     execute "normal! oconsole.log(\"".word." --- \", ".word.")"
   endif
