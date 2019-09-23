@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir -p ~/.config
+
 appendOld() {
   fileList=(
     ~/.tmux.conf \
@@ -24,15 +26,9 @@ appendOld() {
 
 appendOld
 
-# Stow home directory config files
 stow tmux
 stow zsh
 stow scripts
 stow git
-
-# Stow vim config and install plugins
 stow vim && vim -c "PlugInstall | q | q"
-
-# Setup and stow config directories
-mkdir -p ~/.config
 stow ranger
