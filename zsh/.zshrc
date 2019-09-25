@@ -35,7 +35,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
 
   # Hiflow
-  alias hic="hi commit"
+  alias hic="source $HOME/.scripts/branch-prefix.sh"
 
   # Git
   alias ga="git add"
