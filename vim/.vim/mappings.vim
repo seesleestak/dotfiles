@@ -2,7 +2,7 @@
 let mapleader = "\<Space>"
 
 nnoremap <leader>s :update<CR>
-nnoremap <leader>q :qa<CR>
+nnoremap <leader>q :q<CR>
 
 " Copy file path of current buffer
 nnoremap <leader>p :call CopyPath()<CR>
