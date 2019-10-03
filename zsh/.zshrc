@@ -33,8 +33,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias note="source $HOME/.scripts/note.sh"
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-
-  # Hiflow
   alias hic="source $HOME/.scripts/branch-prefix.sh"
 
   # Git

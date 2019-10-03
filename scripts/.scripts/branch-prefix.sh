@@ -2,7 +2,6 @@
 CURR_BRANCH=$(git symbolic-ref HEAD --short)
 
 if [[ -n $CURR_BRANCH ]]; then
-  echo "CURR_BRANCH --- $CURR_BRANCH"
   if [[ "$CURR_BRANCH" == "master" ]] || [[ "$CURR_BRANCH" == "develop" ]]; then
     git commit -m $1 "${@:2}"
   else
