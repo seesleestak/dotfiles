@@ -16,15 +16,14 @@ function! Log(isVisual) abort
 endfunction
 
 " Copy current buffer path to multiple buffers
-function! CopyPath() abort
-  execute "let @*=expand('%:p')"
-  execute "let @+=expand('%:p')"
-endfunction
-
-" Copy current buffer path directory to multiple buffers
-function! CopyPathDir() abort
-  execute "let @*=expand('%:p:h')"
-  execute "let @+=expand('%:p:h')"
+function! CopyPath(dirPath) abort
+  if a:dirPath
+    execute "let @*=expand('%:p:h')"
+    execute "let @+=expand('%:p:h')"
+  else
+    execute "let @*=expand('%:p')"
+    execute "let @+=expand('%:p')"
+  endif
 endfunction
 
 function! Format() abort
