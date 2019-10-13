@@ -15,6 +15,8 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
   alias dot="cd ~/dotfiles"
+  alias vui="cd ~/repos/viking-ui-kit"
+  alias mvj="cd ~/repos/mvj-client"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -33,8 +35,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias note="source $HOME/.scripts/note.sh"
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-
-  # Hiflow
   alias hic="source $HOME/.scripts/branch-prefix.sh"
 
   # Git
