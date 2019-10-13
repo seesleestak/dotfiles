@@ -200,7 +200,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 bindsym $mod+Ctrl+m exec pavucontrol
 # ===============================================================
 
-# Sample i3bar
 bar {
 	i3bar_command i3bar
 	status_command i3status
