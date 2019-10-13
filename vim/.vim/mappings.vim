@@ -5,10 +5,10 @@ nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
 
 " Copy file path of current buffer
-nnoremap <leader>p :call CopyPath()<CR>
+nnoremap <leader>p :call CopyPath(0)<CR>
 
 " Copy directory of current buffer
-nnoremap <leader>d :call CopyPathDir()<CR>
+nnoremap <leader>d :call CopyPath(1)<CR>
 
 " Open and source vimrc
 nnoremap <leader>v :e $MYVIMRC<CR>
@@ -27,10 +27,6 @@ nnoremap <leader>a   :Rg<space>
 nnoremap <leader>f   :Rg <C-R><C-W><CR>
 nnoremap <leader>bf  :Buffers<CR>   
 nnoremap <leader>gst :GFiles?<CR>   
-nnoremap <leader>bc  :BCommits<CR>  
-
-" Fugitive mappings
-nnoremap <leader>gd :Gdiff<CR>
 
 " Format buffer with clang-format if cpp, prettier + eslint if js
 nnoremap <leader>i :call Format()<CR>
