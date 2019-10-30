@@ -19,7 +19,6 @@ call plug#begin('~/.vim/plugged')
   " JS
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
-  Plug 'burner/vim-svelte'
 
   " Rust
   Plug 'rust-lang/rust.vim'
