@@ -17,6 +17,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias dot="cd ~/dotfiles"
   alias vui="cd ~/repos/viking-ui-kit"
   alias mvj="cd ~/repos/mvj-client"
+  alias olb="cd ~/repos/olb-client"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
