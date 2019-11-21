@@ -3,10 +3,10 @@ let mapleader = "\<Space>"
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>y :checktime<CR>
+nnoremap <leader>e :checktime<CR>
 
 " Copy file path of current buffer
-nnoremap <leader>p :call CopyPath(0)<CR>
+nnoremap <leader>y :call CopyPath(0)<CR>
 
 " Copy directory of current buffer
 nnoremap <leader>d :call CopyPath(1)<CR>
