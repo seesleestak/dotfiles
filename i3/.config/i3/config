@@ -28,15 +28,8 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 4
 gaps inner 8
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
 
 # Window colors
 client.focused           $term_color14    $term_color14    $term_background $term_color14
@@ -69,16 +62,17 @@ assign [class="^TelegramDesktop"] $ws9
 
 
 # ========================= STARTUP =============================
-exec --no-startup-id dropbox
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id dropbox
 exec --no-startup-id nitrogen --restore
-exec_always --no-startup-id compton
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id volumeicon
 exec --no-startup-id xautolock -time 20 -locker ~/.config/i3/lock.sh
+exec --no-startup-id xfce4-power-manager
+exec_always --no-startup-id compton
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec --no-startup-id volumeicon
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 # ===============================================================
 
 
@@ -199,30 +193,3 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 
 bindsym $mod+Ctrl+m exec pavucontrol
 # ===============================================================
-
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position top
-
-  ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-  #	tray_output primary
-  #	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-  font xft:Meslo LG M 10
-	strip_workspace_numbers yes
-
-    colors {
-        background $term_background
-        statusline $term_foreground
-        separator  $term_color0
-
-                          # border            backgr.           text
-        focused_workspace   $term_color8      $term_color8      $term_foreground
-        active_workspace    $term_background  $term_background  $term_foreground
-        inactive_workspace  $term_background  $term_background  $term_color8
-        urgent_workspace    $term_color1      $term_color1      $term_foreground
-    }
-}
