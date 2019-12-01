@@ -20,7 +20,8 @@ foreground = ${colors.foreground}
 
 font-0 = Meslo LG M:size=10;2
 font-1 = Meslo LG M:style=Bold:size=10;2
-font-2 = DejaVuSansMono Nerd Font:pixelsize=10;2
+font-2 = TerminessTTF Nerd Font Mono:size=22;4
+
 
 modules-left = i3
 modules-center = date
