@@ -24,7 +24,7 @@ nnoremap <leader>bb :b #<CR>
 
 " fzf mappings
 nnoremap <leader>t   :Files<CR>     
-nnoremap <leader>a   :Rg<CR>
+nnoremap <leader>a   :Rg<space>
 nnoremap <leader>f   :Rg <C-R><C-W><CR>
 nnoremap <leader>bf  :Buffers<CR>   
 nnoremap <leader>gst :GFiles?<CR>   
