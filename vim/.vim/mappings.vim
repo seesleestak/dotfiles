@@ -29,7 +29,7 @@ nnoremap <leader>f   :Rg <C-R><C-W><CR>
 nnoremap <leader>bf  :Buffers<CR>   
 nnoremap <leader>gst :GFiles?<CR>   
 
-" Format buffer with clang-format if cpp, prettier + eslint if js
+" Format buffer
 nnoremap <leader>i :call Format()<CR>
 
 " ALE
