@@ -2,6 +2,7 @@ source ~/.vim/plugins.vim
 source ~/.vim/mappings.vim
 source ~/.vim/functions.vim
 
+set hidden " Do not unload abandoned buffers
 set backspace=indent,eol,start " Allow backspace
 set mouse=n " Allow scrolling in normal mode
 set autoread " Auto reload if file changes outside of vim
