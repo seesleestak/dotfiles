@@ -10,7 +10,7 @@ function! Log(isVisual) abort
     execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
   elseif &filetype == 'sh'
     execute "normal! oecho \"".word." --- $".word."\""
-  else
+  elseif &filetype == 'javascript.jsx'
     execute "normal! oconsole.log(\"".word." --- \", ".word.")"
   endif
 endfunction
