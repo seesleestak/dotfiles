@@ -29,7 +29,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 
   # Homebrew vim alias
   if [[ $(uname -s) = "Darwin" ]]; then
-    alias vim="/usr/local/Cellar/vim/8.1.2350/bin/vim"
+    alias vim="/usr/local/Cellar/vim/8.2.0/bin/vim"
   fi
 
   # Shell scripts
