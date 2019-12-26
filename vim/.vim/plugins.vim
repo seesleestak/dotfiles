@@ -24,6 +24,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
 
   Plug 'seesleestak/nord-vim'
+
+  Plug 'aklt/plantuml-syntax'
 call plug#end()
 
 " Plugin config ----------------------------------
@@ -38,4 +40,6 @@ call plug#end()
   let g:dirvish_relative_paths = 1
 
   " let g:rustfmt_emit_files = 1
+
+  let g:plantuml_executable_script='java -jar ~/.scripts/plantuml.jar'
 " ------------------------------------------------
