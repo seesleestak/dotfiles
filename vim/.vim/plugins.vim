@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
   " Rust
   Plug 'rust-lang/rust.vim'
 
+  " PlantUML
+  Plug 'aklt/plantuml-syntax'
+
   Plug 'seesleestak/nord-vim'
 call plug#end()
 
