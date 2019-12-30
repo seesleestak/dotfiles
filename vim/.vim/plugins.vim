@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'alvan/vim-closetag'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
-  Plug 'danro/rename.vim'
   Plug 'w0rp/ale'
   Plug 'msanders/snipmate.vim'
 
@@ -23,9 +22,11 @@ call plug#begin('~/.vim/plugged')
   " Rust
   Plug 'rust-lang/rust.vim'
 
-  Plug 'seesleestak/nord-vim'
-
+  " PlantUML
   Plug 'aklt/plantuml-syntax'
+
+  " Colorschemes
+  Plug 'seesleestak/nord-vim'
 call plug#end()
 
 " Plugin config ----------------------------------
