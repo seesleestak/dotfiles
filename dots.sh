@@ -34,7 +34,6 @@ appendOld
 stow tmux
 stow zsh
 stow scripts
-stow X11
 stow git
 
 # Stow vim config and install plugins
@@ -42,9 +41,6 @@ stow vim && vim -c "PlugInstall | q | q"
 
 # Setup and stow config directories
 mkdir -p ~/.config
-stow dunst
 stow gtk
-stow i3
-stow polybar
 stow ranger
 stow rofi
