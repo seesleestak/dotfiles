@@ -99,10 +99,12 @@ aurPackages() {
 aptSetup() {
   sudo apt install \
     git \
-    ranger \
     npm \
+    ranger \
+    ripgrep \
     rofi \
     stow \
+    telegram-desktop \
     tmux \
     xclip \
     xsel
