@@ -5,16 +5,8 @@ appendOld() {
     ~/.zprofile \
     ~/.zshrc \
     ~/.scripts \
-    ~/.urxvt   \
-    ~/.xinitrc \
-    ~/.Xresources \
     ~/.gitconfig \
     ~/.vim \
-    ~/.config/dunst \
-    ~/.config/gtk-3.0 \
-    ~/.gtkrc-2.0 \
-    ~/.config/i3 \
-    ~/.config/polybar \
     ~/.config/ranger \
     ~/.config/rofi
   )
@@ -41,6 +33,5 @@ stow vim && vim -c "PlugInstall | q | q"
 
 # Setup and stow config directories
 mkdir -p ~/.config
-stow gtk
 stow ranger
 stow rofi
