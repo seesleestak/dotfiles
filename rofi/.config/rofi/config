@@ -6,3 +6,9 @@ rofi.line-margin: 10
 rofi.padding: 50
 rofi.bw: 8,
 rofi.lines: 8
+
+! Colors states:   'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
+rofi.color-normal: #252A33, #D8DEE9, #252A33, #3B4252, #8FBCBB
+rofi.color-active: #252A33, #D8DEE9, #252A33, #3B4252, #8FBCBB
+!                  'background', 'border', 'separator'
+rofi.color-window: #252A33, #8FBCBB, #252A33
