@@ -69,8 +69,8 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+(($+key[Up])) && bindkey $key[Up] up-line-or-beginning-search # Up
+(($+key[Down])) && bindkey $key[Down] down-line-or-beginning-search # Down
 
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
