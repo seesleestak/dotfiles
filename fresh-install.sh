@@ -98,7 +98,6 @@ aurPackages() {
 
 aptSetup() {
   sudo apt install \
-    dconf-editor \
     git \
     gnome-shell-extension-dashtodock \
     gnome-shell-extensions \
