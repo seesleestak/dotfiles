@@ -14,7 +14,6 @@ URxvt.letterSpace: -1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
 URxvt.url-select.underline: true
-URxvt.internalBorder: 10
 
 ! Prevent ISO notification when attempting to copy/paste
 URxvt.iso14755: False
