@@ -39,13 +39,6 @@ set viminfo+=n~/.vim/viminfo
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Syntax Highlighting
-" if (has("termguicolors"))
-  " set termguicolors
-  " set t_8f=[38;2;%lu;%lu;%lum
-  " set t_8b=[48;2;%lu;%lu;%lum
-" endif
-
 syntax enable
 colorscheme nord
 
