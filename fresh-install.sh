@@ -102,13 +102,17 @@ aptSetup() {
     gnome-shell-extension-dashtodock \
     gnome-shell-extensions \
     gnome-tweak-tool \
+    google-chrome-stable \
+    neofetch \
     npm \
     ranger \
     ripgrep \
     rofi \
+    rxvt-unicode \
     stow \
     telegram-desktop \
     tmux \
+    vim-gui-common \
     xclip \
     xsel
 
