@@ -1,0 +1,39 @@
+snippet log "console.log('...', ...)" b	
+console.log("$1 --- ", $1)	
+endsnippet
+
+snippet sc "Stateless Component" b
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const $1 = () => {
+  return (
+    <div>
+			$2
+    </div>
+  )
+}
+
+$1.propTypes = {}
+$1.defaultProps = {}
+$1.displayName = '$1'
+
+export default $1
+endsnippet
+
+snippet con "Connect Container" b
+import { connect } from 'react-redux'
+
+import $1 from './$1'
+
+const mapStateToProps = (state) => ({})
+const mapDispatchToProps = (dispatch) => ({})
+
+export default connect(mapStateToProps, mapDispatchToProps)($1)
+endsnippet
+
+snippet ind "Index import/export" b
+import $1 from './$1'
+
+export default $1
+endsnippet

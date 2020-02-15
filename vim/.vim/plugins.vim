@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'danro/rename.vim'
   Plug 'w0rp/ale'
-  Plug 'msanders/snipmate.vim'
+  Plug 'SirVer/ultisnips'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
