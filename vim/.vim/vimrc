@@ -22,6 +22,9 @@ set expandtab
 set autoindent
 set tabstop=2 shiftwidth=2 softtabstop=2
 
+" Search
+set incsearch
+
 " Backup handling
 set noswapfile
 set undodir=~/.vim/undodir
