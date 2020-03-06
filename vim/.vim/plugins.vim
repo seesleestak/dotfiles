@@ -22,9 +22,6 @@ call plug#begin('~/.vim/plugged')
   " Rust
   Plug 'rust-lang/rust.vim'
 
-  " PlantUML
-  Plug 'aklt/plantuml-syntax'
-
   " Colorschemes
   Plug 'seesleestak/nord-vim'
 call plug#end()
@@ -39,8 +36,4 @@ call plug#end()
   " dirvish config
   let g:dirvish_mode = 2
   let g:dirvish_relative_paths = 1
-
-  " let g:rustfmt_emit_files = 1
-
-  let g:plantuml_executable_script='java -jar ~/.scripts/plantuml.jar'
 " ------------------------------------------------
