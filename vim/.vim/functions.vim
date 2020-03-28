@@ -41,9 +41,3 @@ function! Format() abort
     execute "ALEFix"
   endif
 endfunction
-
-" Find and replace visual selection with argument
-function! ReplaceUnderVisual(replaceWord) abort
-  let word = @z
-  execute "%s/".word."/".a:replaceWord."/gc"
-endfunction

@@ -44,4 +44,3 @@ vnoremap <leader>lg "zy:call Log(1)<CR>
 
 " Find and replace
 nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
-vnoremap <leader>m "zy:call ReplaceUnderVisual("")<left><left>
