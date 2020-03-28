@@ -2,16 +2,34 @@ source ~/.vim/plugins.vim
 source ~/.vim/mappings.vim
 source ~/.vim/functions.vim
 
-set hidden " Do not unload abandoned buffers
-set backspace=indent,eol,start " Allow backspace
-set mouse=n " Allow scrolling in normal mode
-set autoread " Auto reload if file changes outside of vim
-set number " Show line numbers
-set relativenumber " Show relative line numbers
-set noeb vb t_vb= " Disable beep
-set nowrap " Don't wrap lines
-set linebreak " Break lines at words when wrap
-set wildmenu " Command line tab completion
+" Do not unload abandoned buffers
+set hidden
+
+" Allow backspace
+set backspace=indent,eol,start
+
+" Allow scrolling in normal mode
+set mouse=n
+
+" Auto reload if file changes outside of vim
+set autoread
+
+" Line numbers
+set number
+set relativenumber
+
+" Disable beep
+set noeb vb t_vb=
+
+" Wrap
+set nowrap
+set linebreak
+
+" Command line tab completion
+set wildmenu
+
+" Show a few lines of context around the cursor
+set scrolloff=5
 
 " Fixes ESC delay
 set timeoutlen=1000 
