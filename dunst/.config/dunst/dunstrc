@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "375x4-19+41"
+    geometry = "375x4-22+46"
     indicate_hidden = yes
     shrink = yes
     transparency = 0
@@ -38,7 +38,7 @@
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/google-chrome-stable -new-tab
+    browser = /usr/bin/firefox --new-tab
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -57,19 +57,19 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#2E3440"
+    background = "#252A33"
     foreground = "#ECEFF4"
     frame_color = "#A3BE8C"
     timeout = 10
 
 [urgency_normal]
-    background = "#2E3440"
+    background = "#252A33"
     foreground = "#ECEFF4"
     frame_color = "#A3BE8C"
     timeout = 10
 
 [urgency_critical]
-    background = "#2E3440"
+    background = "#252A33"
     foreground = "#ECEFF4"
     frame_color = "#BF616A"
     timeout = 0
