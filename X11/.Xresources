@@ -29,7 +29,6 @@ URxvt.keysym.Shift-Control-Up:    \033[1;6A
 URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
-! #define nord0 #2E3440
 #define nord0 #252A33
 #define nord1 #3B4252
 #define nord2 #434C5E
