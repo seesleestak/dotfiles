@@ -1,17 +1,32 @@
-source ~/.vim/plugins.vim
-source ~/.vim/mappings.vim
-source ~/.vim/functions.vim
+" ==================== CONFIG ==================== 
+" Do not unload abandoned buffers
+set hidden
 
-set hidden " Do not unload abandoned buffers
-set backspace=indent,eol,start " Allow backspace
-set mouse=n " Allow scrolling in normal mode
-set autoread " Auto reload if file changes outside of vim
-set number " Show line numbers
-set relativenumber " Show relative line numbers
-set noeb vb t_vb= " Disable beep
-set nowrap " Don't wrap lines
-set linebreak " Break lines at words when wrap
-set wildmenu " Command line tab completion
+" Allow backspace
+set backspace=indent,eol,start
+
+" Allow scrolling in normal mode
+set mouse=n
+
+" Auto reload if file changes outside of vim
+set autoread
+
+" Line numbers
+set number
+set relativenumber
+
+" Disable beep
+set noeb vb t_vb=
+
+" Wrap
+set nowrap
+set linebreak
+
+" Command line tab completion
+set wildmenu
+
+" Show a few lines of context around the cursor
+set scrolloff=5
 
 " Fixes ESC delay
 set timeoutlen=1000 
@@ -22,6 +37,9 @@ set smarttab
 set expandtab
 set autoindent
 set tabstop=2 shiftwidth=2 softtabstop=2
+
+" Search
+set incsearch
 
 " Backup handling
 set noswapfile
@@ -40,15 +58,141 @@ set viminfo+=n~/.vim/viminfo
 " Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Syntax Highlighting
-if (has("termguicolors"))
-  set termguicolors
-  set t_8f=[38;2;%lu;%lu;%lum
-  set t_8b=[48;2;%lu;%lu;%lum
-endif
-
 syntax enable
+
+" ==================== PLUGINS ==================== 
+call plug#begin('~/.vim/plugged')
+  " Core editor functionality
+  Plug 'alvan/vim-closetag'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
+  Plug 'w0rp/ale'
+  Plug 'SirVer/ultisnips'
+
+  " File management/navigation
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'justinmk/vim-dirvish'
+
+  " Git
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+
+  " JS
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+
+  " Rust
+  Plug 'rust-lang/rust.vim'
+
+  " Colorschemes
+  Plug 'seesleestak/nord-vim'
+call plug#end()
+
+" Closetag
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
+
+" vim-javascript
+let g:javascript_conceal = 0
+
+" dirvish config
+let g:dirvish_mode = 2
+let g:dirvish_relative_paths = 1
+
 colorscheme nord
+
+" ==================== MAPPINGS ==================== 
+" <leader>
+let mapleader = "\<Space>"
+
+nnoremap <leader>s :update<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>e :checktime<CR>
+
+" Copy file path of current buffer
+nnoremap <leader>y :call CopyPath(0)<CR>
+
+" Copy directory of current buffer
+nnoremap <leader>d :call CopyPath(1)<CR>
+
+" Open and source vimrc
+nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>r :source $MYVIMRC<CR>
+
+" commentary mapping
+noremap <leader>c :Commentary<CR>
+
+" Buffer related mappings
+nnoremap <leader>bd :bd<CR>
+nnoremap <leader>bb :b #<CR>
+
+" fzf mappings
+nnoremap <leader>t   :Files<CR>     
+nnoremap <leader>a   :Rg<space>
+nnoremap <leader>f   :Rg <C-R><C-W><CR>
+nnoremap <leader>bf  :Buffers<CR>   
+nnoremap <leader>gst :GFiles?<CR>   
+
+" Format buffer
+nnoremap <leader>i :call Format()<CR>
+
+" ALE
+nnoremap <leader>w :ALENextWrap<CR>
+
+" Show entire path on Ctrl+g
+nnoremap <C-g> 1<C-g>
+
+" Log function
+nnoremap <leader>lg :call Log(0)<CR>
+vnoremap <leader>lg "zy:call Log(1)<CR>
+
+" Find and replace
+nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
+
+" ==================== FUNCTIONS ==================== 
+" Billy Montgomery's log creator
+function! Log(isVisual) abort
+  if a:isVisual
+    let word = @z
+  else
+    let word = expand("<cword>")
+  endif 
+
+  if &filetype == 'rust'
+    execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
+  elseif &filetype == 'sh'
+    execute "normal! oecho \"".word." --- $".word."\""
+  elseif &filetype == 'javascript.jsx'
+    execute "normal! oconsole.log(\"".word." --- \", ".word.")"
+  endif
+endfunction
+
+" Copy current buffer path to multiple buffers
+function! CopyPath(dirPath) abort
+  if a:dirPath
+    execute "let @*=expand('%:p:h')"
+    execute "let @+=expand('%:p:h')"
+  else
+    execute "let @*=expand('%:p')"
+    execute "let @+=expand('%:p')"
+  endif
+endfunction
+
+function! Format() abort
+  let ft = &filetype
+  if ft == 'cpp' || ft == 'c'
+    silent execute "!clang-format -i " . bufname("%")
+    execute "redraw!"
+  elseif ft == 'rust'
+    execute "RustFmt"
+  elseif ft == 'javascript.jsx'
+    let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+    execute "ALEFix"
+  elseif ft == 'scss'
+    let b:ale_fixers = {'scss': ['stylelint']}
+    execute "ALEFix"
+  endif
+endfunction
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
