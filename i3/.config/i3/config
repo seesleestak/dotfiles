@@ -1,7 +1,7 @@
 # ========================= SETTINGS ============================
 # Set mod as windows key
 set $mod Mod4
-set $term --no-startup-id $TERMINAL
+set $term --no-startup-id urxvt
 
 set $up    "k"
 set $down  "j"
@@ -28,14 +28,16 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-for_window [class="^.*"] border pixel 4
-gaps inner 8
+for_window [class="^.*"] border pixel 5
+gaps inner 10
+smart_gaps on
+smart_borders on
 
 # Window colors
-client.focused           $term_color14    $term_color14    $term_background $term_color14
-client.unfocused         $term_background $term_background $term_foreground $term_background
-client.focused_inactive  $term_color0     $term_color0     $term_foreground $term_color0
-client.urgent            $term_color1     $term_color1     $term_background $term_color1
+client.focused           $term_color14     $term_color14     $term_background  $term_color14
+client.unfocused         $term_background  $term_background  $term_foreground  $term_background
+client.focused_inactive  $term_background  $term_background  $term_foreground  $term_background
+client.urgent            $term_color1      $term_color1      $term_background  $term_color1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -63,16 +65,18 @@ assign [class="^TelegramDesktop"] $ws9
 
 # ========================= STARTUP =============================
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id dropbox
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
-exec --no-startup-id xautolock -time 20 -locker ~/.config/i3/lock.sh
 exec --no-startup-id xfce4-power-manager
+exec --no-startup-id pamac-tray
+exec --no-startup-id clipit
 exec_always --no-startup-id compton
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+
+# Audio
+exec --no-startup-id volumeicon
+bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # ===============================================================
 
 
@@ -93,11 +97,10 @@ bindsym $mod+space exec --no-startup-id "rofi -show combi -combi-modi 'window,ru
 # screenkey
 bindsym $mod+Delete exec --no-startup-id "killall screenkey || screenkey -s small"
 
-# split in horizontal orientation
+# Split
 bindsym $mod+c split h
-
-# split in vertical orientation
 bindsym $mod+v split v
+bindsym $mod+q split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -177,6 +180,26 @@ bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Set shut down, restart and locking features
+bindsym $mod+Tab mode "$mode_system"
+set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 # Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3%
@@ -191,5 +214,34 @@ bindsym XF86LaunchA exec --no-startup-id playerctl next
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 
-bindsym $mod+Ctrl+m exec pavucontrol
+# bindsym $mod+Ctrl+m exec pavucontrol
 # ===============================================================
+#
+bar {
+	i3bar_command i3bar
+	status_command i3status
+	position top
+
+## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+#	tray_output primary
+#	tray_output eDP1
+
+	bindsym button4 nop
+	bindsym button5 nop
+  font xft:Meslo LG M 10
+	strip_workspace_numbers yes
+
+    colors {
+        background $term_background
+        statusline #F9FAF9
+        separator  $term_color0
+
+                        #  border         background       text
+        focused_workspace  $term_color14    $term_color14    $term_background
+        active_workspace   $term_color14    $term_color14    $term_background
+        inactive_workspace $term_background $term_background $term_foreground
+        binding_mode       $term_color13    $term_color13    $term_foreground
+        urgent_workspace   $term_color1     $term_color1     $term_foreground
+    }
+#
+}
