@@ -72,6 +72,10 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# Workaround for reverse cycling through tab completion with vi-mode enabled
+# https://github.com/ohmyzsh/ohmyzsh/issues/8468
+bindkey '^[[Z' reverse-menu-complete
+
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
 HISTSIZE=2048                   # big history
