@@ -1,7 +1,7 @@
 # ========================= SETTINGS ============================
 # Set mod as windows key
 set $mod Mod4
-set $term --no-startup-id urxvt
+set $term --no-startup-id $TERMINAL
 
 set $up    "k"
 set $down  "j"
