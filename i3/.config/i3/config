@@ -71,7 +71,6 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec_always --no-startup-id compton
-exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # Audio
@@ -181,7 +180,7 @@ bindsym $mod+x exec --no-startup-id ~/.config/i3/lock.sh
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-msg exit"
 
 # Set shut down, restart and locking features
 bindsym $mod+Tab mode "$mode_system"
@@ -200,21 +199,14 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
 # Using F9, F10, F11 for Prev, Play/pause, Next
 bindsym XF86Tools exec --no-startup-id playerctl previous
 bindsym XF86Search exec --no-startup-id playerctl play-pause
 bindsym XF86LaunchA exec --no-startup-id playerctl next
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
-
-# bindsym $mod+Ctrl+m exec pavucontrol
+bindsym XF86MonBrightnessUp exec --no-startup-id screen-brightness.sh 0
+bindsym XF86MonBrightnessDown exec --no-startup-id screen-brightness.sh 1
 # ===============================================================
 #
 bar {
@@ -233,7 +225,6 @@ bar {
 
     colors {
         background $term_background
-        statusline #F9FAF9
         separator  $term_color0
 
                         #  border         background       text
