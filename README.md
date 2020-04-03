@@ -1,7 +1,7 @@
 # dotfiles
 
-![dirty-screenshot](https://i.imgur.com/IfbK8uV.png)
-![neofetch-screenshot](https://i.imgur.com/BWZBLN2.png)
+![dirty-screenshot](https://i.imgur.com/njE8o6g.png)
+![fetch-screenshot](https://i.imgur.com/1mUjCtf.png)
 
 Some of the stuff I'm using: 
 - [X11](https://github.com/seesleestak/dotfiles/blob/master/X11) 
