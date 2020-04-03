@@ -111,7 +111,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+s exec --no-startup-id kill-screen-record.sh
 
 # Take screenshot
-bindsym $mod+Shift+t exec --no-startup-id screenshot.sh
+bindsym Print exec --no-startup-id screenshot.sh
 
 # Start ranger
 bindsym $mod+r exec $term -e ranger
