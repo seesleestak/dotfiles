@@ -90,7 +90,7 @@ bindsym $mod+Shift+b exec --no-startup-id monitor-built-in.sh
 bindsym $mod+Shift+q kill
 
 # Program launcher
-bindsym $mod+d exec --no-startup-id dmenu_run -i -p "run:"
+bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+space exec --no-startup-id "rofi -show combi -combi-modi 'window,run' -modi combi"
 
 # screenkey
@@ -224,10 +224,10 @@ bar {
         separator  $term_color0
 
                         #  border         background       text
-        focused_workspace  $term_color14    $term_color14    $term_background
-        active_workspace   $term_color14    $term_color14    $term_background
+        focused_workspace  $term_color8    $term_color8    $term_foreground
+        active_workspace   $term_color8    $term_color8    $term_foreground
         inactive_workspace $term_background $term_background $term_foreground
-        binding_mode       $term_color8     $term_color8     $term_foreground
+        binding_mode       $term_color7     $term_color7     $term_background
         urgent_workspace   $term_color1     $term_color1     $term_foreground
     }
 #
