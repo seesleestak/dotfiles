@@ -125,7 +125,7 @@ function! Format() abort
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
   elseif ft == 'javascript.jsx'
-    let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+    let b:ale_fixers = ['prettier', 'eslint']
     execute "ALEFix"
   elseif ft == 'scss'
     let b:ale_fixers = {'scss': ['stylelint']}
