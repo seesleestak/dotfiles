@@ -116,10 +116,7 @@ endfunction
 
 function! Format() abort
   let ft = &filetype
-  if ft == 'cpp' || ft == 'c'
-    silent execute "!clang-format -i " . bufname("%")
-    execute "redraw!"
-  elseif ft == 'rust'
+  if ft == 'rust'
     execute "RustFmt"
   elseif ft == 'json'
     let b:ale_fixers = ['prettier']
