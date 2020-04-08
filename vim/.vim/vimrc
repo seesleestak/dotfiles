@@ -121,6 +121,9 @@ function! Format() abort
     execute "redraw!"
   elseif ft == 'rust'
     execute "RustFmt"
+  elseif ft == 'json'
+    let b:ale_fixers = ['prettier']
+    execute "ALEFix"
   elseif ft == 'javascript.jsx'
     let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
     execute "ALEFix"
