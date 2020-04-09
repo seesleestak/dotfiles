@@ -1,65 +1,3 @@
-" ==================== CONFIG ==================== 
-" Do not unload abandoned buffers
-set hidden
-
-" Allow backspace
-set backspace=indent,eol,start
-
-" Allow scrolling in normal mode
-set mouse=n
-
-" Auto reload if file changes outside of vim
-set autoread
-
-" Line numbers
-set number
-set relativenumber
-
-" Disable beep
-set noeb vb t_vb=
-
-" Wrap
-set nowrap
-set linebreak
-
-" Command line tab completion
-set wildmenu
-
-" Show a few lines of context around the cursor
-set scrolloff=5
-
-" Fixes ESC delay
-set timeoutlen=1000 
-set ttimeoutlen=0 
-
-" Tab
-set smarttab
-set expandtab
-set autoindent
-set tabstop=2 shiftwidth=2 softtabstop=2
-
-" Search
-set incsearch
-
-" Backup handling
-set noswapfile
-set undodir=~/.vim/undodir
-set undofile
-
-" Clipboard
-set clipboard=unnamed,unnamedplus
-
-" Show col,row at bottom
-set ruler
-
-" Don't polute home directory with viminfo
-set viminfo+=n~/.vim/viminfo
-
-" Disables automatic commenting on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-syntax enable
-
 " ==================== PLUGINS ==================== 
 call plug#begin('~/.vim/plugged')
   " Core editor functionality
@@ -98,8 +36,6 @@ let g:javascript_conceal = 0
 " dirvish config
 let g:dirvish_mode = 2
 let g:dirvish_relative_paths = 1
-
-colorscheme nord
 
 " ==================== MAPPINGS ==================== 
 " <leader>
@@ -180,19 +116,82 @@ endfunction
 
 function! Format() abort
   let ft = &filetype
-  if ft == 'cpp' || ft == 'c'
-    silent execute "!clang-format -i " . bufname("%")
-    execute "redraw!"
-  elseif ft == 'rust'
+  if ft == 'rust'
     execute "RustFmt"
+  elseif ft == 'json'
+    let b:ale_fixers = ['prettier']
+    execute "ALEFix"
   elseif ft == 'javascript.jsx'
-    let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+    let b:ale_fixers = ['prettier', 'eslint']
     execute "ALEFix"
   elseif ft == 'scss'
     let b:ale_fixers = {'scss': ['stylelint']}
     execute "ALEFix"
   endif
 endfunction
+
+" ==================== CONFIG ==================== 
+" Do not unload abandoned buffers
+set hidden
+
+" Allow backspace
+set backspace=indent,eol,start
+
+" Allow scrolling in normal mode
+set mouse=n
+
+" Auto reload if file changes outside of vim
+set autoread
+
+" Line numbers
+set number
+set relativenumber
+
+" Disable beep
+set noeb vb t_vb=
+
+" Wrap
+set nowrap
+set linebreak
+
+" Command line tab completion
+set wildmenu
+
+" Show a few lines of context around the cursor
+set scrolloff=5
+
+" Fixes ESC delay
+set timeoutlen=1000 
+set ttimeoutlen=0 
+
+" Tab
+set smarttab
+set expandtab
+set autoindent
+set tabstop=2 shiftwidth=2 softtabstop=2
+
+" Search
+set incsearch
+
+" Backup handling
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+
+" Clipboard
+set clipboard=unnamed,unnamedplus
+
+" Show col,row at bottom
+set ruler
+
+" Don't polute home directory with viminfo
+set viminfo+=n~/.vim/viminfo
+
+" Disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+syntax enable
+colorscheme nord
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
