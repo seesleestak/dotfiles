@@ -85,6 +85,9 @@ vnoremap <leader>lg "zy:call Log(1)<CR>
 " Find and replace
 nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
 
+" Spelling suggestions with fzf
+nnoremap z= :call FzfSpell()<CR>
+
 " ==================== FUNCTIONS ==================== 
 " Billy Montgomery's log creator
 function! Log(isVisual) abort
@@ -128,6 +131,17 @@ function! Format() abort
     let b:ale_fixers = {'scss': ['stylelint']}
     execute "ALEFix"
   endif
+endfunction
+
+function! FzfSpell()
+  function! FzfSpellSink(word)
+    exe 'normal! "_ciw'.a:word
+  endfunction
+  return fzf#run({
+    \ 'source': spellsuggest(expand("<cword>")),
+    \ 'sink': function("FzfSpellSink"),
+    \ 'down': 10
+    \ })
 endfunction
 
 " ==================== CONFIG ==================== 
