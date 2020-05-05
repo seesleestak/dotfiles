@@ -7,9 +7,6 @@ appendOld() {
     ~/.zprofile \
     ~/.zshrc \
     ~/.scripts \
-    ~/.urxvt   \
-    ~/.xinitrc \
-    ~/.Xresources \
     ~/.gitconfig \
     ~/.vim \
     ~/.config/ranger
