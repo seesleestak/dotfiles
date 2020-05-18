@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
 
   " Colorschemes
-  Plug 'seesleestak/nord-vim'
+  Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Closetag
