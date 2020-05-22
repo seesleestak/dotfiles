@@ -12,9 +12,9 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 # Aliases
   # Directories
   alias re="cd ~/repos"
+  alias dot="cd ~/dotfiles"
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
-  alias dot="cd ~/dotfiles"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -30,7 +30,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   fi
 
   # Shell scripts
-  alias note="source $HOME/.scripts/note.sh"
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
   alias hic="source $HOME/.scripts/branch-prefix.sh"
@@ -70,10 +69,6 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-
-# Workaround for reverse cycling through tab completion with vi-mode enabled
-# https://github.com/ohmyzsh/ohmyzsh/issues/8468
-bindkey '^[[Z' reverse-menu-complete
 
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
