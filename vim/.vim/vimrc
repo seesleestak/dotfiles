@@ -23,6 +23,9 @@ call plug#begin('~/.vim/plugged')
   " Rust
   Plug 'rust-lang/rust.vim'
 
+  Plug 'jparise/vim-graphql'
+  Plug 'digitaltoad/vim-pug'
+
   " Colorschemes
   Plug 'arcticicestudio/nord-vim'
 call plug#end()
