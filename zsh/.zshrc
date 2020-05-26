@@ -32,7 +32,8 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   # Shell scripts
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-  alias hic="source $HOME/.scripts/branch-prefix.sh"
+  alias hic="source $HOME/.scripts/ah-branch-prefix.sh"
+  alias vpn="anyconnect split"
 
   # Git
   alias ga="git add"
