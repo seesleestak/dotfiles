@@ -28,6 +28,7 @@ call plug#begin('~/.vim/plugged')
 
   " Colorschemes
   Plug 'arcticicestudio/nord-vim'
+  Plug 'cocopon/iceberg.vim'
 call plug#end()
 
 " Closetag
@@ -208,7 +209,8 @@ set viminfo+=n~/.vim/viminfo
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax enable
-colorscheme nord
+set termguicolors
+colorscheme iceberg
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
