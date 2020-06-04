@@ -15,6 +15,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias dot="cd ~/dotfiles"
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
+  alias qpp="cd ~/repos/qpp-ui"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -24,16 +25,12 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   fi
   alias ll="ls -al"
 
-  # Homebrew vim alias
-  if [[ $(uname -s) = "Darwin" ]]; then
-    alias vim="/usr/local/Cellar/vim/8.2.0/bin/vim"
-  fi
-
   # Shell scripts
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
   alias hic="source $HOME/.scripts/ah-branch-prefix.sh"
   alias vpn="anyconnect split"
+  alias cov="open ./coverage/lcov-report/index.html"
 
   # Git
   alias ga="git add"
