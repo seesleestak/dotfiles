@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'w0rp/ale'
+  Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
 
   " File management/navigation
@@ -19,12 +20,11 @@ call plug#begin('~/.vim/plugged')
   " JS
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
+  Plug 'jparise/vim-graphql'
+  Plug 'digitaltoad/vim-pug'
 
   " Rust
   Plug 'rust-lang/rust.vim'
-
-  Plug 'jparise/vim-graphql'
-  Plug 'digitaltoad/vim-pug'
 
   " Colorschemes
   Plug 'arcticicestudio/nord-vim'
