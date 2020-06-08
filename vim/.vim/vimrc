@@ -211,7 +211,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax enable
 set termguicolors
-colorscheme iceberg
+colorscheme dracula
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
