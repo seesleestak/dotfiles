@@ -27,19 +27,18 @@ call plug#begin('~/.vim/plugged')
   Plug 'rust-lang/rust.vim'
 
   " Colorschemes
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'cocopon/iceberg.vim'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
 
-" vim-javascript
-let g:javascript_conceal = 0
-
 " dirvish config
 let g:dirvish_mode = 2
 let g:dirvish_relative_paths = 1
+
+" dracula
+let g:dracula_italic = 0
 
 " ==================== MAPPINGS ==================== 
 " <leader>
