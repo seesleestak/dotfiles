@@ -189,6 +189,8 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 
 " Search
 set incsearch
+set smartcase
+set ignorecase
 
 " Backup handling
 set noswapfile
