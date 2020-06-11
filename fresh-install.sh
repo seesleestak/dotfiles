@@ -66,13 +66,14 @@ pacmanPreferredPrograms() {
 
 macOsSetup() {
   brew install \
+    fd \
     node \
-    ripgrep \
-    tmux \
-    stow \
-    vim \
     ranger \
     reattach-to-user-namespace \
+    ripgrep \
+    stow \
+    tmux \
+    vim \
     zsh
 }
 
