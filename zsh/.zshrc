@@ -35,19 +35,17 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   # Git
   alias ga="git add"
   alias gb="git branch"
-  alias gbd="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
   alias gcb="git checkout -b"
-  alias gcd="git checkout develop"
   alias gcmsg="git commit -m"
   alias gco="git checkout"
   alias gd="git diff"
-  alias gds="git diff --staged"
   alias gdc="git diff --compact-summary"
-  alias gf="git fetch"
+  alias gds="git diff --staged"
   alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias glg="git log --oneline --no-merges"
+  alias gres='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
 
