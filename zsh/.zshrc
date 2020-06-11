@@ -49,10 +49,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
 
-# fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files '
-
 # emacs mode
 bindkey -e
 bindkey '\e[1;5C' vi-forward-word   # C-Right
@@ -81,3 +77,6 @@ setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
 setopt inc_append_history       # add commands as they are typed, don't wait until shell exit 
 setopt share_history            # share hist between sessions
+
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
