@@ -47,6 +47,7 @@ let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>e :checktime<CR>
+nnoremap <leader>n :call NewFile("")<left><left>
 
 " Copy file path of current buffer
 nnoremap <leader>y :call CopyPath(0)<CR>
@@ -145,6 +146,11 @@ function! FzfSpell()
     \ 'sink': function("FzfSpellSink"),
     \ 'down': 10
     \ })
+endfunction
+
+function! NewFile(name) abort
+  let dirname = expand("%:h")
+  execute "edit " dirname . "/" . a:name
 endfunction
 
 " ==================== CONFIG ==================== 
