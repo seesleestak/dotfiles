@@ -102,11 +102,13 @@ function! Log(isVisual) abort
   endif 
 
   if &filetype == 'rust'
-    execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
+    execute "normal! oprintln!(\"" . word . " --- {}\", " . word . ");"
   elseif &filetype == 'sh'
-    execute "normal! oecho \"".word." --- $".word."\""
+    execute "normal! oecho \"" . word . " --- $".word."\""
+  elseif &filetype == 'vim'
+    execute "normal! oechom \"" . word . " --- \" . " . word
   elseif &filetype == 'javascript.jsx'
-    execute "normal! oconsole.log(\"".word." --- \", ".word.")"
+    execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
 
