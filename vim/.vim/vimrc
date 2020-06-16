@@ -47,7 +47,7 @@ let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>e :checktime<CR>
-nnoremap <leader>n :call NewFile("")<left><left>
+nnoremap <leader>n :New<space>
 
 " Copy file path of current buffer
 nnoremap <leader>y :call CopyPath(0)<CR>
@@ -226,5 +226,8 @@ command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* New
+  \ call NewFile(<q-args>)
 
 filetype plugin indent on
