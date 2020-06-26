@@ -18,7 +18,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
 
   " JS
-  Plug 'mxw/vim-jsx'
+  Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
   Plug 'jparise/vim-graphql'
   Plug 'digitaltoad/vim-pug'
@@ -107,7 +107,7 @@ function! Log(isVisual) abort
     execute "normal! oecho \"" . word . " --- $".word."\""
   elseif &filetype == 'vim'
     execute "normal! oechom \"" . word . " --- \" . " . word
-  elseif &filetype == 'javascript.jsx'
+  elseif &filetype == 'javascript'
     execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
@@ -130,7 +130,7 @@ function! Format() abort
   elseif ft == 'json'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
-  elseif ft == 'javascript.jsx'
+  elseif ft == 'javascript'
     let b:ale_fixers = ['prettier', 'eslint']
     execute "ALEFix"
   elseif ft == 'scss'
@@ -141,7 +141,7 @@ endfunction
 
 function! FzfSpell()
   function! FzfSpellSink(word)
-    exe 'normal! "_ciw'.a:word
+    execute 'normal! "_ciw'.a:word
   endfunction
   return fzf#run({
     \ 'source': spellsuggest(expand("<cword>")),
