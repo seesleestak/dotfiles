@@ -12,12 +12,10 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 # Aliases
   # Directories
   alias re="cd ~/repos"
+  alias dot="cd ~/dotfiles"
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
-  alias dot="cd ~/dotfiles"
-  alias vui="cd ~/repos/viking-ui-kit"
-  alias mvj="cd ~/repos/mvj-client"
-  alias olb="cd ~/repos/olb-client"
+  alias qpp="cd ~/repos/qpp-ui"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -27,39 +25,29 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   fi
   alias ll="ls -al"
 
-  # Homebrew vim alias
-  if [[ $(uname -s) = "Darwin" ]]; then
-    alias vim="/usr/local/Cellar/vim/8.1.2000/bin/vim"
-  fi
-
   # Shell scripts
-  alias note="source $HOME/.scripts/note.sh"
   alias vimstart="source $HOME/.scripts/vimstart.sh"
   alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-  alias hic="source $HOME/.scripts/branch-prefix.sh"
+  alias hic="source $HOME/.scripts/ah-branch-prefix.sh"
+  alias vpn="anyconnect split"
+  alias cov="open ./coverage/lcov-report/index.html"
 
   # Git
   alias ga="git add"
   alias gb="git branch"
-  alias gbd="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
   alias gcb="git checkout -b"
-  alias gcd="git checkout develop"
   alias gcmsg="git commit -m"
   alias gco="git checkout"
   alias gd="git diff"
-  alias gds="git diff --staged"
   alias gdc="git diff --compact-summary"
-  alias gf="git fetch"
+  alias gds="git diff --staged"
   alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias glg="git log --oneline --no-merges"
+  alias gres='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
-
-# fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files '
 
 # emacs mode
 bindkey -e
@@ -74,6 +62,10 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# Workaround for reverse cycling through tab completion
+# https://github.com/ohmyzsh/ohmyzsh/issues/8468
+bindkey '^[[Z' reverse-menu-complete
+
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
 HISTSIZE=2048                   # big history
@@ -85,3 +77,6 @@ setopt hist_reduce_blanks       # trim blanks
 setopt hist_verify              # show before executing history commands
 setopt inc_append_history       # add commands as they are typed, don't wait until shell exit 
 setopt share_history            # share hist between sessions
+
+# fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
