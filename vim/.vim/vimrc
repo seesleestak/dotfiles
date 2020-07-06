@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'w0rp/ale'
+  Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
 
   " File management/navigation
@@ -17,25 +18,27 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-fugitive'
 
   " JS
-  Plug 'mxw/vim-jsx'
+  Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
+  Plug 'jparise/vim-graphql'
+  Plug 'digitaltoad/vim-pug'
 
   " Rust
   Plug 'rust-lang/rust.vim'
 
   " Colorschemes
-  Plug 'seesleestak/nord-vim'
+  Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
 
-" vim-javascript
-let g:javascript_conceal = 0
-
 " dirvish config
 let g:dirvish_mode = 2
 let g:dirvish_relative_paths = 1
+
+" dracula
+let g:dracula_italic = 0
 
 " ==================== MAPPINGS ==================== 
 " <leader>
@@ -44,6 +47,7 @@ let mapleader = "\<Space>"
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>e :checktime<CR>
+nnoremap <leader>n :New<space>
 
 " Copy file path of current buffer
 nnoremap <leader>y :call CopyPath(0)<CR>
@@ -66,7 +70,7 @@ nnoremap <leader>bb :b #<CR>
 nnoremap <leader>t   :Files<CR>     
 nnoremap <leader>a   :Rg<space>
 nnoremap <leader>f   :Rg <C-R><C-W><CR>
-nnoremap <leader>bf  :Buffers<CR>   
+nnoremap <leader>bl  :Buffers<CR>   
 nnoremap <leader>gst :GFiles?<CR>   
 
 " Format buffer
@@ -85,6 +89,9 @@ vnoremap <leader>lg "zy:call Log(1)<CR>
 " Find and replace
 nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
 
+" Spelling suggestions with fzf
+nnoremap z= :call FzfSpell()<CR>
+
 " ==================== FUNCTIONS ==================== 
 " Billy Montgomery's log creator
 function! Log(isVisual) abort
@@ -95,11 +102,13 @@ function! Log(isVisual) abort
   endif 
 
   if &filetype == 'rust'
-    execute "normal! oprintln!(\"".word." --- {}\", ".word.");"
+    execute "normal! oprintln!(\"" . word . " --- {}\", " . word . ");"
   elseif &filetype == 'sh'
-    execute "normal! oecho \"".word." --- $".word."\""
-  elseif &filetype == 'javascript.jsx'
-    execute "normal! oconsole.log(\"".word." --- \", ".word.")"
+    execute "normal! oecho \"" . word . " --- $".word."\""
+  elseif &filetype == 'vim'
+    execute "normal! oechom \"" . word . " --- \" . " . word
+  elseif &filetype == 'javascript'
+    execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
 
@@ -121,13 +130,29 @@ function! Format() abort
   elseif ft == 'json'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
-  elseif ft == 'javascript.jsx'
+  elseif ft == 'javascript'
     let b:ale_fixers = ['prettier', 'eslint']
     execute "ALEFix"
   elseif ft == 'scss'
     let b:ale_fixers = {'scss': ['stylelint']}
     execute "ALEFix"
   endif
+endfunction
+
+function! FzfSpell()
+  function! FzfSpellSink(word)
+    execute 'normal! "_ciw'.a:word
+  endfunction
+  return fzf#run({
+    \ 'source': spellsuggest(expand("<cword>")),
+    \ 'sink': function("FzfSpellSink"),
+    \ 'down': 10
+    \ })
+endfunction
+
+function! NewFile(name) abort
+  let dirname = expand("%:h")
+  execute "edit " dirname . "/" . a:name
 endfunction
 
 " ==================== CONFIG ==================== 
@@ -172,6 +197,8 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 
 " Search
 set incsearch
+set smartcase
+set ignorecase
 
 " Backup handling
 set noswapfile
@@ -191,14 +218,16 @@ set viminfo+=n~/.vim/viminfo
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax enable
-colorscheme nord
+set termguicolors
+colorscheme dracula
 
 " Create Rg command for fzf
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* New
+  \ call NewFile(<q-args>)
 
 filetype plugin indent on
