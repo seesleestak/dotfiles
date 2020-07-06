@@ -29,50 +29,46 @@ URxvt.keysym.Shift-Control-Up:    \033[1;6A
 URxvt.keysym.Control-Down:        \033[1;5B
 URxvt.keysym.Shift-Control-Down:  \033[1;6B
 
-#define nord0 #252A33
-#define nord1 #3B4252
-#define nord2 #434C5E
-#define nord3 #4C566A
-#define nord4 #D8DEE9
-#define nord5 #E5E9F0
-#define nord6 #ECEFF4
-#define nord7 #8FBCBB
-#define nord8 #88C0D0
-#define nord9 #81A1C1
-#define nord10 #5E81AC
-#define nord11 #BF616A
-#define nord12 #D08770
-#define nord13 #EBCB8B
-#define nord14 #A3BE8C
-#define nord15 #B48EAD
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
 
-*.foreground:   nord4
-*.background:   nord0
-*.cursorColor:  nord4
-*fading: 10
+! Black
+*.color0:     #000000
+*.color8:     #4D4D4D
 
-*.color0: nord1
-*.color1: nord11
-*.color2: nord14
-*.color3: nord13
-*.color4: nord9
-*.color5: nord15
-*.color6: nord8
-*.color7: nord5
-*.color8: nord3
-*.color9: nord11
-*.color10: nord14
-*.color11: nord13
-*.color12: nord9
-*.color13: nord15
-*.color14: nord7
-*.color15: nord6
-*.color16: nord12
+! Red
+*.color1:     #FF5555
+*.color9:     #FF6E67
+
+! Green
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+
+! Yellow
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+
+! Magenta
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+
+! Pink
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+
+! Teal
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+
+! Gray
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
 ! Colors states:   'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
-rofi.color-normal: nord0, nord4, nord0, nord1, nord7
-rofi.color-active: nord0, nord4, nord0, nord1, nord7
+rofi.color-normal: #282A36, #F8F8F2, #282A36, #9AEDFE, #282A36
+rofi.color-active: #282A36, #F8F8F2, #282A36, #9AEDFE, #282A36
 !                  'background', 'border', 'separator'
-rofi.color-window: nord0, nord7, nord0
+rofi.color-window: #282A36, #9AEDFE, #282A36
 
 ! vim:syntax=xdefaults
