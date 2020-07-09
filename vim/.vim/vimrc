@@ -141,7 +141,7 @@ endfunction
 
 function! FzfSpell()
   function! FzfSpellSink(word)
-    execute 'normal! "_ciw'.a:word
+    execute 'normal! "_ciw' . a:word
   endfunction
   return fzf#run({
     \ 'source': spellsuggest(expand("<cword>")),
@@ -163,7 +163,7 @@ set hidden
 set backspace=indent,eol,start
 
 " Allow scrolling in normal mode
-set mouse=n
+set mouse=nvi
 
 " Auto reload if file changes outside of vim
 set autoread
@@ -197,8 +197,6 @@ set tabstop=2 shiftwidth=2 softtabstop=2
 
 " Search
 set incsearch
-set smartcase
-set ignorecase
 
 " Backup handling
 set noswapfile
