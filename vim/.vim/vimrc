@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
+  Plug 'ap/vim-buftabline'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -40,20 +41,23 @@ let g:dirvish_relative_paths = 1
 " dracula
 let g:dracula_italic = 0
 
+" buftabline
+let g:buftabline_indicators = 1
+
 " ==================== MAPPINGS ==================== 
 " <leader>
 let mapleader = "\<Space>"
 
 nnoremap <leader>s :update<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <leader>q :quit<CR>
 nnoremap <leader>e :checktime<CR>
-nnoremap <leader>n :New<space>
+nnoremap <leader>n :NewFile<space>
 
-" Copy file path of current buffer
-nnoremap <leader>y :call CopyPath(0)<CR>
+" Copy current buffer file path
+nnoremap <leader>yy :call CopyPath(0)<CR>
 
-" Copy directory of current buffer
-nnoremap <leader>d :call CopyPath(1)<CR>
+" Copy current buffer directory
+nnoremap <leader>yd :call CopyPath(1)<CR>
 
 " Open and source vimrc
 nnoremap <leader>v :e $MYVIMRC<CR>
@@ -63,14 +67,16 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 noremap <leader>c :Commentary<CR>
 
 " Buffer related mappings
-nnoremap <leader>bd :bd<CR>
-nnoremap <leader>bb :b #<CR>
+nnoremap <leader>d :bd<CR>
+nnoremap <leader>b :b #<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprev<CR>
 
 " fzf mappings
 nnoremap <leader>t   :Files<CR>     
 nnoremap <leader>a   :Rg<space>
 nnoremap <leader>f   :Rg <C-R><C-W><CR>
-nnoremap <leader>bl  :Buffers<CR>   
+nnoremap <leader>l   :Buffers<CR>   
 nnoremap <leader>gst :GFiles?<CR>   
 
 " Format buffer
@@ -83,8 +89,8 @@ nnoremap <leader>w :ALENextWrap<CR>
 nnoremap <C-g> 1<C-g>
 
 " Log function
-nnoremap <leader>lg :call Log(0)<CR>
-vnoremap <leader>lg "zy:call Log(1)<CR>
+nnoremap <leader>gl :call Log(0)<CR>
+vnoremap <leader>gl "zy:call Log(1)<CR>
 
 " Find and replace
 nnoremap <leader>m :%s/<C-R><C-W>//gc<left><left><left>
@@ -155,6 +161,15 @@ function! NewFile(name) abort
   execute "edit " dirname . "/" . a:name
 endfunction
 
+" ==================== COMMANDS ==================== 
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* NewFile
+  \ call NewFile(<q-args>)
+
 " ==================== CONFIG ==================== 
 " Do not unload abandoned buffers
 set hidden
@@ -218,14 +233,5 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 syntax enable
 set termguicolors
 colorscheme dracula
-
-" Create Rg command for fzf
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
-
-command! -bang -nargs=* New
-  \ call NewFile(<q-args>)
 
 filetype plugin indent on
