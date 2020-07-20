@@ -61,7 +61,7 @@ pacmanPreferredPrograms() {
     zsh
 
   # Change shell to zsh
-  # chsh -s $(which zsh)
+  chsh -s $(which zsh)
 }
 
 macOsSetup() {
@@ -75,6 +75,9 @@ macOsSetup() {
     tmux \
     vim \
     zsh
+
+  # Change shell to zsh
+  chsh -s $(which zsh)
 }
 
 pacmanSetup() {
@@ -129,6 +132,9 @@ distroAgnosticSetup() {
     hiflow \
     gatsby \
     prettier
+
+  # Install Rust
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
   # Create directories
   mkdir -p ~/repos
