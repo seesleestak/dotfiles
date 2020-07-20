@@ -50,6 +50,11 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
 
+# emacs mode
+bindkey -e
+bindkey '\e[1;5C' vi-forward-word   # C-Right
+bindkey '\e[1;5D' vi-backward-word  # C-Left
+
 # Complete history on arrow up/down
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
