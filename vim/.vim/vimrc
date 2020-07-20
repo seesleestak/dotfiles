@@ -161,11 +161,6 @@ function! NewFile(name) abort
   execute "edit " dirname . "/" . a:name
 endfunction
 
-function! Now() abort
-  let script = "date \"+\\%a \\%m-\\%d-\\%Y\""
-  execute "r! " . script
-endfunction
-
 " ==================== COMMANDS ==================== 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -174,9 +169,6 @@ command! -bang -nargs=* Rg
 
 command! -bang -nargs=* NewFile
   \ call NewFile(<q-args>)
-
-command! -bang Now
-  \ call Now()
 
 " ==================== CONFIG ==================== 
 " Do not unload abandoned buffers
