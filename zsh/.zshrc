@@ -52,8 +52,6 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
 
 # emacs mode
 bindkey -e
-bindkey '\e[1;5C' vi-forward-word   # C-Right
-bindkey '\e[1;5D' vi-backward-word  # C-Left
 
 # Complete history on arrow up/down
 autoload -U up-line-or-beginning-search
