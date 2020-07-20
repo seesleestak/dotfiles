@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 if [[ -n $1 ]] && [[ -n $2 ]]; then
   COUNT=$(rg $1 --count-matches | cut -d ':' -f 2 | awk '{s+=$1}END{print s}')
   if [[ $COUNT -gt 0 ]]; then

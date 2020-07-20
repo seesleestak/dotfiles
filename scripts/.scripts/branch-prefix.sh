@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/usr/bin/env bash
 CURR_BRANCH=$(git symbolic-ref HEAD --short)
 BLACKLIST=("master" "develop")
 

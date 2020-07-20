@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 TIMESTAMP=$(date -Iseconds)
 
 if [ -z $1 ]; then

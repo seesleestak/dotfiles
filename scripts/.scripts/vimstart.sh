@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # vimstart - by Billy Montgomery
 PURPLE="\033[0;35m"
 ORANGE="\033[0;33m"
