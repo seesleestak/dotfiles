@@ -50,6 +50,8 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
 
+  alias stnd="standup-update.sh && vim ~/log/standup.md"
+
 # emacs mode
 bindkey -e
 
