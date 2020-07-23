@@ -106,14 +106,15 @@ function! Log(isVisual) abort
   else
     let word = expand("<cword>")
   endif 
+  let ft = &filetype
 
-  if &filetype == 'rust'
+  if ft == 'rust'
     execute "normal! oprintln!(\"" . word . " --- {}\", " . word . ");"
-  elseif &filetype == 'sh'
+  elseif ft == 'sh'
     execute "normal! oecho \"" . word . " --- $".word."\""
-  elseif &filetype == 'vim'
+  elseif ft == 'vim'
     execute "normal! oechom \"" . word . " --- \" . " . word
-  elseif &filetype == 'javascript'
+  elseif ft == 'javascript' || ft == 'javascriptreact'
     execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
@@ -136,7 +137,7 @@ function! Format() abort
   elseif ft == 'json'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
-  elseif ft == 'javascript'
+  elseif ft == 'javascript' || ft == 'javascriptreact'
     let b:ale_fixers = ['prettier', 'eslint']
     execute "ALEFix"
   elseif ft == 'scss'
