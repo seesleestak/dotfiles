@@ -111,7 +111,7 @@ function! Log(isVisual) abort
   if ft == 'rust'
     execute "normal! oprintln!(\"" . word . " --- {}\", " . word . ");"
   elseif ft == 'sh'
-    execute "normal! oecho \"" . word . " --- $".word."\""
+    execute "normal! oecho \"" . word . " --- $" . word . "\""
   elseif ft == 'vim'
     execute "normal! oechom \"" . word . " --- \" . " . word
   elseif ft == 'javascript' || ft == 'javascriptreact'
@@ -134,14 +134,11 @@ function! Format() abort
   let ft = &filetype
   if ft == 'rust'
     execute "RustFmt"
-  elseif ft == 'json'
+  elseif ft == 'json' || ft == 'scss'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
   elseif ft == 'javascript' || ft == 'javascriptreact'
     let b:ale_fixers = ['prettier', 'eslint']
-    execute "ALEFix"
-  elseif ft == 'scss'
-    let b:ale_fixers = {'scss': ['stylelint']}
     execute "ALEFix"
   endif
 endfunction
