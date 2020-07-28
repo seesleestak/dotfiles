@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | fzf)
+if [ -z $FILE_SOURCE_PATH ]; then
+  exit
+fi
 FILE_SOURCE_NAME=$(echo $FILE_SOURCE_PATH | cut -f1 -d'.')
 
 TEST_FILE=$(fd $FILE_SOURCE_NAME -e "test.js" --max-results 1)
