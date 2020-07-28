@@ -17,6 +17,7 @@ if [ -z $TEST_FILE ]; then
     TEST_FILE=$(fd -e "test.js" -E "*.style.js" | fzf)
   else
     echo "Exiting..."
+    exit
   fi
 fi
 
