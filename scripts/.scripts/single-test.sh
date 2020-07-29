@@ -3,12 +3,13 @@ FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | fzf)
 if [ -z $FILE_SOURCE_PATH ]; then
   exit
 fi
-FILE_SOURCE_NAME=$(echo $FILE_SOURCE_PATH | cut -f1 -d'.')
+FILE_BASENAME=$(basename $FILE_SOURCE_PATH)
+EXTENSIONLESS_BASENAME=$(echo $FILE_BASENAME | cut -f1 -d'.')
 
-TEST_FILE=$(fd $FILE_SOURCE_NAME -e "test.js" --max-results 1)
+TEST_FILE=$(fd $EXTENSIONLESS_BASENAME -e 'test.js' --max-results 1)
 
 # Look for test named after directory if it's the index
-if [ -z $TEST_FILE ] && [ "$(basename $FILE_SOURCE_PATH)" == "index.js" ]; then
+if [ -z $TEST_FILE ] && [ "$FILE_BASENAME" == "index.js" ]; then
   FILE_SOURCE_DIRNAME=$(dirname $FILE_SOURCE_PATH)
   TEST_FILE=$(fd --full-path "$FILE_SOURCE_DIRNAME/${FILE_SOURCE_DIRNAME##*/}.test.js")
 fi
@@ -29,4 +30,5 @@ if [ -z $TEST_FILE ]; then
   exit
 fi
 
+echo "Test file found. Running..."
 npx jest $TEST_FILE --watch --coverage --collectCoverageFrom $FILE_SOURCE_PATH
