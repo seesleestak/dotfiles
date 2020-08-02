@@ -22,7 +22,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
   Plug 'jparise/vim-graphql'
-  Plug 'digitaltoad/vim-pug'
 
   " Rust
   Plug 'rust-lang/rust.vim'
