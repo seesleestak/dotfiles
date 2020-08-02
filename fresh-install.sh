@@ -67,7 +67,6 @@ pacmanPreferredPrograms() {
 macOsSetup() {
   brew install \
     fd \
-    node \
     ranger \
     reattach-to-user-namespace \
     ripgrep \
