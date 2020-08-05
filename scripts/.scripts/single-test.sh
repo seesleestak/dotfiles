@@ -6,14 +6,15 @@ fi
 FILE_BASENAME=$(basename $FILE_SOURCE_PATH)
 EXTENSIONLESS_BASENAME=$(echo $FILE_BASENAME | cut -f1 -d'.')
 
-TEST_FILE=$(fd $EXTENSIONLESS_BASENAME -e 'test.js' --max-results 1)
-
 # Look for test named after directory if it's the index
-if [ -z $TEST_FILE ] && [ "$FILE_BASENAME" == "index.js" ]; then
+if [ "$FILE_BASENAME" == "index.js" ]; then
   FILE_SOURCE_DIRNAME=$(dirname $FILE_SOURCE_PATH)
   TEST_FILE=$(fd --full-path "$FILE_SOURCE_DIRNAME/${FILE_SOURCE_DIRNAME##*/}.test.js")
+else
+  TEST_FILE=$(fd $EXTENSIONLESS_BASENAME -e 'test.js' --max-results 1)
 fi
 
+# If the test can't be found, provide a search prompt
 if [ -z $TEST_FILE ]; then
   echo -n "Search for test file? (y/n) "
   read
