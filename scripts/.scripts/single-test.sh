@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | fzf)
+SEARCH_COMMAND_FZF="fzf --height 20% --layout=reverse --border"
+FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | $SEARCH_COMMAND_FZF)
 if [ -z $FILE_SOURCE_PATH ]; then
   exit
 fi
@@ -19,7 +20,7 @@ if [ -z $TEST_FILE ]; then
   echo -n "Search for test file? (y/n) "
   read
   if [ "$REPLY" == "y" ]; then
-    TEST_FILE=$(fd -e "test.js" -E "*.style.js" | fzf)
+    TEST_FILE=$(fd -e "test.js" -E "*.style.js" | $SEARCH_COMMAND_FZF)
   else
     echo "Exiting..."
     exit
