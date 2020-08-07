@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/local/bin/bash
+# Requires bash version that handles color codes
 SEARCH_COMMAND_FZF="fzf --height 20% --layout=reverse --border"
 FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | $SEARCH_COMMAND_FZF)
 if [ -z $FILE_SOURCE_PATH ]; then
@@ -32,5 +33,6 @@ if [ -z $TEST_FILE ]; then
   exit
 fi
 
-echo "Test file found. Running..."
+echo -e "Test file found: \e[32m$TEST_FILE\e[0m"
+echo "Running..."
 npx jest $TEST_FILE --watch --coverage --collectCoverageFrom $FILE_SOURCE_PATH
