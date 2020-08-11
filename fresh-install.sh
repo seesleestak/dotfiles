@@ -68,7 +68,6 @@ macOsSetup() {
   brew install \
     fd \
     ranger \
-    reattach-to-user-namespace \
     ripgrep \
     stow \
     tmux \
