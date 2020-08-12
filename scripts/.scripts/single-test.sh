@@ -40,4 +40,4 @@ if [[ -z $TEST_FILE ]]; then
 fi
 
 echo "Running..."
-npx jest $TEST_FILE --watch --coverage --collectCoverageFrom $FILE_SOURCE_PATH
+npx jest $TEST_FILE --watch --coverage --collectCoverageFrom $FILE_SOURCE_PATH "$@"
