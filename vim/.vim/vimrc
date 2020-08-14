@@ -159,10 +159,15 @@ function! NewFile(name) abort
 endfunction
 
 " ==================== COMMANDS ==================== 
+" Override Rg to add preview and border
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+  \   fzf#vim#with_preview({'options': ['--border']}), <bang>0)
+
+" Override Files to add fzf border
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--border']}, <bang>0)
 
 command! -bang -nargs=* NewFile
   \ call NewFile(<q-args>)
