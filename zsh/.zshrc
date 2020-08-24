@@ -39,16 +39,16 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gcb="git checkout -b"
   alias gcmsg="git commit -m"
   alias gco="git checkout"
-  alias gd="git diff"
-  alias gdc="git diff --compact-summary"
-  alias gds="git diff --staged"
+  alias gd="git diff ${@}"
+  alias gdc="git diff ${@} --compact-summary"
+  alias gds="git diff ${@} --staged"
   alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias glg="git log --oneline --no-merges"
-  alias gres='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -s"
+  alias hard='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
 
   alias stnd="vim $(standup-update.sh)"
 
