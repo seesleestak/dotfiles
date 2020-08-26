@@ -226,6 +226,9 @@ set clipboard=unnamed,unnamedplus
 " Show col,row at bottom
 set ruler
 
+" Set syntax highlight limit
+set synmaxcol=225
+
 " Don't polute home directory with viminfo
 set viminfo+=n~/.vim/viminfo
 
