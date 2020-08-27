@@ -66,9 +66,9 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 *.color15:    #E6E6E6
 
 ! Colors states:   'bg', 'fg', 'bgalt', 'hlbg', 'hlfg'
-rofi.color-normal: #282A36, #F8F8F2, #282A36, #9AEDFE, #282A36
-rofi.color-active: #282A36, #F8F8F2, #282A36, #9AEDFE, #282A36
+rofi.color-normal: #282A36, #F8F8F2, #282A36, #424450, #F8F8F2
+rofi.color-active: #282A36, #F8F8F2, #282A36, #424450, #F8F8F2
 !                  'background', 'border', 'separator'
-rofi.color-window: #282A36, #9AEDFE, #282A36
+rofi.color-window: #282A36, #CAA9FA, #282A36
 
 ! vim:syntax=xdefaults

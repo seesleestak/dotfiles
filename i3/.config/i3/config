@@ -34,7 +34,7 @@ smart_gaps on
 smart_borders on
 
 # Window colors
-client.focused           $term_color14     $term_color14     $term_background  $term_color14
+client.focused           $term_color12     $term_color12     $term_background  $term_color12
 client.unfocused         $term_background  $term_background  $term_foreground  $term_background
 client.focused_inactive  $term_background  $term_background  $term_foreground  $term_background
 client.urgent            $term_color1      $term_color1      $term_background  $term_color1
@@ -224,8 +224,8 @@ bar {
         separator  $term_color0
 
                         #  border         background       text
-        focused_workspace  $term_color8    $term_color8    $term_foreground
-        active_workspace   $term_color8    $term_color8    $term_foreground
+        focused_workspace  $term_color12    $term_color12    $term_background
+        active_workspace   $term_color12    $term_color12    $term_background
         inactive_workspace $term_background $term_background $term_foreground
         binding_mode       $term_color7     $term_color7     $term_background
         urgent_workspace   $term_color1     $term_color1     $term_foreground
