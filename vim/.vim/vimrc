@@ -66,7 +66,7 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 noremap <leader>c :Commentary<CR>
 
 " Buffer related mappings
-nnoremap <leader>d :bd<CR>
+nnoremap <leader>d :bd!<CR>
 nnoremap <leader>b :b #<CR>
 nnoremap <C-l> :bnext<CR>
 nnoremap <C-h> :bprev<CR>
@@ -159,10 +159,15 @@ function! NewFile(name) abort
 endfunction
 
 " ==================== COMMANDS ==================== 
+" Override Rg to add preview and border
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+  \   fzf#vim#with_preview({'options': ['--border']}), <bang>0)
+
+" Override Files to add fzf border
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--border']}, <bang>0)
 
 command! -bang -nargs=* NewFile
   \ call NewFile(<q-args>)
@@ -220,6 +225,9 @@ set clipboard=unnamed,unnamedplus
 
 " Show col,row at bottom
 set ruler
+
+" Set syntax highlight limit
+set synmaxcol=225
 
 " Don't polute home directory with viminfo
 set viminfo+=n~/.vim/viminfo
