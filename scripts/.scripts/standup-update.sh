@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# Script gets called in two places:
+#   - `stnd` command in shell config. This command is run when I want to edit the standup file.
+#   - crontab, weekdays at 8:30 AM. This ensures there's at least a placeholder for every day
+# 
+# Using ~/log so crontab has write access
 LOG_PATH="$HOME/log/standup"
 mkdir -p $LOG_PATH
 
