@@ -149,7 +149,8 @@ function! FzfSpell()
   return fzf#run({
     \ 'source': spellsuggest(expand("<cword>")),
     \ 'sink': function("FzfSpellSink"),
-    \ 'down': 10
+    \ 'down': 10,
+    \ 'options': ['--border']
     \ })
 endfunction
 
