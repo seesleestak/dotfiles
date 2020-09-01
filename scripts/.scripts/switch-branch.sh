@@ -3,8 +3,8 @@ CHECKOUT_SEARCH_STR=$(git --no-pager branch --all --no-color --format='%(refname
 
 if [[ -n $CHECKOUT_SEARCH_STR ]]; then
   if [[ $(echo $CHECKOUT_SEARCH_STR | cut -d'/' -f 1) = "origin" ]]; then
-    git checkout --track $CHECKOUT_SEARCH_STR
+    git switch --track $CHECKOUT_SEARCH_STR
   else
-    git checkout $CHECKOUT_SEARCH_STR
+    git switch $CHECKOUT_SEARCH_STR
   fi
 fi
