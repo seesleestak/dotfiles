@@ -1,7 +1,7 @@
 #!/usr/local/bin/bash
 # Requires bash version that handles color codes
 echo "Search for source file:"
-SEARCH_COMMAND_FZF="fzf --height 25% --layout=reverse --border"
+SEARCH_COMMAND_FZF="fzf --height 25% --reverse --border"
 FILE_SOURCE_PATH=$(fd -e js -E "*.test.js" -E "*.style.js" | $SEARCH_COMMAND_FZF)
 if [[ -z $FILE_SOURCE_PATH ]]; then
   exit
