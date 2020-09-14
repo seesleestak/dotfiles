@@ -33,6 +33,10 @@ call plug#end()
 " Closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
 
+" fzf
+" Override window as default layout
+let g:fzf_layout = { 'down': '40%' }
+
 " dirvish config
 let g:dirvish_mode = 2
 let g:dirvish_relative_paths = 1
