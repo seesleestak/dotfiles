@@ -229,6 +229,16 @@ set synmaxcol=225
 " Don't polute home directory with viminfo
 set viminfo+=n~/.vim/viminfo
 
+" https://vim.fandom.com/wiki/Configuring_the_cursor#Changing_the_cursor_color_in_insert_mode
+" Insert mode cursor
+let &t_SI .= "\<Esc>[6 q"
+
+" Replace mode cursor
+let &t_SR .= "\<Esc>[4 q"
+
+" Normal mode cursor
+let &t_EI .= "\<Esc>[2 q"
+
 syntax enable
 set termguicolors
 colorscheme dracula
