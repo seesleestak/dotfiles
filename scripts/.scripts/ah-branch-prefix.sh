@@ -2,7 +2,7 @@
 CURR_BRANCH=$(git symbolic-ref HEAD --short)
 
 if [[ -n $CURR_BRANCH ]]; then
-  BRANCH_PREFIX=$(echo $CURR_BRANCH | grep -o -E "([a-zA-Z]+)-([0-9]+)")
+  BRANCH_PREFIX=$(echo $CURR_BRANCH | grep -m 1 -o -E "([a-zA-Z]+)-([0-9]+)")
 
   if [[ -n $1 ]]; then
     if [[ -n $BRANCH_PREFIX ]]; then
