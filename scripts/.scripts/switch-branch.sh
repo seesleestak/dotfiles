@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-CHECKOUT_SEARCH_STR=$(git --no-pager branch --all --no-color --format='%(refname:short)' | fzf --height 35% --reverse)
+CHECKOUT_SEARCH_STR=$(branch)
 
 if [[ -n $CHECKOUT_SEARCH_STR ]]; then
   if [[ $(echo $CHECKOUT_SEARCH_STR | cut -d'/' -f 1) = "origin" ]]; then
