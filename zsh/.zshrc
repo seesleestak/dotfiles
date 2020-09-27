@@ -38,7 +38,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gb="git branch"
   alias gcb="git checkout -b"
   alias gcmsg="git commit -m"
-  alias gco="git restore"
+  alias gco="git checkout"
   alias gd="git diff ${@}"
   alias gdc="git diff ${@} --compact-summary"
   alias gds="git diff ${@} --staged"
@@ -47,7 +47,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias glg="git log --oneline --no-merges"
   alias gsr="git symbolic-ref --short HEAD"
-  alias gs="git status -sb"
+  alias gss="git status -sb"
   alias hard="git reset --hard ${@}"
   alias ch="source $HOME/.scripts/switch-branch.sh"
   alias branch="git --no-pager branch --all --no-color --format='%(refname:short)' | fzf --height 35% --reverse"
