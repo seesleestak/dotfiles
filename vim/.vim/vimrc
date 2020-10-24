@@ -117,7 +117,7 @@ function! Log(isVisual) abort
     execute "normal! oecho \"" . word . " --- $" . word . "\""
   elseif ft == 'vim'
     execute "normal! oechom \"" . word . " --- \" . " . word
-  elseif ft == 'javascript' || ft == 'javascriptreact'
+  elseif ft == 'javascript' || ft == 'javascriptreact' || ft == 'html'
     execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
@@ -137,7 +137,7 @@ function! Format() abort
   let ft = &filetype
   if ft == 'rust'
     execute "RustFmt"
-  elseif ft == 'json' || ft == 'scss'
+  elseif ft == 'json' || ft == 'scss' || ft == 'html'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
   elseif ft == 'javascript' || ft == 'javascriptreact'
