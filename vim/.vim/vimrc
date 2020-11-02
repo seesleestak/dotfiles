@@ -72,15 +72,15 @@ noremap <leader>c :Commentary<CR>
 " Buffer related mappings
 nnoremap <leader>d :bd!<CR>
 nnoremap <leader>b :b #<CR>
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext!<CR>
+nnoremap <C-h> :bprev!<CR>
 
 " fzf mappings
-nnoremap <leader>t   :Files<CR>     
-nnoremap <leader>a   :Rg<space>
-nnoremap <leader>f   :Rg <C-R><C-W><CR>
-nnoremap <leader>l   :Buffers<CR>   
-nnoremap <leader>gst :GFiles?<CR>   
+nnoremap <leader>t :Files<CR>
+nnoremap <leader>a :Rg<space>
+nnoremap <leader>f :Rg <C-R><C-W><CR>
+nnoremap <leader>l :Buffers<CR>
+nnoremap <leader>gst :GFiles?<CR>
 
 " Format buffer
 nnoremap <leader>i :call Format()<CR>
