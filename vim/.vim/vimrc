@@ -137,7 +137,7 @@ function! Format() abort
   let ft = &filetype
   if ft == 'rust'
     execute "RustFmt"
-  elseif ft == 'json' || ft == 'scss' || ft == 'html'
+  elseif ft == 'json' || ft == 'scss' || ft == 'html' || ft == 'markdown'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
   elseif ft == 'javascript' || ft == 'javascriptreact'
