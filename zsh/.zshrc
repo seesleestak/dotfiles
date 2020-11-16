@@ -49,7 +49,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -sb"
   alias ch="source $HOME/.scripts/switch-branch.sh"
-  alias rst='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
+  alias rst="source $HOME/.scripts/reset.sh"
 
   alias stnd="vim $(standup-update.sh)"
 
