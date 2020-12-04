@@ -9,6 +9,8 @@ compinit
 setopt PROMPT_SUBST     # allow funky stuff in prompt
 PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
 
+SCRIPTS_DIR="$HOME/.scripts"
+
 # Aliases
   # Directories
   alias re="cd ~/repos"
@@ -17,6 +19,7 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias mora="cd ~/repos/mor-api"
   alias ui="cd ~/repos/qpp-ui"
   alias sty="cd ~/repos/qpp-style"
+  alias grade="cd ~/repos/grading"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -27,11 +30,11 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias ll="ls -al"
 
   # Shell scripts
-  alias vimstart="source $HOME/.scripts/vimstart.sh"
-  alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-  alias hic="source $HOME/.scripts/ah-branch-prefix.sh"
+  alias rsr="$SCRIPTS_DIR/ripgrep-search-replace.sh"
+  alias hic="$SCRIPTS_DIR/ah-branch-prefix.sh"
   alias vpn="anyconnect split"
   alias cov="open ./coverage/lcov-report/index.html"
+  alias json="$SCRIPTS_DIR/json-format.sh"
 
   # Git
   alias ga="git add"
@@ -48,8 +51,8 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias glg="git log --oneline --no-merges"
   alias gsr="git symbolic-ref --short HEAD"
   alias gss="git status -sb"
-  alias ch="source $HOME/.scripts/switch-branch.sh"
-  alias rst="source $HOME/.scripts/reset.sh"
+  alias ch="$SCRIPTS_DIR/switch-branch.sh"
+  alias rst="$SCRIPTS_DIR/reset.sh"
 
   alias stnd="vim $(standup-update.sh)"
 

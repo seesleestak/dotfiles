@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-pbpaste | jj -p | pbcopy
+echo -n "format (f) or minify (m): "
+read -rsn1 selection
+case $selection in
+  f)
+    pbpaste | jj -np | pbcopy
+    ;;
+  m)
+    pbpaste | echo $(jj -nu) | pbcopy
+    ;;
+esac
