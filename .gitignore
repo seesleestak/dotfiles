@@ -4,3 +4,4 @@ vim/.vim/swapfiles/*
 vim/.vim/plugged/
 vim/.vim/.netrwhist
 vim/.vim/viminfo*
+vim/.vim/*.tmp
