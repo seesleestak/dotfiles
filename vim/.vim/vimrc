@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
-  Plug 'ap/vim-buftabline'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -72,8 +71,6 @@ noremap <leader>c :Commentary<CR>
 " Buffer related mappings
 nnoremap <leader>d :bd!<CR>
 nnoremap <leader>b :b #<CR>
-nnoremap <C-l> :bnext!<CR>
-nnoremap <C-h> :bprev!<CR>
 
 " fzf mappings
 nnoremap <leader>t :Files<CR>
