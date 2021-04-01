@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'w0rp/ale'
   Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
-  Plug 'ap/vim-buftabline'
 
   " File management/navigation
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -32,6 +31,10 @@ call plug#end()
 
 " Closetag
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
+
+" fzf
+" Override window as default layout
+let g:fzf_layout = { 'down': '40%' }
 
 " dirvish config
 let g:dirvish_mode = 2
@@ -68,15 +71,13 @@ noremap <leader>c :Commentary<CR>
 " Buffer related mappings
 nnoremap <leader>d :bd!<CR>
 nnoremap <leader>b :b #<CR>
-nnoremap <C-l> :bnext<CR>
-nnoremap <C-h> :bprev<CR>
 
 " fzf mappings
-nnoremap <leader>t   :Files<CR>     
-nnoremap <leader>a   :Rg<space>
-nnoremap <leader>f   :Rg <C-R><C-W><CR>
-nnoremap <leader>l   :Buffers<CR>   
-nnoremap <leader>gst :GFiles?<CR>   
+nnoremap <leader>t :Files<CR>
+nnoremap <leader>a :Rg<space>
+nnoremap <leader>f :Rg <C-R><C-W><CR>
+nnoremap <leader>l :Buffers<CR>
+nnoremap <leader>gst :GFiles?<CR>
 
 " Format buffer
 nnoremap <leader>i :call Format()<CR>
@@ -113,7 +114,7 @@ function! Log(isVisual) abort
     execute "normal! oecho \"" . word . " --- $" . word . "\""
   elseif ft == 'vim'
     execute "normal! oechom \"" . word . " --- \" . " . word
-  elseif ft == 'javascript' || ft == 'javascriptreact'
+  elseif ft == 'javascript' || ft == 'javascriptreact' || ft == 'html'
     execute "normal! oconsole.log(\"" . word . " --- \", " . word . ")"
   endif
 endfunction
@@ -133,7 +134,7 @@ function! Format() abort
   let ft = &filetype
   if ft == 'rust'
     execute "RustFmt"
-  elseif ft == 'json' || ft == 'scss'
+  elseif ft == 'json' || ft == 'scss' || ft == 'html' || ft == 'markdown'
     let b:ale_fixers = ['prettier']
     execute "ALEFix"
   elseif ft == 'javascript' || ft == 'javascriptreact'
@@ -149,7 +150,8 @@ function! FzfSpell()
   return fzf#run({
     \ 'source': spellsuggest(expand("<cword>")),
     \ 'sink': function("FzfSpellSink"),
-    \ 'down': 10
+    \ 'down': 10,
+    \ 'options': ['--border']
     \ })
 endfunction
 
@@ -162,12 +164,8 @@ endfunction
 " Override Rg to add preview and border
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview({'options': ['--border']}), <bang>0)
-
-" Override Files to add fzf border
-command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files(<q-args>, {'options': ['--border']}, <bang>0)
+  \   'rg --column --line-number --no-heading --color=always -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 command! -bang -nargs=* NewFile
   \ call NewFile(<q-args>)
@@ -231,9 +229,6 @@ set synmaxcol=225
 
 " Don't polute home directory with viminfo
 set viminfo+=n~/.vim/viminfo
-
-" Disables automatic commenting on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax enable
 set termguicolors

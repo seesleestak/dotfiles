@@ -14,18 +14,8 @@ snippet sc
 
 	$1.propTypes = {}
 	$1.defaultProps = {}
-	$1.displayName = '$1'
 
 	export default ${1:}
-snippet con
-	import { connect } from 'react-redux'
-
-	import ${1:} from './$1'
-
-	const mapStateToProps = (state) => ({})
-	const mapDispatchToProps = (dispatch) => ({})
-
-	export default connect(mapStateToProps, mapDispatchToProps)($1)
 snippet ind
 	import ${1:} from './$1'
 
