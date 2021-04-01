@@ -30,8 +30,6 @@ set_from_resource $term_color15    color15
 
 for_window [class="^.*"] border pixel 5
 gaps inner 10
-smart_gaps on
-smart_borders on
 
 # Window colors
 client.focused           $term_color12     $term_color12     $term_background  $term_color12
