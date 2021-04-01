@@ -9,13 +9,17 @@ compinit
 setopt PROMPT_SUBST     # allow funky stuff in prompt
 PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
 
+SCRIPTS_DIR="$HOME/.scripts"
+
 # Aliases
   # Directories
   alias re="cd ~/repos"
   alias dot="cd ~/dotfiles"
   alias mor="cd ~/repos/mor-web-client"
   alias mora="cd ~/repos/mor-api"
-  alias qpp="cd ~/repos/qpp-ui"
+  alias ui="cd ~/repos/qpp-ui"
+  alias sty="cd ~/repos/qpp-style"
+  alias grade="cd ~/repos/grading"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -26,11 +30,11 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias ll="ls -al"
 
   # Shell scripts
-  alias vimstart="source $HOME/.scripts/vimstart.sh"
-  alias rsr="source $HOME/.scripts/ripgrep-search-replace.sh"
-  alias hic="source $HOME/.scripts/ah-branch-prefix.sh"
+  alias rsr="$SCRIPTS_DIR/ripgrep-search-replace.sh"
+  alias hic="$SCRIPTS_DIR/ah-branch-prefix.sh"
   alias vpn="anyconnect split"
   alias cov="open ./coverage/lcov-report/index.html"
+  alias json="$SCRIPTS_DIR/json-format.sh"
 
   # Git
   alias ga="git add"
@@ -38,21 +42,22 @@ PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_c
   alias gcb="git checkout -b"
   alias gcmsg="git commit -m"
   alias gco="git checkout"
-  alias gd="git diff"
-  alias gdc="git diff --compact-summary"
-  alias gds="git diff --staged"
+  alias gd="git diff ${@}"
+  alias gdc="git diff ${@} --compact-summary"
+  alias gds="git diff ${@} --staged"
   alias gf="git fetch"
   alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
   alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
   alias glg="git log --oneline --no-merges"
-  alias gres='git reset --hard origin/"$(git symbolic-ref --short HEAD)"'
   alias gsr="git symbolic-ref --short HEAD"
-  alias gss="git status -s"
+  alias gss="git status -sb"
+  alias ch="$SCRIPTS_DIR/switch-branch.sh"
+  alias rst="$SCRIPTS_DIR/reset.sh"
+
+  alias stnd="vim $(standup-update.sh)"
 
 # emacs mode
 bindkey -e
-bindkey '\e[1;5C' vi-forward-word   # C-Right
-bindkey '\e[1;5D' vi-backward-word  # C-Left
 
 # Complete history on arrow up/down
 autoload -U up-line-or-beginning-search
