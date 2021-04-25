@@ -19,7 +19,7 @@ SCRIPTS_DIR="$HOME/.scripts"
   alias mora="cd ~/repos/mor-api"
   alias ui="cd ~/repos/qpp-ui"
   alias sty="cd ~/repos/qpp-style"
-  alias grade="cd ~/repos/grading"
+  alias gr="cd ~/repos/grading"
 
   # ls color always
   if [[ $(uname -s) = "Darwin" ]]; then
@@ -34,7 +34,7 @@ SCRIPTS_DIR="$HOME/.scripts"
   alias hic="$SCRIPTS_DIR/ah-branch-prefix.sh"
   alias vpn="anyconnect split"
   alias cov="open ./coverage/lcov-report/index.html"
-  alias json="$SCRIPTS_DIR/json-format.sh"
+  alias jf="$SCRIPTS_DIR/json-format.sh"
 
   # Git
   alias ga="git add"
@@ -46,10 +46,10 @@ SCRIPTS_DIR="$HOME/.scripts"
   alias gdc="git diff ${@} --compact-summary"
   alias gds="git diff ${@} --staged"
   alias gf="git fetch"
-  alias ggl='git pull origin "$(git symbolic-ref --short HEAD)"'
-  alias ggp='git push origin "$(git symbolic-ref --short HEAD)"'
+  alias ggl='git pull origin "$(git branch --show-current)"'
+  alias ggp='git push origin "$(git branch --show-current)"'
   alias glg="git log --oneline --no-merges"
-  alias gsr="git symbolic-ref --short HEAD"
+  alias gsr="git branch --show-current"
   alias gss="git status -sb"
   alias ch="$SCRIPTS_DIR/switch-branch.sh"
   alias rst="$SCRIPTS_DIR/reset.sh"
