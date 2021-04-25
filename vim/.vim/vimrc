@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 
   " Git
   Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-rhubarb'
   Plug 'tpope/vim-fugitive'
 
   " JS
