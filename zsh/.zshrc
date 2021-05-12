@@ -5,9 +5,8 @@ autoload -U colors && colors
 autoload -U compinit
 compinit
 
-# Prompt - https://dustri.org/b/my-zsh-configuration.html
-setopt PROMPT_SUBST     # allow funky stuff in prompt
-PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%}@%m% %u %{$fg[green]%}%c%{$reset_color%}]$ "
+# Prompt info - https://dustri.org/b/my-zsh-configuration.html
+PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%} %{$fg[green]%}%c%{$reset_color%}]$ "
 
 SCRIPTS_DIR="$HOME/.scripts"
 
