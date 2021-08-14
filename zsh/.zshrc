@@ -6,7 +6,7 @@ autoload -U compinit
 compinit
 
 # Prompt info - https://dustri.org/b/my-zsh-configuration.html
-PROMPT="[%{$fg_bold[white]%}%n%{$reset_color%} %{$fg[green]%}%c%{$reset_color%}]$ "
+PROMPT="[%n%{$reset_color%} %{$fg[green]%}%c%{$reset_color%}]$ "
 
 SCRIPTS_DIR="$HOME/.scripts"
 
@@ -63,8 +63,8 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey "^[OA" up-line-or-beginning-search # Up
+bindkey "^[OB" down-line-or-beginning-search # Down
 
 # History - https://dustri.org/b/my-zsh-configuration.html
 HISTFILE=~/.zsh_history         # where to store zsh history
