@@ -1,4 +1,4 @@
-export VISUAL="/usr/local/bin/vim"
+export VISUAL="/usr/bin/vim"
 export EDITOR=$VISUAL
 
 export FZF_DEFAULT_COMMAND='fd --type file'
