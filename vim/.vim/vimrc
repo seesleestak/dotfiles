@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'alvan/vim-closetag'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   Plug 'tpope/vim-eunuch'
   Plug 'SirVer/ultisnips'
 
@@ -31,15 +31,11 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Closetag
-let g:closetag_filenames = '*.html,*.js,*.jsx,*.svelte'
+let g:closetag_filenames = '*.html,*.js,*.jsx'
 
 " fzf
 " Override window as default layout
 let g:fzf_layout = { 'down': '40%' }
-
-" dirvish config
-let g:dirvish_mode = 2
-let g:dirvish_relative_paths = 1
 
 " dracula
 let g:dracula_italic = 0
@@ -53,7 +49,7 @@ let mapleader = "\<Space>"
 
 nnoremap <leader>s :update<CR>
 nnoremap <leader>q :quit<CR>
-nnoremap <leader>e :checktime<CR>
+nnoremap <leader>e :e<CR>
 nnoremap <leader>n :NewFile<space>
 
 " Copy current buffer file path
@@ -110,7 +106,7 @@ function! Log(isVisual) abort
   let ft = &filetype
 
   if ft == 'rust'
-    execute "normal! oprintln!(\"" . word . " --- {}\", " . word . ");"
+    execute "normal! oprintln!(\"" . word . " --- {:?}\", " . word . ");"
   elseif ft == 'sh'
     execute "normal! oecho \"" . word . " --- $" . word . "\""
   elseif ft == 'vim'
